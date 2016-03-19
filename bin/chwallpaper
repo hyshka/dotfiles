@@ -12,24 +12,26 @@
 
 # Size
 # widthxheight ex. 1600x900
-size=1600x900
-size_ext=1920x1200
+size_w520=1600x900
+size_brix=1920x1200
 
 # Location
 #bg_location=${HOME}'/.wallpaper/background'
 bg_location='/home/hyshka/.wallpaper/background.jpg'
 bg_location_png='/home/hyshka/.wallpaper/background.png'
-bg_ext_location='/home/hyshka/.wallpaper/background_ext.jpg'
-bg_ext_location_png='/home/hyshka/.wallpaper/background_ext.png'
+#bg_ext_location='/home/hyshka/.wallpaper/background_ext.jpg'
+#bg_ext_location_png='/home/hyshka/.wallpaper/background_ext.png'
 
-# Download image
-wget https://source.unsplash.com/category/nature/$size/daily -O $bg_location
-wget https://source.unsplash.com/category/nature/$size_ext/daily -O $bg_ext_location
+if [ "$HOSTNAME" = brix ]; then
+    wget https://source.unsplash.com/category/nature/$size_brix/daily -O $bg_location
+else
+    wget https://source.unsplash.com/category/nature/$size_w520/daily -O $bg_location
+fi
 
 # Conver to PNG
 convert	$bg_location $bg_location_png
-convert	$bg_ext_location $bg_ext_location_png
+#convert	$bg_ext_location $bg_ext_location_png
 
 # Set new background
-setroot --store -f $bg_location_png $bg_ext_location_png
+setroot --store -z $bg_location_png
 
