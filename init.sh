@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 function doIt() {
+  # bin
+  rm -R ~/.bin
+  ln -s ~/.dotfiles/bin ~/.bin
+
   # zsh
   rm -r ~/.zshrc
   rm -r ~/.zprofile
