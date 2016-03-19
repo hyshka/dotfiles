@@ -1,4 +1,4 @@
 #!/bin/sh
 #
-pip install virtualenv virtualenvwrapper virtualenvclone cookiecutter
-pip2 install virtualenv virtualenvwrapper virtualenvclone cookiecutter
+sudo pip install virtualenv virtualenvwrapper virtualenv-clone cookiecutter
+sudo pip2 install virtualenv virtualenvwrapper virtualenv-clone cookiecutter
