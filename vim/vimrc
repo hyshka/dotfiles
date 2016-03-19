@@ -1,0 +1,60 @@
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'jmcantrell/vim-virtualenv'
+call plug#end()
+
+" color scheme
+colorscheme base16-railscasts
+set background=dark
+
+" syntax highlighting
+":filetype plugin on
+":syntax on
+
+" better line breaks
+set linebreak
+
+" enable mouse
+set mouse=a
+
+" Traverse line breaks with arrow keys
+set whichwrap=b,s,<,>,[,]
+
+" line numbers
+:set number
+
+" save cursor position
+augroup resCur
+  autocmd!
+  autocmd BufReadPost * call setpos(".", getpos("'\""))
+augroup END
+
+" bind Ctrl-C to clipboard copy
+vmap <C-c> "+y
+
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+

@@ -1,0 +1,9 @@
+# Linux
+*~
+.Trash-*
+.fuse_hidden*
+
+# Thumbnails
+._*
+ehthumbs.db
+Thumbs.db

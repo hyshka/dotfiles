@@ -1,0 +1,33 @@
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-railscasts.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# aliases
+
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g sx=startx
+alias -g darRoot="sudo dar -B ~/bin/darRoot"
+alias -g syncHome="rsync -aAXS --delete --info=progress2 --exclude={".thumbnails/*",".cache/*",".local/share/Trash/*",".gvfs"} /home/hyshka /media/Portable/hyshka/"
+alias -g shdh="ssh bryhys@john-langdon.dreamhost.com"
+alias -g shal="ssh bhyshka@alice.communitas.ca"
+alias -g xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
+alias -g xClass="xprop | grep WM_CLASS"
+alias -g vimalias="vim /usr/lib/zim/modules/custom/init.zsh"
+alias -g srvup="sudo systemctl start httpd mysqld"
+alias -g srvdown="sudo systemctl stop httpd mysqld"
+
+# Django
+alias -g djadmin=django-admin.py
+alias -g djrun='django-admin.py runserver'
+alias -g djrun2='django-admin.py runserver 127.0.0.1:8080'
+alias -g djmig='django-admin.py migrate'
+alias -g djsync='django-admin.py syncdb'
+alias -g djshell='python2 manage.py shell'
+
+alias -g vi=vim
+alias -g ya="yaourt --nameonly --pager --color $1"
+alias zshrc="vim ~/.zshrc && source ~/.zshrc"
+alias i3conf="vim ~/.config/i3/config"
+alias xres="vim ~/.Xresources && xrdb ~/.Xresources"

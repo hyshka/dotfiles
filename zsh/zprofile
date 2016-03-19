@@ -1,0 +1,8 @@
+# node version manager
+source "/usr/share/nvm/init-nvm.sh"
+
+# virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Lift
+source /usr/bin/virtualenvwrapper.sh
