@@ -21,7 +21,7 @@ function doIt() {
 
   # ranger
   rm -r ~/config/ranger
-  ln -s ~/.dotfiles/ranger ~/config/ranger
+  ln -s ~/.dotfiles/ranger ~/.config/ranger
 
   # i3
   rm -r ~/config/i3/i3status.conf
