@@ -29,11 +29,11 @@ function doIt() {
   rm -r ~/config/i3/conkyrc
   rm -r ~/config/i3/compton.conf
   rm -r ~/config/i3/base16-railscasts.yaml
-  ln -s ~/.dotfiles/i3/i3status.conf ~/config/i3/i3status.conf
-  ln -s ~/.dotfiles/i3/config ~/config/i3/config
-  ln -s ~/.dotfiles/i3/conkyrc ~/config/i3/conkyrc
-  ln -s ~/.dotfiles/i3/compton.conf ~/config/i3/compton.conf
-  ln -s ~/.dotfiles/i3/base16-railscasts.yaml ~/config/i3/base16-railscasts.yaml
+  ln -s ~/.dotfiles/i3/i3status.conf ~/.config/i3/i3status.conf
+  ln -s ~/.dotfiles/i3/config ~/.config/i3/config
+  ln -s ~/.dotfiles/i3/conkyrc ~/.config/i3/conkyrc
+  ln -s ~/.dotfiles/i3/compton.conf ~/.config/i3/compton.conf
+  ln -s ~/.dotfiles/i3/base16-railscasts.yaml ~/.config/i3/base16-railscasts.yaml
 
   # git
   rm -r ~/.gitconfig
