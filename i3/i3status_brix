@@ -16,7 +16,6 @@ general {
 }
 
 order += "volume master"
-order += "battery 0"
 order += "load"
 order += "tztime date"
 order += "tztime time"
@@ -26,16 +25,6 @@ volume master {
 	format_muted = "  (%volume)"
 	device = "pulse"
 }		
-
-battery 0 {
-        format = "%status  %percentage %remaining"
-	format_down = ""
-	integer_battery_capacity = true
-	hide_seconds = true
-	status_chr= ""
-        status_bat= ""
-        status_full = ""
-}
 
 load {
         format = "  %1min"
@@ -48,6 +37,4 @@ tztime date {
 tztime time {
         format = "  %H:%M     "
 }
-
-
 
