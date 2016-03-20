@@ -32,9 +32,11 @@ load {
 
 tztime date {
         format = "  %a %Y-%m-%d"
+	timezone = "America/Edmonton"
 }
 
 tztime time {
         format = "  %H:%M     "
+	timezone = "America/Edmonton"
 }
 
