@@ -24,15 +24,19 @@ function doIt() {
   ln -s ~/.dotfiles/x11/Xresources ~/.Xresources
 
   # ranger
-  rm -r ~/config/ranger
-  ln -s ~/.dotfiles/ranger ~/.config/ranger
+  mkdir -p ~/.config/ranger/colorschemes
+  rm -r ~/.config/ranger/rc.conf
+  rm -r ~/.config/ranger/bookmarks
+  ln -s ~/.dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
+  ln -s ~/.dotfiles/ranger/bookmarks ~/.config/ranger/bookmarks
 
   # i3
-  rm -r ~/config/i3/i3status.conf
-  rm -r ~/config/i3/config
-  rm -r ~/config/i3/conkyrc
-  rm -r ~/config/i3/compton.conf
-  rm -r ~/config/i3/base16-railscasts.yaml
+  mkdir -p ~/.config/i3
+  rm -r ~/.config/i3/i3status.conf
+  rm -r ~/.config/i3/config
+  rm -r ~/.config/i3/conkyrc
+  rm -r ~/.config/i3/compton.conf
+  rm -r ~/.config/i3/base16-railscasts.yaml
   ln -s ~/.dotfiles/i3/i3status.conf ~/.config/i3/i3status.conf
   ln -s ~/.dotfiles/i3/config ~/.config/i3/config
   ln -s ~/.dotfiles/i3/conkyrc ~/.config/i3/conkyrc
@@ -44,6 +48,15 @@ function doIt() {
   rm -r ~/.gitignore
   ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
   ln -s ~/.dotfiles/git/gitignore ~/.gitignore
+
+  # subl3
+  mkdir -p ~/.config/sublime-text-3/Packages/User
+  rm -r "~/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
+  rm -r ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+  rm -r ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
+  ln -s "~/.dotfiles/subl3/Default (Linux).sublime-keymap" "~/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
+  ln -s ~/.dotfiles/subl3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+  ln -s ~/.dotfiles/subl3/ColorHighlighter.sublime-settings ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
 
   xrdb ~/.Xresources
   source ~/.zshrc
