@@ -4,6 +4,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'chriskempson/base16-vim'
+"Plug 'gertjanreynaert/cobalt2-vim-theme'
 Plug 'jmcantrell/vim-virtualenv'
 call plug#end()
 
