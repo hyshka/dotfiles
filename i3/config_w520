@@ -183,8 +183,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
 bindsym XF86Sleep exec --no-startup-id systemctl suspend
 
 bar {
-  #  i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
-  status_command i3status
+  status_command i3status --config ~/.config/i3/i3status.conf
   position	top
   #tray_output	LVDS1
   tray_padding  4
