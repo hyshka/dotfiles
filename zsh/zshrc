@@ -2,21 +2,30 @@
 BASE16_SHELL="$HOME/.config/base16-shell/base16-railscasts.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-# aliases
+# Calling nvm use automatically in a directory with a .nvmrc file
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
 
+# shortcuts
 alias ...='../..'
 alias ....='../../..'
 alias .....='../../../..'
 alias sx=startx
-alias darRoot="sudo dar -B ~/bin/darRoot"
-alias syncHome="rsync -aAXS --delete --info=progress2 --exclude={".thumbnails/*",".cache/*",".local/share/Trash/*",".gvfs"} /home/hyshka /media/Portable/hyshka/"
-alias shdh="ssh bryhys@john-langdon.dreamhost.com"
-alias shal="ssh bhyshka@alice.communitas.ca"
+alias vi=vim
+
+# custom commands
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 alias xClass="xprop | grep WM_CLASS"
-alias vimalias="vim /usr/lib/zim/modules/custom/init.zsh"
 alias srvup="sudo systemctl start httpd mysqld"
 alias srvdown="sudo systemctl stop httpd mysqld"
+alias zshrc="vim ~/.zshrc && source ~/.zshrc"
+alias i3conf="vim ~/.config/i3/config"
+alias xres="vim ~/.Xresources && xrdb ~/.Xresources"
 
 # Django
 alias djadmin=django-admin.py
@@ -26,8 +35,7 @@ alias djmig='django-admin.py migrate'
 alias djsync='django-admin.py syncdb'
 alias djshell='python2 manage.py shell'
 
-alias vi=vim
+# yaourt
 alias ya="yaourt --nameonly --pager --color $1"
-alias zshrc="vim ~/.zshrc && source ~/.zshrc"
-alias i3conf="vim ~/.config/i3/config"
-alias xres="vim ~/.Xresources && xrdb ~/.Xresources"
+alias yau="yaourt --nameonly --pager --color -Syua"
+
