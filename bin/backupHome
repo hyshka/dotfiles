@@ -1,0 +1,15 @@
+#!/bin/sh
+
+rsync \
+	-aAXS \
+	--delete \
+	--info=progress2 \
+	--exclude={ \
+		".thumbnails/*", \
+		".cache/*", \
+		".local/share/Trash/*", \
+		".gvfs" \
+	} \
+	/home/hyshka \ # source
+	/media/Portable/hyshka/ # destination
+

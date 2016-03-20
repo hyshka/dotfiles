@@ -1,0 +1,4 @@
+#!/bin/sh
+# Requires dar and par2cmdline
+
+sudo dar -B ~/.bin/darRoot
