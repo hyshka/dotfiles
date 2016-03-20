@@ -1,6 +1,5 @@
 # autostarts
 exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
-#exec --no-startup-id spacefm -d
 exec_always --no-startup-id setroot --restore
 #exec --no-startup-id redshift
 #exec --no-startup-id urxvt -name tty-clock -e tty-clock -C 2 -c -d 20000000000
@@ -150,16 +149,14 @@ for_window [class="URxvt" instance="tty-clock"] fullscreen enable
 assign [class="URxvt"] $WS1
 assign [class="Firefox"] $WS2
 assign [class="Thunderbird"] $WS2
-assign [class="Atom"] $WS3
-assign [class="Spacefm"] $WS4
+assign [class="Subl3"] $WS3
 assign [class="Sunflower"] $WS4
 assign [class="URxvt" instance="cmus"] $ws10
 
 # custom binds
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+w exec firefox
-#bindsym $mod+Shift+m exec thunderbird
-#bindsym $mod+Shift+f exec spacefm
+bindsym $mod+Shift+t exec thunderbird
 bindsym $mod+Shift+a exec atom
 bindsym $mod+Shift+p exec xfce4-appfinder
 bindsym $mod+Shift+s exec subl3

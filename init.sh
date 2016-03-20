@@ -54,10 +54,10 @@ function doIt() {
 
   # subl3
   mkdir -p ~/.config/sublime-text-3/Packages/User
-  rm -r "~/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
+  rm -r ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
   rm -r ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
   rm -r ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
-  ln -s "~/.dotfiles/subl3/Default (Linux).sublime-keymap" "~/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
+  ln -s ~/.dotfiles/subl3/'Default (Linux).sublime-keymap' ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
   ln -s ~/.dotfiles/subl3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
   ln -s ~/.dotfiles/subl3/ColorHighlighter.sublime-settings ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
 
