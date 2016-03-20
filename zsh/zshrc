@@ -27,6 +27,10 @@ alias zshrc="vim ~/.zshrc && source ~/.zshrc"
 alias i3conf="vim ~/.config/i3/config"
 alias xres="vim ~/.Xresources && xrdb ~/.Xresources"
 
+# wine
+alias win32="WINEARCH=win32 WINEPREFIX=~/win32"
+alias win64="WINEPREFIX=~/win64"
+
 # Django
 alias djadmin=django-admin.py
 alias djrun='django-admin.py runserver'
@@ -36,6 +40,6 @@ alias djsync='django-admin.py syncdb'
 alias djshell='python2 manage.py shell'
 
 # yaourt
-alias ya="yaourt --nameonly --pager --color $1"
+alias ya="yaourt --nameonly --pager --color"
 alias yau="yaourt --nameonly --pager --color -Syua"
 
