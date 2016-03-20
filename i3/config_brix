@@ -19,7 +19,7 @@ gaps outer 0
 bindsym $mod+d exec rofi -show run
 
 # i3 basics
-set $mod Mod4
+set $mod Mod1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # kill focused window
@@ -136,6 +136,7 @@ for_window [class="TeamViewer.exe"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Gimp"] floating enable
 for_window [class="Calendar"] floating enable
+for_window [class="Galculator"] floating enable
 
 # window defaults
 for_window [class="Uzbl-core"] focus child, layout stacking, focus
@@ -151,16 +152,21 @@ assign [class="Firefox"] $WS2
 assign [class="Thunderbird"] $WS2
 assign [class="Atom"] $WS3
 assign [class="Spacefm"] $WS4
-assign [class="Spacefm"] $WS4
+assign [class="Sunflower"] $WS4
 assign [class="URxvt" instance="cmus"] $ws10
 
 # custom binds
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+w exec firefox
-bindsym $mod+Shift+m exec thunderbird
-bindsym $mod+Shift+f exec spacefm
+#bindsym $mod+Shift+m exec thunderbird
+#bindsym $mod+Shift+f exec spacefm
 bindsym $mod+Shift+a exec atom
 bindsym $mod+Shift+p exec xfce4-appfinder
+bindsym $mod+Shift+s exec subl3
+bindsym $mod+Shift+f exec sunflower
+bindsym $mod+Shift+g exec i3-sensible-terminal -e ranger
+bindsym $mod+Shift+m exec i3-sensible-terminal -e cmus
+
 # audio
 bindsym XF86AudioLowerVolume exec --no-startup-id /usr/bin/pulseaudio-ctl down
 bindsym XF86AudioRaiseVolume exec --no-startup-id /usr/bin/pulseaudio-ctl up
@@ -178,7 +184,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
 bindsym XF86Sleep exec --no-startup-id systemctl suspend
 
 bar {
-  status_command i3status --config ~/config/i3/i3status.conf
+  status_command i3status --config ~/.config/i3/i3status.conf
   position	top
   #tray_output	LVDS1
   tray_padding  4
