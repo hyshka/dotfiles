@@ -150,7 +150,7 @@ assign [class="URxvt"] $WS1
 assign [class="Firefox"] $WS2
 assign [class="Thunderbird"] $WS2
 assign [class="Subl3"] $WS3
-assign [class="Sunflower"] $WS4
+#assign [class="Sunflower"] $WS4
 assign [class="URxvt" instance="cmus"] $ws10
 
 # custom binds
