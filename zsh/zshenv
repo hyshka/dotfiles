@@ -10,7 +10,7 @@ fi
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # setup path
-PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin:$HOME/.node_modules/bin:$HOME/bin
+PATH=$PATH:/bin:$HOME/.node_modules/bin:$HOME/bin
 FPATH=$FPATH:$HOME/.fpath
 
 # node version manager
@@ -23,3 +23,5 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Lift
 source /usr/bin/virtualenvwrapper.sh
+
+
