@@ -43,6 +43,6 @@ alias djshell='python2 manage.py shell'
 # yaourt
 alias ya="yaourt --nameonly --pager --color"
 alias yau="yaourt --nameonly --pager --color -Syua"
+alias yas="yaourt --nameonly --pager --color -Ss"
+alias yai="yaourt --nameonly --pager --color -Sy"
 
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
