@@ -3,6 +3,8 @@
 URxvt*iconFile: /usr/share/icons/Faenza/apps/32/utilities-terminal.png
 IRC*iconFile: /usr/share/icons/Faenza/apps/32/xchat.png
 URxvt.geometry: 80x22
+!disable the fucking bell
+URxvt.insecure: false
 ! URXVT FONTS
 !------------------------------------------------
 URxvt.font:xft:Inconsolatazi4:size=12
@@ -11,17 +13,15 @@ URxvt.italicfont:xft:Inconsolatazi4:italic:size=12
 URxvt.bolditalicFont:xft:Inconsolatazi4:bold:italic:size=12
 !URxvt*letterSpace: 1
 URxvt*allow_bold: true
+! URXVT PERL EXTENSIONS 
+!------------------------------------------------
+URxvt.perl-ext-common: default,matcher,clipboard
 ! URXVT ENABLE LINK SUPPORT
 !------------------------------------------------
-!URxvt.perl-lib: /home/luca/Documenti/perl/
-URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.matcher.button: 1
-URxvt.perl-ext: default
-URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.url-select.launcher: /usr/bin/xdg-open
-URxvt.url-select.underline: true
-!disable the fucking bell
-URxvt.insecure: false
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.keysym.C-Delete: perl:matcher:last
+URxvt.keysym.M-Delete: perl:matcher:list
 ! URXVT COPY PASTE SHORTCUTS
 !------------------------------------------------
 URxvt.iso14755: false
