@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 function doIt() {
   # bin
@@ -62,7 +62,7 @@ function doIt() {
   ln -s ~/.dotfiles/subl3/ColorHighlighter.sublime-settings ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
 
   xrdb ~/.Xresources
-  source ~/.zshrc
+  #source ~/.zshrc
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

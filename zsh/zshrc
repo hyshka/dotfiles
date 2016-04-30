@@ -29,6 +29,11 @@ alias srvdown="sudo systemctl stop httpd mysqld"
 alias zshrc="vim ~/.zshrc && source ~/.zshrc"
 alias i3conf="vim ~/.config/i3/config"
 alias xres="vim ~/.Xresources && xrdb ~/.Xresources"
+alias dhcpeth="sudo systemctl restart dhcpcd@enp0s31f6"
+
+# wine
+alias win32="WINEARCH=win32 WINEPREFIX=~/win32"
+alias win64="WINEPREFIX=~/win64"
 
 # Django
 alias djadmin=django-admin.py
@@ -39,6 +44,8 @@ alias djsync='django-admin.py syncdb'
 alias djshell='python2 manage.py shell'
 
 # yaourt
-alias ya="yaourt --nameonly --pager --color $1"
+alias ya="yaourt --nameonly --pager --color"
 alias yau="yaourt --nameonly --pager --color -Syua"
+alias yas="yaourt --nameonly --pager --color -Ss"
+alias yai="yaourt --nameonly --pager --color -Sy"
 
