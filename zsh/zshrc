@@ -11,6 +11,9 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 
+# term keybinds
+bindkey -v
+
 # shortcuts
 alias ...='../..'
 alias ....='../../..'

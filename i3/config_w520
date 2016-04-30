@@ -23,7 +23,7 @@ gaps outer 0
 bindsym $mod+d exec rofi -show run
 
 # i3 basics
-set $mod Mod4
+set $mod Mod1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # kill focused window
