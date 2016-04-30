@@ -2,8 +2,26 @@
 export VISUAL=vim
 export EDITOR=vim
 export TERMINAL=urxvt
+if [ -n "$DISPLAY" ]; then
+    export BROWSER=firefox
+else 
+    export BROWSER=w3m
+fi
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # setup path
-PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin:$HOME/.node_modules/bin:$HOME/bin
+PATH=./node_modules/.bin:$PATH:/bin:$HOME/.node_modules/bin:$HOME/bin:$HOME/.rvm/bin
 FPATH=$FPATH:$HOME/.fpath
+
+# node version manager
+export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/nvm.sh
+source /usr/share/nvm/install-nvm-exec
+
+# virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Lift
+source /usr/bin/virtualenvwrapper.sh
+
+

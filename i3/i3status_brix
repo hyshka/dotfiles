@@ -16,6 +16,8 @@ general {
 }
 
 order += "volume master"
+order += "wireless wlp1s0"
+order += "ethernet enp0s31f6"
 order += "load"
 order += "tztime date"
 order += "tztime time"
@@ -26,15 +28,27 @@ volume master {
 	device = "pulse"
 }		
 
+wireless wlp1s0 {
+	format_up = "  %essid (%quality) %ip"
+	format_down = "  down"
+}
+
+ethernet enp0s31f6 {
+	format_up = "  %ip"
+	format_down = "  down"
+}
+
 load {
         format = "  %1min"
 }
 
 tztime date {
         format = "  %a %Y-%m-%d"
+	timezone = "America/Edmonton"
 }
 
 tztime time {
         format = "  %H:%M     "
+	timezone = "America/Edmonton"
 }
 

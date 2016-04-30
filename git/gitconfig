@@ -26,3 +26,5 @@
 
 [push]
 	default = simple
+[core]
+	autocrlf = false
