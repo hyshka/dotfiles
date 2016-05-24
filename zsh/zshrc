@@ -51,5 +51,5 @@ alias yas="yaourt --nameonly --pager --color -Ss"
 alias yai="yaourt --nameonly --pager --color -Sy"
 
 # functions
-
 calc(){ awk "BEGIN{ print $* }" ;}
+
