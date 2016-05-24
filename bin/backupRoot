@@ -1,4 +1,8 @@
 #!/bin/sh
 # Requires dar and par2cmdline
 
-sudo dar -B ~/.bin/darRoot
+if [ "$HOSTNAME" = brix ]; then
+	sudo dar -B ~/.bin/darRootBrix
+else
+	sudo dar -B ~/.bin/darRoot
+fi
