@@ -140,7 +140,6 @@ for_window [class="Galculator"] floating enable
 # window defaults
 for_window [class="Uzbl-core"] focus child, layout stacking, focus
 for_window [class="Firefox"] layout stacking
-for_window [class="Thunderbird"] layout stacking
 for_window [class="Chromium"] layout stacking
 for_window [class="URxvt" instance="tty-clock"] fullscreen enable
 #for_window [instance="scratchpad"] move window to scratchpad, scratchpad show
@@ -148,7 +147,6 @@ for_window [class="URxvt" instance="tty-clock"] fullscreen enable
 # application workspaces
 assign [class="URxvt"] $WS1
 assign [class="Firefox"] $WS2
-assign [class="Thunderbird"] $WS2
 assign [class="Subl3"] $WS3
 #assign [class="Sunflower"] $WS4
 assign [class="URxvt" instance="cmus"] $ws10
@@ -156,11 +154,9 @@ assign [class="URxvt" instance="cmus"] $ws10
 # custom binds
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+w exec firefox
-bindsym $mod+Shift+t exec thunderbird
-bindsym $mod+Shift+a exec atom
 bindsym $mod+Shift+p exec xfce4-appfinder
 bindsym $mod+Shift+s exec subl3
-bindsym $mod+Shift+f exec sunflower
+bindsym $mod+Shift+f exec spacefm
 bindsym $mod+Shift+g exec i3-sensible-terminal -e ranger
 bindsym $mod+Shift+m exec i3-sensible-terminal -e cmus
 
@@ -177,8 +173,6 @@ bindsym XF86AudioPrev exec cmus-remote --prev
 # screen
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
-# power
-bindsym XF86Sleep exec --no-startup-id systemctl suspend
 
 bar {
   status_command i3status --config ~/.config/i3/i3status.conf
