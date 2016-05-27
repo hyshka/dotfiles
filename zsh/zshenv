@@ -10,13 +10,8 @@ fi
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # setup path
-PATH=./node_modules/.bin:$PATH:/bin:$HOME/.node_modules/bin:$HOME/bin:$HOME/.rvm/bin
+PATH=./node_modules/.bin:"$HOME/.nvm/versions/node/v4.4.0/bin":$PATH:/bin:$HOME/.bin:$HOME/.rvm/bin
 FPATH=$FPATH:$HOME/.fpath
-
-# node version manager
-export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/install-nvm-exec
 
 # virtualenv
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
@@ -24,4 +19,11 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Lift
 source /usr/bin/virtualenvwrapper.sh
 
+# node version manage
+export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/nvm.sh
+source /usr/share/nvm/install-nvm-exec
+
+# ruby version manager
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
