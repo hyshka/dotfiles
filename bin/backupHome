@@ -1,5 +1,12 @@
 #!/bin/sh
 
+if [ "$HOSTNAME" = brix ]; then
+	DEST="/run/media/hyshka/Lift Portable/brix-home"
+else
+	DEST=/media/Portable/hyshka/
+fi
+
+
 rsync \
 	-aAXS \
 	--delete \
@@ -11,5 +18,5 @@ rsync \
 		".gvfs" \
 	} \
 	/home/hyshka \ # source
-	/media/Portable/hyshka/ # destination
+	$DEST # destination
 
