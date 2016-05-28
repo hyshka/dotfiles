@@ -51,4 +51,3 @@ tztime time {
         format = "  %H:%M     "
 	timezone = "America/Edmonton"
 }
-
