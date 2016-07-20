@@ -154,17 +154,16 @@ assign [class="URxvt"] $WS1
 assign [class="Firefox"] $WS2
 assign [class="Thunderbird"] $WS2
 assign [class="Subl3"] $WS3
-assign [class="Sunflower"] $WS4
+#assign [class="Sunflower"] $WS4
 assign [class="URxvt" instance="cmus"] $ws10
 
 # custom binds
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+t exec thunderbird
-bindsym $mod+Shift+a exec atom
 bindsym $mod+Shift+p exec xfce4-appfinder
 bindsym $mod+Shift+s exec subl3
-bindsym $mod+Shift+f exec sunflower
+bindsym $mod+Shift+f exec spacefm
 bindsym $mod+Shift+g exec i3-sensible-terminal -e ranger
 bindsym $mod+Shift+m exec i3-sensible-terminal -e cmus
 
