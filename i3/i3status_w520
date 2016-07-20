@@ -16,6 +16,8 @@ general {
 }
 
 order += "volume master"
+order += "wireless wlp3s0"
+order += "ethernet enp0s25"
 order += "battery 0"
 order += "load"
 order += "tztime date"
@@ -26,6 +28,16 @@ volume master {
 	format_muted = "  (%volume)"
 	device = "pulse"
 }		
+
+wireless wlp3s0 {
+	format_up = "  %essid (%quality) %ip"
+	format_down = "  down"
+}
+
+ethernet enp0s25 {
+	format_up = "  %ip"
+	format_down = "  down"
+}
 
 battery 0 {
         format = "%status  %percentage %remaining"
@@ -48,6 +60,3 @@ tztime date {
 tztime time {
         format = "  %H:%M     "
 }
-
-
-
