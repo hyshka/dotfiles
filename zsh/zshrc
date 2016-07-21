@@ -37,12 +37,13 @@ alias win32="WINEARCH=win32 WINEPREFIX=~/win32"
 alias win64="WINEPREFIX=~/win64"
 
 # Django
-alias djadmin=django-admin.py
-alias djrun='django-admin.py runserver'
-alias djrun2='django-admin.py runserver 127.0.0.1:8080'
-alias djmig='django-admin.py migrate'
-alias djsync='django-admin.py syncdb'
-alias djshell='python2 manage.py shell'
+alias dja=django-admin.py
+alias djr='django-admin.py runserver'
+alias djr2='django-admin.py runserver 127.0.0.1:8080'
+alias djm='django-admin.py migrate'
+alias djs='django-admin.py syncdb'
+alias djsh='django-admin.py shell'
+alias djshp='django-admin.py shell_plus'
 
 # yaourt
 alias ya="yaourt --nameonly --pager --color"
