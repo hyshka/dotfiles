@@ -45,6 +45,12 @@ alias djs='django-admin.py syncdb'
 alias djsh='django-admin.py shell'
 alias djshp='django-admin.py shell_plus'
 
+# pip
+alias pipi="pip install"
+alias pipu="pip uninstall"
+alias pipf="pip freeze"
+alias pipfg="pip freeze | grep"
+
 # yaourt
 alias ya="yaourt --nameonly --pager --color"
 alias yau="yaourt --nameonly --pager --color -Syua"
