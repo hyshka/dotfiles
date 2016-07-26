@@ -57,6 +57,14 @@ alias yau="yaourt --nameonly --pager --color -Syua"
 alias yas="yaourt --nameonly --pager --color -Ss"
 alias yai="yaourt --nameonly --pager --color -Sy"
 
+#git shortcuts
+alias gch="git cherry-pick"
+
+# npm shortcuts that only list top-level modules
+# ! overrides the line-number utility
+alias ng="npm list -g --depth=0 2>/dev/null"
+alias nl="npm list --depth=0 2>/dev/null"
+
 # functions
 calc(){ awk "BEGIN{ print $* }" ;}
 
