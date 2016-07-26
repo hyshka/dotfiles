@@ -9,12 +9,12 @@
 # ignore darrc
 --noconf
 # backup location
---create /media/Portable/arch-root/arch-root
+--create /media/Portable/w520-root/w520-root
 # size of each piece, bigger = more ram
 --slice 1950M
 # compression level
 -z6
-# files note to compress
+# files not to compress
 -an
 -Z "*.ogg"
 -Z "*.avi"
@@ -40,3 +40,4 @@
 --prune media
 --prune mnt
 --prune home
+
