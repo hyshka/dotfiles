@@ -6,17 +6,21 @@ else
 	DEST=/media/Portable/hyshka/
 fi
 
+SRC=/home/hyshka
 
 rsync \
-	-aAXS \
+	# 'aAX' handles files in archive mode
+	# S handles sparse files properly
+	# v is to increase verbosity
+	-aAXSv \
+	# delete extraneous files from dest dirs
 	--delete \
 	--info=progress2 \
-	--exclude={ \
-		".thumbnails/*", \
-		".cache/*", \
-		".local/share/Trash/*", \
-		".gvfs" \
-	} \
-	/home/hyshka \ # source
+	# do each exclude separate
+	--exclude="$SOURCE.thumbnails/*" \
+	--exclude="$SOURCE.cache/*" \
+	--exclude="$SOURCE.local/share/Trash/*" \
+	--exclude="$SOURCE.gvfs" \
+	$SRC \ # source
 	$DEST # destination
 

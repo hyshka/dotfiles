@@ -5,4 +5,5 @@ if [ "$HOSTNAME" = brix ]; then
 	sudo dar -B ~/.bin/darRootBrix
 else
 	sudo dar -B ~/.bin/darRoot
+	sudo chown -R hyshka:hyshka /media/Portable/w520-root/
 fi
