@@ -23,9 +23,9 @@ bg_location_png='/home/hyshka/.wallpaper/background.png'
 #bg_ext_location_png='/home/hyshka/.wallpaper/background_ext.png'
 
 if [ "$HOSTNAME" = brix ]; then
-    wget https://source.unsplash.com/category/nature/$size_brix/daily -O $bg_location
+    wget https://source.unsplash.com/category/nature/$size_brix/ -O $bg_location
 else
-    wget https://source.unsplash.com/category/nature/$size_w520/daily -O $bg_location
+    wget https://source.unsplash.com/category/nature/$size_w520/ -O $bg_location
 fi
 
 # Conver to PNG
