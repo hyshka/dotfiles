@@ -5,8 +5,12 @@
 	"caret_extra_width": 3,
 	"caret_style": "phase",
 	"color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
+	"folder_exclude_patterns":
+	[
+		"*.dist-info"
+	],
 	"font_face": "Envy Code R",
-	"font_size": 13,
+	"font_size": 12,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
