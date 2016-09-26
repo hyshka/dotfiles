@@ -9,10 +9,13 @@
 # Select what modules you would like enabled.
 # The second line of modules may depend on options set by modules in the first line.
 # These dependencies are noted on the respective module's README.md.
-zmodules=(directory environment git history input utility \
-          syntax-highlighting history-substring-search prompt \
-	  	  archive ssh pacman completion)
-
+zmodules=( \
+	directory environment history-substring-search \
+	history input prompt spectrum syntax-highlighting \
+	archive git ssh utility meta \
+	pacman \
+	# completion needs to be last
+	completion )
 
 ###################
 # MODULE SETTINGS #
