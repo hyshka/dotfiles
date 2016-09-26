@@ -1,6 +1,21 @@
+#
+# User configuration sourced by interactive shells
+#
+
+# Source zim
+if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
+  source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
+fi
+
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-railscasts.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# enable command completion
+#autoload -Uz compinit
+#compinit
+# autocompletion of command line switches for aliases
+#setopt COMPLETE_ALIASES
 
 # Calling nvm use automatically in a directory with a .nvmrc file
 autoload -U add-zsh-hook
@@ -38,14 +53,26 @@ alias timer="/opt/activecollab-timer/activecollab-timer &"
 alias win32="WINEARCH=win32 WINEPREFIX=~/win32"
 alias win64="WINEPREFIX=~/win64"
 
-# Django
+# django-admin.py
 alias dja=django-admin.py
 alias djr='django-admin.py runserver'
+alias djrp='django-admin.py runserver_plus'
 alias djr2='django-admin.py runserver 127.0.0.1:8080'
 alias djm='django-admin.py migrate'
+alias djmm='django-admin.py makemigrations'
 alias djs='django-admin.py syncdb'
 alias djsh='django-admin.py shell'
 alias djshp='django-admin.py shell_plus'
+
+# manage.py
+alias pm="python manage.py"
+alias pmr="python manage.py runserver"
+alias pmrp='python manage.py runserver_plus'
+alias pmr2='python manage.py runserver 127.0.0.1:8080'
+alias pmm='python manage.py migrate'
+alias pms='python manage.py syncdb'
+alias pmsh='python manage.py shell'
+alias pmshp='python manage.py shell_plus'
 
 # pip
 alias pipi="pip install"
@@ -59,7 +86,7 @@ alias yau="yaourt --nameonly --pager --color -Syua"
 alias yas="yaourt --nameonly --pager --color -Ss"
 alias yai="yaourt --nameonly --pager --color -Sy"
 
-#git shortcuts
+# git shortcuts
 alias gch="git cherry-pick"
 alias gcA="git commit --amend --no-edit"
 
@@ -68,6 +95,22 @@ alias gcA="git commit --amend --no-edit"
 alias ng="npm list -g --depth=0 2>/dev/null"
 alias nl="npm list --depth=0 2>/dev/null"
 
+# nvm
+alias n10="nvm use 0.10"
+alias n4="nvm use 4"
+alias n5="nvm use 5"
+
+# rvm
+alias r1="rvm use 1.9.3"
+
 # functions
-calc(){ awk "BEGIN{ print $* }" ;}
+#calc(){awk "BEGIN{ print $* }";}
+
+# bc - An arbitrary precision calculator language
+function = 
+{
+  echo "$@" | bc -l
+}
+
+alias calc="="
 
