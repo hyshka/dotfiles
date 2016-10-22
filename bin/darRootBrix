@@ -9,7 +9,7 @@
 # ignore darrc
 --noconf
 # backup location
---create "/run/media/hyshka/Lift Portab/brix-root/brix-root"
+#--create "/run/media/hyshka/Lift Portab/brix-root/brix-root"
 # size of each piece, bigger = more ram
 --slice 1950M
 # compression level
