@@ -14,6 +14,7 @@ function doIt() {
   ln -s ~/.dotfiles/zsh/zprofile ~/.zprofile
   ln -s ~/.dotfiles/zsh/zshenv ~/.zshenv
   ln -s ~/.dotfiles/zsh/zimrc ~/.zimrc
+  # source ~/.zshrc
 
   # vim
   rm -r ~/.vimrc
@@ -22,6 +23,7 @@ function doIt() {
   # x11
   rm -r ~/.Xresources
   ln -s ~/.dotfiles/x11/Xresources ~/.Xresources
+  xrdb ~/.Xresources
 
   # ranger
   mkdir -p ~/.config/ranger/colorschemes
@@ -60,9 +62,6 @@ function doIt() {
   ln -s ~/.dotfiles/subl3/'Default (Linux).sublime-keymap' ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
   ln -s ~/.dotfiles/subl3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
   ln -s ~/.dotfiles/subl3/ColorHighlighter.sublime-settings ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
-
-  xrdb ~/.Xresources
-  #source ~/.zshrc
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
