@@ -8,8 +8,6 @@
 --fs-root /
 # ignore darrc
 --noconf
-# backup location
---create /media/Portable/w520-root/w520-root
 # size of each piece, bigger = more ram
 --slice 1950M
 # compression level
