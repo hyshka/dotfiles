@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
-#This will run reflector on mirrorlist, copying from backup first, overwriting
+# This will run reflector on mirrorlist, copying from backup first, overwriting
 
-curl -o /etc/pacman.d/mirrorlist.backup https://www.archlinux.org/mirrorlist/all/
-cp /etc/pacman.d/mirrorlist.backup /etc/pacman.d/mirrorlist
-reflector -l 100 -n 10 -p http --sort rate --save /etc/pacman.d/mirrorlist
+sudo curl -o /etc/pacman.d/mirrorlist.backup https://www.archlinux.org/mirrorlist/all/
+sudo cp /etc/pacman.d/mirrorlist.backup /etc/pacman.d/mirrorlist
+sudo reflector -l 100 -n 10 -p http --sort rate --save /etc/pacman.d/mirrorlist
 
