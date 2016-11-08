@@ -13,7 +13,7 @@
 # Size
 # widthxheight ex. 1600x900
 size_w520=1600x900
-size_brix=1920x1200
+size_brix=2560x1440
 
 # Location
 #bg_location=${HOME}'/.wallpaper/background'
