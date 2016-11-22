@@ -49,6 +49,7 @@ alias dhcpeth="sudo systemctl restart dhcpcd@enp0s31f6"
 alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.config/chromium-dev &"
 alias chwallpaper="zsh ~/.bin/chwallpaper"
 alias timer="/opt/activecollab-timer/activecollab-timer &"
+alias ytced="PROJECT='ytced' tmuxp load ~/.config/tmuxp/docker-project.yaml"
 
 # wine
 alias win32="WINEARCH=win32 WINEPREFIX=~/win32"
@@ -122,4 +123,14 @@ dfp () {
     else
         docker inspect --format='{{(index (index .NetworkSettings.Ports "'$2'/tcp") 0).HostPort}}' $1
     fi
+}
+
+dfpo () {
+       if [ -z "$2" ]
+       then
+               port=$(docker inspect --format='{{(index (index .NetworkSettings.Ports "8000/tcp") 0).HostPort}}' $1)
+       else
+               port=$(docker inspect --format='{{(index (index .NetworkSettings.Ports "'$2'/tcp") 0).HostPort}}' $1)
+       fi
+       chromium 'http://localhost:'"$port" &
 }
