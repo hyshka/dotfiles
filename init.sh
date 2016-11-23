@@ -58,7 +58,7 @@ function doIt() {
   rm ~/.tmux.conf
   mkdir -p ~/.config/tmuxp
   ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
-  ln -s ~/.dotfiles/tmux/tmuxp ~/.config/tmuxp
+  ln -s ~/.dotfiles/tmux/tmuxp ~/.config
 
   # subl3
   mkdir -p ~/.config/sublime-text-3/Packages/User
