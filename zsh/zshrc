@@ -126,11 +126,21 @@ dfp () {
 }
 
 dfpo () {
-       if [ -z "$2" ]
-       then
-               port=$(docker inspect --format='{{(index (index .NetworkSettings.Ports "8000/tcp") 0).HostPort}}' $1)
-       else
-               port=$(docker inspect --format='{{(index (index .NetworkSettings.Ports "'$2'/tcp") 0).HostPort}}' $1)
-       fi
-       chromium 'http://localhost:'"$port" &
+    if [ -z "$2" ]
+    then
+        port=$(docker inspect --format='{{(index (index .NetworkSettings.Ports "8000/tcp") 0).HostPort}}' $1)
+    else
+        port=$(docker inspect --format='{{(index (index .NetworkSettings.Ports "'$2'/tcp") 0).HostPort}}' $1)
+    fi
+    chromium 'http://localhost:'"$port" &
+}
+
+tpo () {
+    if [ -z "$1" ]
+    then
+        print This command requires an argument. Ex. tpo [projectname]
+    else
+        print $1
+        PROJECT=$1 tmuxp load ~/.config/tmuxp/docker-project.yaml
+    fi
 }
