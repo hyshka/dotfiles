@@ -54,6 +54,12 @@ function doIt() {
   ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
   ln -s ~/.dotfiles/git/gitignore ~/.gitignore
 
+  # tmux
+  rm ~/.tmux.conf
+  mkdir -p ~/.config/tmuxp
+  ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+  ln -s ~/.dotfiles/tmux/tmuxp ~/.config/tmuxp
+
   # subl3
   mkdir -p ~/.config/sublime-text-3/Packages/User
   rm -r ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
