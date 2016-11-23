@@ -56,7 +56,6 @@ function doIt() {
 
   # tmux
   rm ~/.tmux.conf
-  mkdir -p ~/.config/tmuxp
   ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
   ln -s ~/.dotfiles/tmux/tmuxp ~/.config
 
