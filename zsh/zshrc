@@ -12,8 +12,8 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-railscasts.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # enable command completion
-#autoload -Uz compinit
-#compinit
+autoload -Uz compinit
+compinit
 # autocompletion of command line switches for aliases
 #setopt COMPLETE_ALIASES
 
@@ -135,7 +135,7 @@ dfpo () {
     chromium 'http://localhost:'"$port" &
 }
 
-tpo () {
+tlo () {
     if [ -z "$1" ]
     then
         print This command requires an argument. Ex. tpo [projectname]

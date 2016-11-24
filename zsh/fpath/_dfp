@@ -1,0 +1,5 @@
+#compdef dfp
+
+local -a options
+options=$(docker ps --format "{{.Names}}")
+_alternative "args:docker containers:($options)"

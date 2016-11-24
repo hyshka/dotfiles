@@ -14,6 +14,7 @@ function doIt() {
   ln -s ~/.dotfiles/zsh/zprofile ~/.zprofile
   ln -s ~/.dotfiles/zsh/zshenv ~/.zshenv
   ln -s ~/.dotfiles/zsh/zimrc ~/.zimrc
+  ln -s ~/.dotfiles/zsh/fpath ~/.fpath
   # source ~/.zshrc
 
   # vim
