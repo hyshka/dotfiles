@@ -1,0 +1,5 @@
+#compdef tlo
+
+local -a options
+options=$(ls -l --time-style="long-iso" ~/Lift | egrep '^d' | awk '{print $8}')
+_alternative "args:project directories:($options)"
