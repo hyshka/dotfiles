@@ -1,6 +1,6 @@
 session_name: "${PROJECT}"
 start_directory: "/home/hyshka/Lift/${PROJECT}"
-shell_command_before: make up
+shell_command_before: make up || echo 'Already up'
 windows:
   - window_name: code
     layout: even-vertical
