@@ -49,6 +49,7 @@ alias dhcpeth="sudo systemctl restart dhcpcd@enp0s31f6"
 alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.config/chromium-dev &"
 alias timer="/opt/activecollab-timer/activecollab-timer &"
 alias ytced="PROJECT='ytced' tmuxp load ~/.config/tmuxp/docker-project.yaml"
+alias syncHome="sudo osync.sh ~/.dotfiles/osync/sync.conf"
 
 # wine
 alias win32="WINEARCH=win32 WINEPREFIX=~/win32"
