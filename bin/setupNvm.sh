@@ -10,4 +10,7 @@ npm config set python python2.7
 nvm install 4
 npm install -g bower gulp grunt-cli node-sass eslint eslint-config-airbnb sass-lint
 npm config set python python2.7
-nvm alias default 4
+nvm install 6
+npm install -g bower gulp grunt-cli node-sass eslint eslint-config-airbnb sass-lint
+npm config set python python2.7
+nvm alias default 6
