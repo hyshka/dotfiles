@@ -1,25 +1,14 @@
 session_name: "${PROJECT}"
 start_directory: "/home/hyshka/Lift/${PROJECT}"
-shell_command_before: make up || echo 'Already up'
+shell_command_before: make up_fe
 windows:
   - window_name: code
+    panes:
+       - blank
+  - window_name: docker
     layout: even-vertical
     focus: true
     panes:
-       - blank
-#      - shell_command:
-#        - nvim
-#        focus: true
-#      - shell_command:
-#        - tmux resizep -t 2 -y 20; tmux resize-pane -Z -t 1; clear
-  - window_name: docker
-    layout: even-vertical
-    panes:
-      - make run; clear;
-      - make enter-web; clear;
-      - make dev; clear;
-  # - window_name: prod
-  #   layout: even-vertical
-  #   panes:
-  #     - ssh "${PROJECT}"
-  #     - ssh "${PROJECT}"
+      - make enter; django-admin.py runserver 0.0.0.0:8000; clear;
+      - make enter_fe; gulp --dev --docker; clear;
+      - make enter

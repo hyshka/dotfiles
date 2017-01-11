@@ -105,7 +105,7 @@ alias n6="nvm use 6"
 # rvm
 alias r1="rvm use 1.9.3"
 
-# functions
+# calc function
 #calc(){awk "BEGIN{ print $* }";}
 
 # bc - An arbitrary precision calculator language
@@ -116,15 +116,7 @@ function =
 
 alias calc="="
 
-dfp () {
-    if [ -z "$2" ]
-    then
-        docker inspect --format='{{(index (index .NetworkSettings.Ports "8000/tcp") 0).HostPort}}' $1
-    else
-        docker inspect --format='{{(index (index .NetworkSettings.Ports "'$2'/tcp") 0).HostPort}}' $1
-    fi
-}
-
+# docker functions
 dfpo () {
     if [ -z "$2" ]
     then

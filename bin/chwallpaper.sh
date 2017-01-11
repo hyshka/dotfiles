@@ -33,5 +33,5 @@ convert	$bg_location $bg_location_png
 #convert	$bg_ext_location $bg_ext_location_png
 
 # Set new background
-setroot --store -z $bg_location_png
+setroot --store -z $bg_location_png $bg_location_png
 
