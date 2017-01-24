@@ -30,3 +30,11 @@
 	autocrlf = false
 [credential]
 	helper = cache --timeout=3600
+[merge]
+	tool = vimdiff
+[mergetool "diffconflicts"]
+	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+	keepBackup = false
+[mergetool]
+	keepBackup = false

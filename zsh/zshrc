@@ -38,6 +38,7 @@ alias vi=vim
 alias t=tmux
 
 # custom commands
+alias uh="urxvt &"
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 alias xClass="xprop | grep WM_CLASS"
 alias srvup="sudo systemctl start httpd mysqld"
@@ -105,11 +106,14 @@ alias n6="nvm use 6"
 # rvm
 alias r1="rvm use 1.9.3"
 
+# assh
+#alias ssh="~/.gocode/bin/assh wrapper ssh"
+
 # calc function
 #calc(){awk "BEGIN{ print $* }";}
 
 # bc - An arbitrary precision calculator language
-function = 
+function =
 {
   echo "$@" | bc -l
 }
@@ -134,5 +138,15 @@ tlo () {
     else
         print $1
         PROJECT=$1 tmuxp load ~/.config/tmuxp/docker-project.yaml
+    fi
+}
+
+msi () {
+    if [ -z "$1" ]
+    then
+        print This command requires an argument. Ex. msi [projectname]
+    else
+        print Setting up virtualenv and installing packages for $1...
+        make setup venv=$1 && workon $1 && make install
     fi
 }

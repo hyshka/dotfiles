@@ -12,9 +12,9 @@ smart_borders on
 gaps inner 0
 gaps outer 0
 #new_window pixel 1
-#new_float pixel 1  
+#new_float pixel 1
 
-# Rofi 
+# Rofi
 bindsym $mod+d exec rofi -show run
 
 # i3 basics
@@ -138,9 +138,10 @@ for_window [class="Calendar"] floating enable
 for_window [class="Galculator"] floating enable
 
 # window defaults
-for_window [class="Uzbl-core"] focus child, layout stacking, focus
-for_window [class="Firefox"] layout stacking
-for_window [class="Chromium"] layout stacking
+for_window [class="Uzbl-core"] focus child, layout tabbed, focus
+for_window [class="Firefox"] layout tabbed
+for_window [class="Chromium"] layout tabbed
+for_window [class="Subl3"] layout tabbed
 for_window [class="URxvt" instance="tty-clock"] fullscreen enable
 #for_window [instance="scratchpad"] move window to scratchpad, scratchpad show
 

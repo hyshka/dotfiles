@@ -12,6 +12,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 # setup path
 PATH=./node_modules/.bin:"$HOME/.nvm/versions/node/v4.4.0/bin":$HOME/.bin:$PATH:/bin:$HOME/.rvm/bin
 FPATH=$FPATH:$HOME/.fpath
+GOPATH=$HOME/.gocode
 
 # virtualenv
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
