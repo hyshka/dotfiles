@@ -6,13 +6,13 @@ exec_always --no-startup-id setroot --restore
 
 # general config
 font pango:Noto Sans 10
-hide_edge_borders both
-new_window none
+#hide_edge_borders none
 smart_borders on
 gaps inner 0
 gaps outer 0
-#new_window pixel 1
-#new_float pixel 1
+smart_gaps on
+new_window pixel 1
+new_float pixel 1
 
 # Rofi
 bindsym $mod+d exec rofi -show run
@@ -97,10 +97,10 @@ mode "  " {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -136,6 +136,7 @@ for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Gimp"] floating enable
 for_window [class="Calendar"] floating enable
 for_window [class="Galculator"] floating enable
+for_window [title="Active Collab Timer"] floating enable
 
 # window defaults
 for_window [class="Uzbl-core"] focus child, layout tabbed, focus
@@ -187,19 +188,18 @@ bar {
   separator_symbol "     "
   bindsym button4 nop
   bindsym button5 nop
-
   colors {
-    separator #3a4055
-    background #3a4055
-    statusline #e6e1dc
-    focused_workspace #a5c261 #a5c261 #2b2b2b
-    active_workspace #3a4055 #3a4055 #5a647e
-    inactive_workspace #3a4055 #3a4055 #5a647e
-    urgent_workspace #da4939 #da4939 #f9f7f3
+    separator #666666
+    background #222222
+    statusline #dddddd
+    focused_workspace #0088CC #0088CC #ffffff
+    active_workspace #333333 #333333 #ffffff
+    inactive_workspace #333333 #333333 #888888
+    urgent_workspace #2f343a #900000 #ffffff
   }
 }
 
-client.focused #a5c261 #a5c261 #2b2b2b #ffc66d
-client.focused_inactive #5a647e #5a647e #d4cfc9 #5a647e
-client.unfocused #3a4055 #3a4055 #5a647e #5a647e
-client.urgent #da4939 #da4939 #f9f7f3 #da4939
+client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000

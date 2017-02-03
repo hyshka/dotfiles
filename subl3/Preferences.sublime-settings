@@ -4,7 +4,7 @@
 	"caret_extra_top": 2,
 	"caret_extra_width": 3,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (light).tmTheme",
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -39,7 +39,7 @@
 	"show_panel_on_build": false,
 	"sidebar_font_big": false,
 	"sidebar_medium": true,
-	"theme": "Cobalt2.sublime-theme",
+	"theme": "Sodarized Light 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,

@@ -9,6 +9,7 @@ fi
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-railscasts.dark.sh"
+# BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.light.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # enable command completion
@@ -25,6 +26,11 @@ load-nvmrc() {
   fi
 }
 add-zsh-hook chpwd load-nvmrc
+
+# setup path
+PATH=./node_modules/.bin:"$HOME/.nvm/versions/node/v4.4.0/bin":$HOME/.bin:$PATH:/bin:$HOME/.rvm/bin
+FPATH=$FPATH:$HOME/.fpath
+GOPATH=$HOME/.gocode
 
 # term keybinds
 bindkey -v

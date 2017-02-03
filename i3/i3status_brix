@@ -18,7 +18,7 @@ general {
 order += "volume master"
 order += "wireless wlp1s0"
 order += "ethernet enp0s31f6"
-order += "load"
+# order += "load"
 order += "tztime date"
 order += "tztime time"
 
@@ -26,21 +26,22 @@ volume master {
 	format = "  %volume"
 	format_muted = "  (%volume)"
 	device = "pulse"
-}		
+}
 
 wireless wlp1s0 {
-	format_up = "  %essid (%quality) %ip"
-	format_down = "  down"
+    # format_up = "  %essid (%quality) %ip"
+	format_up = "w  %ip"
+	format_down = "w"
 }
 
 ethernet enp0s31f6 {
-	format_up = "  %ip"
-	format_down = "  down"
+	format_up = "e  %ip"
+	format_down = "e"
 }
 
-load {
-        format = "  %1min"
-}
+# load {
+        # format = "  %1min"
+# }
 
 tztime date {
         format = "  %a %Y-%m-%d"

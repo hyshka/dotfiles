@@ -9,6 +9,6 @@ windows:
     layout: even-vertical
     focus: true
     panes:
-      - make enter; django-admin.py runserver 0.0.0.0:8000; clear;
-      - make enter_fe; gulp --dev --docker; clear;
+      - docker exec -it ${PROJECT}_backend /bin/bash -c "django-admin.py runserver 0.0.0.0:8000"
+      - docker exec -it ${PROJECT}_frontend /bin/bash -c "gulp --dev --docker"
       - make enter
