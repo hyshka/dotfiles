@@ -37,10 +37,9 @@ source /usr/share/nvm/install-nvm-exec
 # ruby version manager
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Base16 Shell themes
-BASE16_SHELL="$HOME/.config/base16-shell/base16-railscasts.dark.sh"
-# BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.light.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+# Base16 Shell
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # Zim!
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then

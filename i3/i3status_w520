@@ -7,8 +7,8 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 5
+    colors = true
+    interval = 5
 	#separator = " - "
 	color_good = "#a5c261"
 	color_degraded = "#ffc66d"
@@ -19,7 +19,7 @@ order += "volume master"
 order += "wireless wlp3s0"
 order += "ethernet enp0s25"
 order += "battery 0"
-order += "load"
+#order += "load"
 order += "tztime date"
 order += "tztime time"
 
@@ -27,20 +27,21 @@ volume master {
 	format = "  %volume"
 	format_muted = "  (%volume)"
 	device = "pulse"
-}		
+}
 
 wireless wlp3s0 {
-	format_up = "  %essid (%quality) %ip"
-	format_down = "  down"
+    # format_up = "  %essid (%quality) %ip"
+    format_up = "w  %ip"
+    format_down = "w"
 }
 
 ethernet enp0s25 {
-	format_up = "  %ip"
-	format_down = "  down"
+    format_up = "e  %ip"
+    format_down = "e"
 }
 
 battery 0 {
-        format = "%status  %percentage %remaining"
+    format = "%status  %percentage %remaining"
 	format_down = ""
 	integer_battery_capacity = true
 	hide_seconds = true
@@ -49,9 +50,9 @@ battery 0 {
         status_full = ""
 }
 
-load {
-        format = "  %1min"
-}
+# load {
+#         format = "  %1min"
+# }
 
 tztime date {
         format = "  %a %Y-%m-%d"

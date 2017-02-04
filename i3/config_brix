@@ -189,17 +189,17 @@ bar {
   bindsym button4 nop
   bindsym button5 nop
   colors {
-    separator #666666
-    background #222222
-    statusline #dddddd
-    focused_workspace #0088CC #0088CC #ffffff
-    active_workspace #333333 #333333 #ffffff
-    inactive_workspace #333333 #333333 #888888
-    urgent_workspace #2f343a #900000 #ffffff
+    separator #8e908c
+    background #ffffff
+    statusline #4d4d4c
+    focused_workspace #4271ae #4271ae #ffffff
+    active_workspace #d6d6d6 #d6d6d6 #1d1f21
+    inactive_workspace #e0e0e0 #e0e0e0 #8e908c
+    urgent_workspace #c82829 #c82829 #1d1f21
   }
 }
 
-client.focused #0088CC #0088CC #ffffff #dddddd
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused #333333 #333333 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+client.focused #4271ae #4271ae #ffffff #e0e0e0
+client.focused_inactive #d6d6d6 #d6d6d6 #8e908c #e0e0e0
+client.unfocused #e0e0e0 #e0e0e0 #8e908c #e0e0e0
+client.urgent #d6d6d6 #c82829 #1d1f21 #c82829

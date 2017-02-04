@@ -11,15 +11,15 @@ exec --no-startup-id redshift
 
 # general config
 font pango:Noto Sans 10
-hide_edge_borders both
-new_window none
+#hide_edge_borders none
 smart_borders on
 gaps inner 0
 gaps outer 0
-#new_window pixel 1
-#new_float pixel 1  
+smart_gaps on
+new_window pixel 1
+new_float pixel 1
 
-# Rofi 
+# Rofi
 bindsym $mod+d exec rofi -show run
 
 # i3 basics
@@ -140,6 +140,7 @@ for_window [class="TeamViewer.exe"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Gimp"] floating enable
 for_window [class="Calendar"] floating enable
+for_window [class="Galculator"] floating enable
 
 # window defaults
 for_window [class="Uzbl-core"] focus child, layout stacking, focus
@@ -151,21 +152,22 @@ for_window [class="URxvt" instance="tty-clock"] fullscreen enable
 
 # application workspaces
 assign [class="URxvt"] $WS1
-assign [class="Firefox"] $WS2
-assign [class="Thunderbird"] $WS2
-assign [class="Subl3"] $WS3
-#assign [class="Sunflower"] $WS4
-assign [class="URxvt" instance="cmus"] $ws10
+assign [class="Firefox"] $WS3
+assign [class="Chromium"] $WS4
+assign [class="Subl3"] $WS2
+assign [class="Spacefm"] $WS5
+#assign [class="URxvt" instance="cmus"] $ws9
 
 # custom binds
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+t exec thunderbird
+bindsym $mod+Shift+e exec chromium
 bindsym $mod+Shift+p exec xfce4-appfinder
 bindsym $mod+Shift+s exec subl3
 bindsym $mod+Shift+f exec spacefm
 bindsym $mod+Shift+g exec i3-sensible-terminal -e ranger
-bindsym $mod+Shift+m exec i3-sensible-terminal -e cmus
+#bindsym $mod+Shift+m exec i3-sensible-terminal -e cmus
 
 # audio
 bindsym XF86AudioLowerVolume exec --no-startup-id /usr/bin/pulseaudio-ctl down
@@ -193,19 +195,18 @@ bar {
   separator_symbol "     "
   bindsym button4 nop
   bindsym button5 nop
-
   colors {
-    separator #3a4055
-    background #3a4055
-    statusline #e6e1dc
-    focused_workspace #a5c261 #a5c261 #2b2b2b
-    active_workspace #3a4055 #3a4055 #5a647e
-    inactive_workspace #3a4055 #3a4055 #5a647e
-    urgent_workspace #da4939 #da4939 #f9f7f3
+    separator #8e908c
+    background #ffffff
+    statusline #4d4d4c
+    focused_workspace #4271ae #4271ae #ffffff
+    active_workspace #d6d6d6 #d6d6d6 #1d1f21
+    inactive_workspace #e0e0e0 #e0e0e0 #8e908c
+    urgent_workspace #c82829 #c82829 #1d1f21
   }
 }
 
-client.focused #a5c261 #a5c261 #2b2b2b #ffc66d
-client.focused_inactive #5a647e #5a647e #d4cfc9 #5a647e
-client.unfocused #3a4055 #3a4055 #5a647e #5a647e
-client.urgent #da4939 #da4939 #f9f7f3 #da4939
+client.focused #4271ae #4271ae #ffffff #e0e0e0
+client.focused_inactive #d6d6d6 #d6d6d6 #8e908c #e0e0e0
+client.unfocused #e0e0e0 #e0e0e0 #8e908c #e0e0e0
+client.urgent #d6d6d6 #c82829 #1d1f21 #c82829

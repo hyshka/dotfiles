@@ -1,9 +1,10 @@
 session_name: "dashboard"
 start_directory: "/home/hyshka"
 windows:
-  - window_name: dashboard
+  - window_name: live
+    start_directory: '~'
     layout: even-vertical
     panes:
       - htop
       - blank
-      - blank
+      - tmux split-window -h

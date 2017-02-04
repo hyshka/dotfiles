@@ -59,7 +59,12 @@ URxvt*scrollTtyKeypress: true
 !------------------------------------------------
 URxvt*internalBorder: 10
 URxvt*depth: 32
-URxvt*background: [100]#2b2b2b
+
+! Tomorrow
+URxvt*background: [100]#ffffff
+! Tomorrow Night
+!URxvt*background: [100]#1d1f21
+
 
 ! ---------------------------------------------------------------
 ! ROFI Settings

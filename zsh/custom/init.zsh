@@ -28,16 +28,21 @@ alias calc="="
 alias uh="urxvt &"
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 alias xClass="xprop | grep WM_CLASS"
-alias srvup="sudo systemctl start httpd mysqld"
-alias srvdown="sudo systemctl stop httpd mysqld"
-alias zshrc="vim ~/.zshrc && source ~/.zshrc"
-alias i3conf="vim ~/.config/i3/config"
-alias xres="vim ~/.Xresources && xrdb ~/.Xresources"
-alias dhcpeth="sudo systemctl restart dhcpcd@enp0s31f6"
 alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.config/chromium-dev &"
 alias timer="/opt/activecollab-timer/activecollab-timer &"
-alias syncHome="sudo osync.sh ~/.dotfiles/osync/sync.conf"
 alias gp6="bash /opt/GuitarPro6/launcher.sh"
+
+# services
+alias srvup="sudo systemctl start httpd mysqld"
+alias srvdown="sudo systemctl stop httpd mysqld"
+alias dhcpeth="sudo systemctl restart dhcpcd@enp0s31f6"
+
+# osync
+alias syncHome="sudo osync.sh ~/.dotfiles/osync/sync.conf"
+
+# i3-style
+alias i3t="i3-style ~/.dotfiles/i3/base16-tomorrow.yaml -o ~/.config/i3/config --reload"
+alias i3tn="i3-style ~/.dotfiles/i3/base16-tomorrow-night.yaml -o ~/.config/i3/config --reload"
 
 # tmuxp sessions
 alias tph="tmuxp load ~/.config/tmuxp/dashboard_home.yaml"
