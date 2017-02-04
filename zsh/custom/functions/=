@@ -1,0 +1,3 @@
+# bc - An arbitrary precision calculator language
+
+echo "$@" | bc -l

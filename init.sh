@@ -7,15 +7,17 @@ function doIt() {
 
   # zsh
   rm -r ~/.zshrc
-  rm -r ~/.zprofile
-  rm -r ~/.zshenv
+  rm -r ~/.zlogin
   rm -r ~/.zimrc
+  rm -r ~/.zim/modules/custom
+  rm -r ~/.fpath
   ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
-  ln -s ~/.dotfiles/zsh/zprofile ~/.zprofile
-  ln -s ~/.dotfiles/zsh/zshenv ~/.zshenv
+  ln -s ~/.dotfiles/zsh/zlogin ~/.zlogin
   ln -s ~/.dotfiles/zsh/zimrc ~/.zimrc
   ln -s ~/.dotfiles/zsh/fpath ~/.fpath
+  ln -s ~/.dotfiles/zsh/custom ~/.zim/modules/custom
   # source ~/.zshrc
+  source ${ZDOTDIR:-${HOME}}/.zlogin
 
   # vim
   rm -r ~/.vimrc

@@ -1,0 +1,9 @@
+session_name: "dashboard"
+start_directory: "/home/hyshka"
+windows:
+  - window_name: dashboard
+    layout: even-vertical
+    panes:
+      - htop
+      - blank
+      - blank
