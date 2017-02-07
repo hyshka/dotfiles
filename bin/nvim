@@ -10,4 +10,4 @@ else
 fi
 
 # Run the docker command
-docker run -i -t -P -v "$dir_name":/src thornycrackers/neovim /bin/sh -c "cd /src;nvim $file_name"
+docker run -i -t -P -v "$dir_name":/src hyshka/neovim /bin/sh -c "cd /src;nvim $file_name"

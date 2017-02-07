@@ -9,10 +9,10 @@ URxvt.insecure: false
 !------------------------------------------------
 ! URXVT FONTS
 !------------------------------------------------
-URxvt.font:xft:Inconsolatazi4:size=12
-URxvt.boldFont:xft:Inconsolatazi4:bold:size=12
-URxvt.italicfont:xft:Inconsolatazi4:italic:size=12
-URxvt.bolditalicFont:xft:Inconsolatazi4:bold:italic:size=12
+URxvt.font:xft:DejaVuSansMono Nerd Font:style=Book:size=10
+URxvt.boldFont:xft:DejaVuSansMono Nerd Font:style=Bold:size=10
+URxvt.italicfont:xft:DejaVuSansMono Nerd Font:style=Oblique:size=10
+URxvt.bolditalicFont:xft:DejaVuSansMono Nerd Font:style=Bold Oblique:size=10
 !URxvt*letterSpace: 1
 URxvt*allow_bold: true
 

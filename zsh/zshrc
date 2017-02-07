@@ -12,7 +12,11 @@ export VISUAL=vim
 export EDITOR=vim
 export TERMINAL=urxvt
 if [ -n "$DISPLAY" ]; then
-    export BROWSER=firefox
+    if [ "$HOSTNAME" = brix ]; then
+        export BROWSER=chromium
+    else
+        export BROWSER=firefox
+    fi
 else
     export BROWSER=w3m
 fi
