@@ -8,7 +8,6 @@ Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'posva/vim-vue'
 Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
 Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic' " Syntax checking
@@ -60,7 +59,7 @@ Plug 'mattn/emmet-vim'
 "Plug 'digitaltoad/vim-pug'
 
 " Ack Plugin
-"Plug 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " Elixir Plugins
 "Plug 'elixir-lang/vim-elixir'

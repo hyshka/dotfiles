@@ -8,8 +8,8 @@ FPATH=$FPATH:$HOME/.fpath
 GOPATH=$HOME/.gocode
 
 # default apps
-export VISUAL=vim
-export EDITOR=vim
+export VISUAL=nvim
+export EDITOR=nvim
 export TERMINAL=urxvt
 if [ -n "$DISPLAY" ]; then
     if [ "$HOSTNAME" = brix ]; then
