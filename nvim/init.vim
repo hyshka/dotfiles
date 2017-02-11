@@ -8,7 +8,8 @@ Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'posva/vim-vue'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
+"Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
+Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'tpope/vim-commentary' " Better commenting commands
