@@ -23,6 +23,10 @@ function doIt() {
   rm -r ~/.vimrc
   ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 
+  # neovim
+  rm -r ~/.config/nvim
+  ln -s ~/.dotfiles/nvim ~/.config/nvim
+
   # x11
   rm -r ~/.Xresources
   ln -s ~/.dotfiles/x11/Xresources ~/.Xresources

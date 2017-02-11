@@ -1,2 +1,15 @@
-bin/sql-backup
 *.zwc
+*.swp
+*~
+nvim/plugged/*
+!nvim/plugged/.gitkeep
+nvim/nvim-files/backups/*
+!nvim/nvim-files/backups/.gitkeep
+nvim/nvim-files/swaps/*
+!nvim/nvim-files/swaps/.gitkeep
+.ctrlp_cache/
+.vimcache
+
+
+# secret
+bin/sql-backup
