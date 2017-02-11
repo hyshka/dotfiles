@@ -17,6 +17,10 @@ Plug 'ryanoasis/vim-devicons' " Dev icons
 Plug 'milkypostman/vim-togglelist' " toggle the location list
 Plug 'hyshka/vim-options' " Vim options
 
+" tmux
+Plug 'tmux-plugins/vim-tmux'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+
 "Plug 'tpope/vim-surround' " Helps with surrounding text
 "Plug 'terryma/vim-multiple-cursors'
 "Plug 'Shougo/unite.vim' " Provides yank history and buffer switching
