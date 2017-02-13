@@ -1,6 +1,6 @@
 if [ -z "$1" ]
 then
-    print This command requires an argument. Ex. tpo [projectname]
+    print This command requires an argument. Ex. tpd [projectname]
 else
     print $1
     PROJECT=$1 tmuxp load ~/.config/tmuxp/docker-project.yaml
