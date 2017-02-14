@@ -23,7 +23,7 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 "Plug 'tpope/vim-surround' " Helps with surrounding text
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 "Plug 'Shougo/unite.vim' " Provides yank history and buffer switching
 "Plug 'Shougo/vimproc.vim', { 'do': 'make' } " Vimproc because fucking unite needs it
 "Plug 'Shougo/neoyank.vim' " Provides yank history for unite
