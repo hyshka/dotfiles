@@ -6,45 +6,45 @@ function doIt() {
   ln -s ~/dotfiles/bin ~/.bin
 
   # zsh
-  rm -rf ~/.zshrc
-  rm -rf ~/.zlogin
-  rm -rf ~/.zimrc
-  rm -rf ~/.zim/modules/custom
-  rm -rf ~/.fpath
+  rm -f ~/.zshrc
+  rm -f ~/.zlogin
+  rm -f ~/.zimrc
+  rm -Rf ~/.zim/modules/custom
+  rm -f ~/.fpath
   ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
   ln -s ~/dotfiles/zsh/zlogin ~/.zlogin
   ln -s ~/dotfiles/zsh/zimrc ~/.zimrc
   ln -s ~/dotfiles/zsh/fpath ~/.fpath
   ln -s ~/dotfiles/zsh/custom ~/.zim/modules/custom
   # source ~/.zshrc
-  source ${ZDOTDIR:-${HOME}}/.zlogin
+  # source ${ZDOTDIR:-${HOME}}/.zlogin
 
   # vim
-  rm -rf ~/.vimrc
+  rm -f ~/.vimrc
   ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 
   # neovim
-  rm -rf ~/.config/nvim
+  rm -Rf ~/.config/nvim
   ln -s ~/dotfiles/nvim ~/.config/nvim
 
   # x11
-  rm -rf ~/.Xresources
+  rm -f ~/.Xresources
   ln -s ~/dotfiles/x11/Xresources ~/.Xresources
   xrdb ~/.Xresources
 
   # ranger
   mkdir -p ~/.config/ranger/colorschemes
-  rm -rf ~/.config/ranger/rc.conf
-  rm -rf ~/.config/ranger/bookmarks
+  rm -f ~/.config/ranger/rc.conf
+  rm -f ~/.config/ranger/bookmarks
   ln -s ~/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
   ln -s ~/dotfiles/ranger/bookmarks ~/.config/ranger/bookmarks
 
   # i3
   mkdir -p ~/.config/i3
-  rm -rf ~/.config/i3/i3status.conf
-  rm -rf ~/.config/i3/config
-  rm -rf ~/.config/i3/compton.conf
-  rm -rf ~/.config/i3/base16-railscasts.yaml
+  rm -f ~/.config/i3/i3status.conf
+  rm -f ~/.config/i3/config
+  rm -f ~/.config/i3/compton.conf
+  rm -f ~/.config/i3/base16-railscasts.yaml
   if [ "$HOSTNAME" = brix ]; then
     ln -s ~/dotfiles/i3/config_brix ~/.config/i3/config
     ln -s ~/dotfiles/i3/i3status_brix ~/.config/i3/i3status.conf
@@ -56,21 +56,22 @@ function doIt() {
   ln -s ~/dotfiles/i3/base16-railscasts.yaml ~/.config/i3/base16-railscasts.yaml
 
   # git
-  rm -rf ~/.gitconfig
-  rm -rf ~/.gitignore
+  rm -f ~/.gitconfig
+  rm -f ~/.gitignore
   ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
   ln -s ~/dotfiles/git/gitignore ~/.gitignore
 
   # tmux
-  rm ~/.tmux.conf
+  rm -f ~/.tmux.conf
+  rm -Rf ~/.config/tmuxp
   ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-  ln -s ~/dotfiles/tmux/tmuxp ~/.config
+  ln -s ~/dotfiles/tmux/tmuxp ~/.config/tmuxp
 
   # subl3
   mkdir -p ~/.config/sublime-text-3/Packages/User
-  rm -rf ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
-  rm -rf ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-  rm -rf ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
+  rm -f ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
+  rm -f ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+  rm -f ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
   ln -s ~/dotfiles/subl3/'Default (Linux).sublime-keymap' ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
   ln -s ~/dotfiles/subl3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
   ln -s ~/dotfiles/subl3/ColorHighlighter.sublime-settings ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings

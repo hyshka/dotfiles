@@ -11,6 +11,7 @@ windows:
   - window_name: docker
     layout: even-vertical
     panes:
-      - workon $(tmux display-message -p '#S')
-      - workon $(tmux display-message -p '#S')
+      #- workon $(tmux display-message -p '#S')
+      - blank
+      - blank
       - blank
