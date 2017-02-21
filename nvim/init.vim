@@ -17,6 +17,7 @@ Plug 'ryanoasis/vim-devicons' " Dev icons
 Plug 'milkypostman/vim-togglelist' " toggle the location list
 Plug 'chrisbra/colorizer' " color highlighting
 Plug 'hyshka/vim-options' " Vim options
+Plug 'tweekmonster/django-plus.vim'
 
 " tmux
 Plug 'tmux-plugins/vim-tmux'
