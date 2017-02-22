@@ -19,7 +19,7 @@ URxvt*allow_bold: true
 !------------------------------------------------
 ! URXVT PERL EXTENSIONS
 !------------------------------------------------
-URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 
 !------------------------------------------------
 ! URXVT ENABLE LINK SUPPORT
@@ -34,11 +34,13 @@ URxvt.keysym.M-Delete: perl:matcher:list
 !------------------------------------------------
 URxvt.iso14755: false
 URxvt.iso14755_52: false
-URxvt.keysym.C-S-C: perl:clipboard:copy
-URxvt.keysym.C-S-V: perl:clipboard:paste
-URxvt.keysym.C-S-W: perl:clipboard:paste_escaped
-URxvt.clipboard.copycmd:  xsel -ib
-URxvt.clipboard.pastecmd: xsel -ob
+!URxvt.keysym.C-S-C: perl:clipboard:copy
+!URxvt.keysym.C-S-V: perl:clipboard:paste
+!URxvt.keysym.C-S-W: perl:clipboard:paste_escaped
+!URxvt.clipboard.copycmd:  xsel -ib
+!URxvt.clipboard.pastecmd: xsel -ob
+URxvt.keysym.C-S-C: eval:selection_to_clipboard
+URxvt.keysym.C-S-V: eval:paste_clipboard
 
 !------------------------------------------------
 ! URXVT SCROLLBAR AND CURSOR STYLE
