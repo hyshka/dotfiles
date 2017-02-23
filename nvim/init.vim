@@ -23,6 +23,11 @@ Plug 'tweekmonster/django-plus.vim'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
+" frontend
+Plug 'pangloss/vim-javascript'
+Plug 'mattn/emmet-vim'
+
+
 "Plug 'tpope/vim-surround' " Helps with surrounding text
 "Plug 'terryma/vim-multiple-cursors'
 "Plug 'Shougo/unite.vim' " Provides yank history and buffer switching
@@ -44,9 +49,6 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 "endfunction
 "Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 "Plug 'zchee/deoplete-jedi'
-
-" HTML Plugins
-Plug 'mattn/emmet-vim'
 
 " Markdown Plugins
 "Plug 'plasticboy/vim-markdown' " Syntax highlighting

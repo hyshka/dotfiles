@@ -1,4 +1,4 @@
-#compdef tlo
+#compdef tpd
 
 local -a options
 options=$(ls -l --time-style="long-iso" ~/Lift | egrep '^d' | awk '{print $8}')
