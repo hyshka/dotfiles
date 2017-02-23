@@ -35,11 +35,10 @@ if [[ -s /usr/bin/virtualenvwrapper.sh ]]; then
   source /usr/bin/virtualenvwrapper.sh
 fi
 
-# node version manage
-if [[ -s /usr/share/nvm/nvm.sh ]]; then
+# node version manager
+if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
   export NVM_DIR="$HOME/.nvm"
-  source /usr/share/nvm/nvm.sh
-  source /usr/share/nvm/install-nvm-exec
+  source "$NVM_DIR/nvm.sh"
 fi
 
 # ruby version manager

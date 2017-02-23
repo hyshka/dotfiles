@@ -30,7 +30,7 @@ function doIt() {
   # x11
   rm -f ~/.Xresources
   ln -s ~/dotfiles/x11/Xresources ~/.Xresources
-  xrdb ~/.Xresources
+  # xrdb ~/.Xresources
 
   # ranger
   mkdir -p ~/.config/ranger/colorschemes
