@@ -10,4 +10,4 @@ exec_always --no-startup-id setroot --restore
 ####
 
 # reload the configuration file
-bindsym $mod+Shift+c exec "cat ~/.config/i3/colors ~/.config/i3/base ~/.config/i3/config_brix > ~/.config/i3/config && i3-msg reload"
+bindsym $mod+Shift+c exec "cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_brix > ~/.config/i3/config && i3-msg reload"

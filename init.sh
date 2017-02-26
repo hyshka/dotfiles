@@ -46,10 +46,10 @@ function doIt() {
   rm -f ~/.config/i3/compton.conf
   rm -f ~/.config/i3/base16-railscasts.yaml
   if [ "$HOSTNAME" = brix ]; then
-    cat ~/.config/i3/colors ~/.config/i3/base ~/.config/i3/config_brix > ~/.config/i3/config
+    cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_brix > ~/.config/i3/config
     ln -s ~/dotfiles/i3/i3status_brix ~/.config/i3/i3status.conf
   else
-    cat ~/.config/i3/colors ~/.config/i3/base ~/.config/i3/config_w520 > ~/.config/i3/config
+    cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_w520 > ~/.config/i3/config
     ln -s ~/dotfiles/i3/i3status_w520 ~/.config/i3/i3status.conf
   fi
   ln -s ~/dotfiles/i3/compton.conf ~/.config/i3/compton.conf
