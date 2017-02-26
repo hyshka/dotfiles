@@ -1,8 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 
-# This will run reflector on mirrorlist, copying from backup first, overwriting
+# This will run reflector, overwriting mirrorlist 
+reflector \
+    --age 1 \ # have been synced within last hour
+    --protocol http \ # http or https
+    --protocol https \
+    --sort rate \ # sort by speed
+    --number 5 \ # only return list of 5
+    --save /etc/pacman.d/mirrorlist
 
-sudo curl -o /etc/pacman.d/mirrorlist.backup https://www.archlinux.org/mirrorlist/all/
-sudo cp /etc/pacman.d/mirrorlist.backup /etc/pacman.d/mirrorlist
-sudo reflector -l 100 -n 10 -p http --sort rate --save /etc/pacman.d/mirrorlist
-
+# Remove mirrorlist pacnew if it got added from upgrade
+if [[ -f /etc/pacman.d/mirrorlist.pacnew ]]; then
+    rm /etc/pacman.d/mirrorlist.pacnew
+fi
