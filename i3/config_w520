@@ -1,5 +1,5 @@
 # autostarts
-exec --no-startup-id compton --config ~/.config/compton.conf -b
+#exec --no-startup-id compton --config ~/.config/compton.conf -b
 exec_always --no-startup-id setroot --restore
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift
