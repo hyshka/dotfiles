@@ -3,42 +3,48 @@
 "----------------------------------------------------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
-" General Plugins
-Plug 'tpope/vim-sensible'
-Plug 'chriskempson/base16-vim'
-Plug 'posva/vim-vue'
+" big ticket items
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic' " Syntax checking
-Plug 'tpope/vim-commentary' " Better commenting commands
-Plug 'tpope/vim-fugitive' " Git integration with vim
-Plug 'ryanoasis/vim-devicons' " Dev icons
+Plug 'ryanoasis/vim-devicons' " Dev icons, needs to be after ctrlp, nerdtree, etc.
+
+" General Plugins
 Plug 'milkypostman/vim-togglelist' " toggle the location list
-Plug 'chrisbra/colorizer' " color highlighting
-Plug 'hyshka/vim-options' " Vim options
-Plug 'tweekmonster/django-plus.vim'
+Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
+Plug 'mileszs/ack.vim'
+
+" colortheme
+Plug 'chriskempson/base16-vim'
 
 " tmux
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
+" django
+Plug 'tweekmonster/django-plus.vim'
+
 " frontend
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
+Plug 'posva/vim-vue'
+Plug 'chrisbra/colorizer' " color highlighting
 
+" tim pope
+Plug 'tpope/vim-sensible' " Provides base config
+Plug 'tpope/vim-commentary' " Better commenting commands
+Plug 'tpope/vim-fugitive' " Git integration with vim
+Plug 'tpope/vim-surround' " Helps with surrounding text
 
-"Plug 'tpope/vim-surround' " Helps with surrounding text
+" my settings
+Plug 'hyshka/vim-options' " Vim options
+
+" old
 "Plug 'terryma/vim-multiple-cursors'
 "Plug 'Shougo/unite.vim' " Provides yank history and buffer switching
 "Plug 'Shougo/vimproc.vim', { 'do': 'make' } " Vimproc because fucking unite needs it
 "Plug 'Shougo/neoyank.vim' " Provides yank history for unite
-"Plug 'SirVer/ultisnips' | Plug 'thornycrackers/vim-snippets' " Snippets
-"Plug 'ervandew/supertab' " Supertab for awesome tabbing
-"Plug 'godlygeek/tabular' " Lines up code awesome
 "Plug 'jamessan/vim-gnupg' " Loads encrypted files by asking for password
-"Plug 'gcmt/taboo.vim' " Rename Tabs
-""Plug 'ryanoasis/vim-devicons', { 'tag': '0.8.0' } " Dev icons
 "Plug 'rizzatti/dash.vim' " Dash Functionality
 "Plug 'bkad/CamelCaseMotion' " Camel Case based motions
 "Plug 'tmhedberg/SimpylFold' " Folding for python
@@ -65,12 +71,6 @@ Plug 'mattn/emmet-vim'
 "Plug 'gavocanov/vim-js-indent'
 "Plug 'sidorares/node-vim-debugger'
 "Plug 'digitaltoad/vim-pug'
-
-" Ack Plugin
-Plug 'mileszs/ack.vim'
-
-" Elixir Plugins
-"Plug 'elixir-lang/vim-elixir'
 
 " Add plugins to &runtimepath
 call plug#end()
