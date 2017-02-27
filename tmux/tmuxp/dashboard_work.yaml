@@ -7,4 +7,4 @@ windows:
     panes:
       - htop
       - weechat
-      - tmux split-window -h
+      - tmux split-window -h; gcalcli calw 2
