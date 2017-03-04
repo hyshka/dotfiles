@@ -15,6 +15,7 @@ Plug 'mileszs/ack.vim' " Use ack to grep project directory
 Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'terryma/vim-multiple-cursors' " Multipe cursors, like the sublime feature
 Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
+Plug 'bkad/CamelCaseMotion' " Camel Case based motions
 "Plug 'tmhedberg/SimpylFold' " Folding for python
 Plug 'tpope/vim-commentary' " Better commenting commands
 Plug 'tpope/vim-fugitive' " Git integration with vim
