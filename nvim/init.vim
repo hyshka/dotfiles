@@ -13,6 +13,7 @@ Plug 'ryanoasis/vim-devicons' " Dev icons, needs to be after ctrlp, nerdtree, et
 Plug 'milkypostman/vim-togglelist' " toggle the location list
 Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
 Plug 'mileszs/ack.vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " colortheme
 Plug 'chriskempson/base16-vim'
@@ -32,12 +33,22 @@ Plug 'chrisbra/colorizer' " color highlighting
 
 " tim pope
 Plug 'tpope/vim-sensible' " Provides base config
-Plug 'tpope/vim-commentary' " Better commenting commands
-Plug 'tpope/vim-fugitive' " Git integration with vim
-Plug 'tpope/vim-surround' " Helps with surrounding text
+
+" vim-surround: s is a text-object for delimiters; ss linewise
+" ys to add surround
+Plug 'tpope/vim-surround'
+
+" vim-commentary: gc is an operator to toggle comments; gcc linewise
+Plug 'tpope/vim-commentary'
+
+" vim-repeat: make vim-commentary and vim-surround work with .
+Plug 'tpope/vim-repeat'
+
+" Git integration with vim
+Plug 'tpope/vim-fugitive'
 
 " my settings
-Plug 'hyshka/vim-options' " Vim options
+Plug 'hyshka/vim-options'
 
 " old
 "Plug 'terryma/vim-multiple-cursors'
