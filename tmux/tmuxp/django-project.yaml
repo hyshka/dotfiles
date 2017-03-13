@@ -1,5 +1,5 @@
 session_name: "${PROJECT}"
-start_directory: "/home/hyshka/Lift/${PROJECT}"
+start_directory: "~/work/lift/${PROJECT}"
 windows:
   - window_name: code
     panes:
