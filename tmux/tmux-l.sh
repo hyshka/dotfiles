@@ -1,7 +1,6 @@
 #!/bin/sh
 
 read -n 1 input
-
 case $input in
     1 ) tmux select-layout even-horizontal ;;
     2 ) tmux select-layout even-vertical ;;
