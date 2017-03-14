@@ -28,7 +28,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events' " restore focusgained and focuslost au
 " Syntax highlighting / Themes / Indentation
 Plug 'chriskempson/base16-vim' " colorschemes
 Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
-"Plug 'plasticboy/vim-markdown' " It's got some cool stuff but dammit.
+Plug 'plasticboy/vim-markdown' " It's got some cool stuff but dammit.
 Plug 'stephpy/vim-yaml'
 Plug 'hdima/python-syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
