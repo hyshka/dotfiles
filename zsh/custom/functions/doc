@@ -1,0 +1,9 @@
+if [ -z "$1" ]
+then
+    print This command requires an argument. Ex. doc [containername]
+else
+    URL="http://$(docker port surehire_backend | awk '{ print $3 }' | sed 's/0.0.0.0/localhost/g')"
+
+    print Opening $1 at ${URL} in Chromium...
+    chromium ${URL}
+fi
