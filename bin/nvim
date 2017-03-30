@@ -10,4 +10,4 @@ else
 fi
 
 # Run the docker command
-docker run -it -P -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v "$dir_name":/src hyshka/neovim /bin/sh -c "cd /src;nvim $file_name"
+docker run -it -P -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v "$dir_name":/src --name neovim hyshka/neovim /bin/sh -c "cd /src;nvim $file_name"
