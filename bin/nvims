@@ -10,4 +10,4 @@ else
 fi
 
 # Run the docker command with host permissions
-docker run --userns="host" -i -t -P -v "$dir_name":/src --name neovim hyshka/neovim /bin/sh -c "cd /src;nvim $file_name"
+docker run --userns="host" -i -t -P -v "$dir_name":/src hyshka/neovim /bin/sh -c "cd /src;nvim $file_name"
