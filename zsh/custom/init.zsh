@@ -31,6 +31,7 @@ alias xClass="xprop | grep WM_CLASS"
 alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.config/chromium-dev &"
 alias timer="/opt/activecollab-timer/activecollab-timer &"
 alias gp6="bash /opt/GuitarPro6/launcher.sh"
+alias remo="TERM=tmux-256color ssh linode"
 
 # services
 alias srvup="sudo systemctl start httpd mysqld"
