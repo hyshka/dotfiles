@@ -14,14 +14,14 @@
 
 zmodules=( \
     # behaviour modules
-	directory environment history input \
-	history-substring-search prompt spectrum syntax-highlighting \
+  directory environment history input \
+  history-substring-search prompt spectrum syntax-highlighting \
     # productivity modules
-	archive git ssh utility meta fasd custom \
+  archive git ssh utility meta fasd custom \
     # distro-specific modules
-	pacman \
-	# completion needs to be last but is a behaviour module
-	completion )
+  pacman \
+  # completion needs to be last but is a behaviour module
+  completion )
 
 
 ###################

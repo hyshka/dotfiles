@@ -31,15 +31,12 @@ alias xClass="xprop | grep WM_CLASS"
 alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.config/chromium-dev &"
 alias timer="/opt/activecollab-timer/activecollab-timer &"
 alias gp6="bash /opt/GuitarPro6/launcher.sh"
-alias remo="TERM=tmux-256color ssh linode"
+alias remo="TERM=screen-256color ssh linode"
 
 # services
 alias srvup="sudo systemctl start httpd mysqld"
 alias srvdown="sudo systemctl stop httpd mysqld"
 alias dhcpeth="sudo systemctl restart dhcpcd@enp0s31f6"
-
-# osync
-alias syncHome="sudo osync.sh ~/.dotfiles/osync/sync.conf"
 
 # i3-style
 alias i3t="i3-style ~/.dotfiles/i3/base16-tomorrow.yaml -o ~/.config/i3/config --reload"
@@ -51,7 +48,7 @@ alias tpw="tmuxp load ~/.config/tmuxp/dashboard_work.yaml"
 alias tpdot="tmuxp load ~/.config/tmuxp/dotfiles.yaml"
 
 # django-admin.py
-alias dja=django-admin.py
+alias dj=django-admin.py
 alias djr='django-admin.py runserver'
 alias djrp='django-admin.py runserver_plus'
 alias djr2='django-admin.py runserver 127.0.0.1:8080'
@@ -76,12 +73,6 @@ alias pi="pip install"
 alias pu="pip uninstall"
 alias pf="pip freeze"
 alias pfg="pip freeze | grep"
-
-# yaourt
-alias y="yaourt --nameonly --pager --color"
-alias yu="yaourt --nameonly --pager --color -Syua"
-alias ys="yaourt --nameonly --pager --color -Ss"
-alias yi="yaourt --nameonly --pager --color -Sy"
 
 # git shortcuts (mostly in zim module)
 alias gch="git cherry-pick"
