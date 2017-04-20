@@ -148,7 +148,7 @@ for_window [class="URxvt" instance="tty-clock"] fullscreen enable
 #for_window [instance="scratchpad"] move window to scratchpad, scratchpad show
 
 # application workspaces
-assign [class="URxvt"] $WS1
+# assign [class="URxvt"] $WS1
 assign [class="Firefox"] $WS3
 assign [class="Chromium"] $WS4
 assign [class="Subl3"] $WS2
