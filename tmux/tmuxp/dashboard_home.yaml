@@ -7,4 +7,4 @@ windows:
     panes:
       - htop
       - blank
-      - tmux split-window -h
+      - tmux split-window -h; clear
