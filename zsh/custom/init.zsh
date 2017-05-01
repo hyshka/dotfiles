@@ -33,6 +33,7 @@ alias timer="/opt/activecollab-timer/activecollab-timer &"
 alias gp6="bash /opt/GuitarPro6/launcher.sh"
 alias remo="TERM=screen-256color ssh linode"
 alias makepkgfast="BUILDDIR=/tmp/makepkg makepkg"
+alias cala="gcalcli agenda"
 
 # services
 alias srvup="sudo systemctl start httpd mysqld"
