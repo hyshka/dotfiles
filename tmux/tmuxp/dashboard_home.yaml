@@ -1,8 +1,7 @@
 session_name: "dashboard"
-start_directory: "/home/hyshka"
+start_directory: "${HOME}"
 windows:
   - window_name: live
-    start_directory: '~'
     layout: even-vertical
     panes:
       - htop

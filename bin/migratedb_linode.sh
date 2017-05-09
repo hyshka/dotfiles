@@ -12,18 +12,19 @@
 #   x: Debug, print commands as they are executed
 set -eu
 
+DATABASE=$1
+ORIGIN_HOST=$2
+DESTINATION_HOST=$3
+
 # Main loop of program
 main() {
-  DATABASE=$1
-  ORIGIN_HOST=$2
-  DESTINATION_HOST=$3
   TIMESTAMP=$(date +%F)
 
   # dump database from origin
-  ssh -t $2 'bash -c "sudo -u postgres bash -c \"pg_dump -d $DATABASE > /tmp/$DATABASE-$TIMESTAMP.sql\""'
+  ssh -t $ORIGIN_HOST "bash -c \"sudo -u postgres bash -c \"pg_dump --no-owner -d $DATABASE > /tmp/$DATABASE-$TIMESTAMP.sql\"\""
 
   # scp database to destination
-  scp -3 $2:/tmp/$DATABASE-$TIMESTAMP.sql $3:/tmp/$DATABASE-$TIMESTAMP.sql
+  scp -3 $ORIGIN_HOST:/tmp/$DATABASE-$TIMESTAMP.sql $DESTINATION_HOST:/tmp/$DATABASE-$TIMESTAMP.sql
 }
 main
 

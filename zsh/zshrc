@@ -3,7 +3,7 @@
 #####################
 
 # setup paths
-PATH=./node_modules/.bin:$HOME/.bin:$PATH:/bin:$HOME/.rvm/bin
+PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/.bin:$HOME/.local/bin:$PATH
 FPATH=$FPATH:$HOME/.fpath
 GOPATH=$HOME/.gocode
 

@@ -1,40 +1,79 @@
-[alias]
-	wow = log --all --graph --decorate --oneline --simplify-by-decoration
-
-[color]
-	ui = true
-
 [user]
-	name = Bryan Hyshka
-	email = bryan@hyshka.com
+  name = Bryan Hyshka
+  email = bryan@hyshka.com
 
-[color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+[alias]
+  prune = fetch --prune
+  # Because I constantly forget how to do this
+  # https://git-scm.com/docs/git-fetch#git-fetch--p
 
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  undo = reset --soft HEAD^
+  # Not quite as common as an amend, but still common
+  # https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
 
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+  stash-all = stash save --include-untracked
+  # We wanna grab those pesky un-added files!
+  # https://git-scm.com/docs/git-stash
+
+[merge]
+  ff = only
+  # I pretty much never mean to do a real merge, since I use a rebase workflow.
+  # Note: this global option applies to all merges, including those done during a git pull
+  # https://git-scm.com/docs/git-config#git-config-mergeff
+
+  conflictstyle = diff3
+  # Standard diff is two sets of final changes. This introduces the original text before each side's changes.
+  # https://git-scm.com/docs/git-config#git-config-mergeconflictStyle
+
+  tool = vimdiff
+
+[mergetool "diffconflicts"]
+  cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+  trustExitCode = true
+  keepBackup = false
+  # http://vim.wikia.com/wiki/A_better_Vimdiff_Git_mergetool
+
+[commit]
+  gpgSign = true
+  # "other people can trust that the changes you've made really were made by you"
+  # https://help.github.com/articles/about-gpg/
+  # https://git-scm.com/docs/git-config#git-config-commitgpgSign
 
 [push]
-	default = simple
-[core]
-	autocrlf = false
+  default = simple
+  # "push the current branch back to the branch whose changes are usually integrated into the current branch"
+  # "refuse to push if the upstream branch’s name is different from the local one"
+  # https://git-scm.com/docs/git-config#git-config-pushdefault
+
+  followTags = true
+  # Because I get sick of telling git to do it manually
+  # https://git-scm.com/docs/git-config#git-config-pushfollowTags
+
+[status]
+  showUntrackedFiles = all
+  # Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
+  # https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
+
+[transfer]
+  fsckobjects = true
+  # To combat repository corruption!
+  # Note: this global option applies during receive and transmit
+  # https://git-scm.com/docs/git-config#git-config-transferfsckObjects
+  # via https://groups.google.com/forum/#!topic/binary-transparency/f-BI4o8HZW0
+
+[diff]
+  tool = icdiff
+
+[difftool]
+  prompt = false
+
+[difftool "icdiff"]
+  cmd = /usr/bin/icdiff --line-numbers $LOCAL $REMOTE
+  # A nice little github-like colorful, split diff right in the console.
+  # via http://owen.cymru/github-style-diff-in-terminal-with-icdiff/
+
 [credential]
-	helper = cache --timeout=3600
-[merge]
-	tool = vimdiff
-[mergetool "diffconflicts"]
-	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
-	trustExitCode = true
-	keepBackup = false
-[mergetool]
-	keepBackup = false
+  helper = cache --timeout=3600
+  # Helper to temporarily store passwords in memory
+  # Cache credentials for 1 hr
+  # https://git-scm.com/docs/git-credential-cache
