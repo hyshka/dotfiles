@@ -67,6 +67,11 @@ function doIt() {
   ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
   ln -s ~/dotfiles/tmux/tmuxp ~/.config/tmuxp
 
+  # gnupg
+  rm -f ~/.gnupg/gpg-agent.conf
+  mkdir -p ~/.gnupg
+  ln -s ~/dotfiles/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+
   # subl3
   mkdir -p ~/.config/sublime-text-3/Packages/User
   rm -f ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
