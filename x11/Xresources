@@ -19,7 +19,7 @@
 #define base0F #a3685a
 
 *.foreground:   base05
-*.background:   base00
+*.background:   [80]base00
 *.cursorColor:  base05
 
 *.color0:       base00
@@ -114,7 +114,7 @@ URxvt*internalBorder: 10
 URxvt*depth: 32
 
 ! Tomorrow
-URxvt*background: [100]#ffffff
+URxvt*background: [80]#ffffff
 ! Tomorrow Night
 !URxvt*background: [100]#1d1f21
 
