@@ -114,7 +114,7 @@ URxvt*internalBorder: 10
 URxvt*depth: 32
 
 ! Tomorrow
-URxvt*background: [80]#ffffff
+!URxvt*background: [80]#ffffff
 ! Tomorrow Night
 !URxvt*background: [100]#1d1f21
 
