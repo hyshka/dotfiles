@@ -96,16 +96,16 @@ URxvt.keysym.C-S-V: eval:paste_clipboard
 !------------------------------------------------
 ! URXVT SCROLLBAR AND CURSOR STYLE
 !------------------------------------------------
-URxvt*saveLines: 300000
-URxvt.scrollBar: false
-URxvt*scrollstyle: plain
-URxvt.scrollBar_right: true
+URxvt*saveLines: 0
+URxvt*scrollBar: false
+!URxvt*scrollstyle: plain
+!URxvt.scrollBar_right: true
 URxvt*cursorBlink: true
 URxvt*cursorUnderline: true
 ! do not scroll with output
-URxvt*scrollTtyOutput: false
-URxvt*scrollWithBuffer: true
-URxvt*scrollTtyKeypress: true
+!URxvt*scrollTtyOutput: false
+!URxvt*scrollWithBuffer: true
+!URxvt*scrollTtyKeypress: true
 
 !------------------------------------------------
 ! URXVT VISUALS
