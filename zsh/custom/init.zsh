@@ -48,6 +48,7 @@ alias i3tn="i3-style ~/.dotfiles/i3/base16-tomorrow-night.yaml -o ~/.config/i3/c
 alias tph="tmuxp load ~/.config/tmuxp/dashboard_home.yaml"
 alias tpw="tmuxp load ~/.config/tmuxp/dashboard_work.yaml"
 alias tpdot="tmuxp load ~/.config/tmuxp/dotfiles.yaml"
+alias tppg="tmuxp load ~/.config/tmuxp/postgres.yaml"
 
 # django-admin.py
 alias dj=django-admin.py
