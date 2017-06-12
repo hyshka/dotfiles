@@ -49,6 +49,7 @@ alias tph="tmuxp load ~/.config/tmuxp/dashboard_home.yaml"
 alias tpw="tmuxp load ~/.config/tmuxp/dashboard_work.yaml"
 alias tpdot="tmuxp load ~/.config/tmuxp/dotfiles.yaml"
 alias tppg="tmuxp load ~/.config/tmuxp/postgres.yaml"
+alias tpsp="tmuxp load ~/.config/tmuxp/scratchpad.yaml"
 
 # django-admin.py
 alias dj=django-admin.py
