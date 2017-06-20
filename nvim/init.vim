@@ -41,6 +41,7 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'chrisbra/colorizer' " highlight colors
 Plug 'tweekmonster/django-plus.vim' " django python+html indent, completions, syntax
 Plug 'tmux-plugins/vim-tmux' " syntax, commentstring fix, and some extras
+Plug 'posva/vim-vue'
 
 " My custom options
 Plug 'hyshka/vim-options'
