@@ -42,7 +42,7 @@ zprompt_theme='lean'
 
 # set an optional host-specific filename for the completion cache file
 # if none is provided, the default '.zcompdump' is used.
-#zcompdump_file=".zcompdump-${HOST}-${ZSH_VERSION}"
+zcompdump_file=".zcompdump-${HOST}-${ZSH_VERSION}"
 
 
 #
