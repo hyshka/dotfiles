@@ -23,6 +23,8 @@ Plug 'tpope/vim-repeat' " make vim-commentary and vim-surround work with .
 Plug 'milkypostman/vim-togglelist' " toggle the location and quickfix lists
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tmux-plugins/vim-tmux-focus-events' " restore focusgained and focuslost autocommands
+Plug 'wincent/vim-clipper' " shorcuts for clipper integration
+
 
 " Syntax highlighting / Themes / Indentation
 Plug 'chriskempson/base16-vim' " colorschemes

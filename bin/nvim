@@ -1,5 +1,15 @@
 #!/bin/bash
-# Command for running neovim
+# vim: set filetype=sh :
+
+# Purpose: Command for running neovim
+#
+# Set options:
+#   e: Stop script if command fails
+#   u: Stop script if unset variable is referenced
+#   x: Debug, print commands as they are executed
+#set -eu
+
+IMAGENAME=hyshka/neovim
 
 if [[ "$1" = /* ]]; then
   file_name="$(basename ${1})"
@@ -10,4 +20,4 @@ else
 fi
 
 # Run the docker command
-docker run -it -P -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v "$dir_name":/src hyshka/neovim /bin/sh -c "cd /src;nvim $file_name"
+docker run -i -t -P -v ~/.clipper.sock:/root/.clipper.sock -v "$dir_name":/src $IMAGENAME /bin/sh -c "cd /src;nvim $file_name"

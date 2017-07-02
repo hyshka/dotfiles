@@ -35,6 +35,9 @@ alias remo="TERM=screen-256color ssh linode"
 alias makepkgfast="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
 
+# clipboard
+alias clip="nc -NU ~/.clipper.sock"
+
 # services
 alias srvup="sudo systemctl start httpd mysqld"
 alias srvdown="sudo systemctl stop httpd mysqld"
