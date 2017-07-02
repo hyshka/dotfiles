@@ -72,6 +72,10 @@ function doIt() {
   mkdir -p ~/.gnupg
   ln -s ~/dotfiles/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 
+  # clipper
+  rm -rf ~/.config/clipper
+  ln -s ~/dotfiles/clipper ~/.config/clipper
+
   # subl3
   mkdir -p ~/.config/sublime-text-3/Packages/User
   rm -f ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
