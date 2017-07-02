@@ -19,7 +19,7 @@
 #define base0F #a3685a
 
 *.foreground:   base05
-*.background:   [100]base00
+*.background:   base00
 *.cursorColor:  base05
 
 *.color0:       base00
@@ -85,11 +85,6 @@ URxvt.keysym.M-Delete: perl:matcher:list
 !------------------------------------------------
 URxvt.iso14755: false
 URxvt.iso14755_52: false
-!URxvt.keysym.C-S-C: perl:clipboard:copy
-!URxvt.keysym.C-S-V: perl:clipboard:paste
-!URxvt.keysym.C-S-W: perl:clipboard:paste_escaped
-!URxvt.clipboard.copycmd:  xsel -ib
-!URxvt.clipboard.pastecmd: xsel -ob
 URxvt.keysym.C-S-C: eval:selection_to_clipboard
 URxvt.keysym.C-S-V: eval:paste_clipboard
 
@@ -98,8 +93,6 @@ URxvt.keysym.C-S-V: eval:paste_clipboard
 !------------------------------------------------
 URxvt*saveLines: 0
 URxvt*scrollBar: false
-!URxvt*scrollstyle: plain
-!URxvt.scrollBar_right: true
 URxvt*cursorBlink: true
 URxvt*cursorUnderline: true
 ! do not scroll with output
@@ -112,12 +105,7 @@ URxvt*cursorUnderline: true
 !------------------------------------------------
 URxvt*internalBorder: 10
 URxvt*depth: 32
-
-! Tomorrow
-!URxvt*background: [80]#ffffff
-! Tomorrow Night
-!URxvt*background: [100]#1d1f21
-
+URxvt*background: base00
 
 ! ---------------------------------------------------------------
 ! ROFI Settings
