@@ -15,7 +15,6 @@ Plug 'mileszs/ack.vim' " Use ack to grep project directory
 Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
-"Plug 'tmhedberg/SimpylFold' " Folding for python
 Plug 'tpope/vim-commentary' " Better commenting commands
 Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
@@ -30,6 +29,7 @@ Plug 'wincent/vim-clipper' " shorcuts for clipper integration
 Plug 'chriskempson/base16-vim' " colorschemes
 Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
 Plug 'plasticboy/vim-markdown' " It's got some cool stuff but dammit.
+Plug 'othree/html5.vim' " Has a bit more than the default html highlighting
 Plug 'stephpy/vim-yaml'
 Plug 'hdima/python-syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
