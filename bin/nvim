@@ -20,4 +20,4 @@ else
 fi
 
 # Run the docker command
-docker run -i -t -P -v ~/.clipper.sock:/root/.clipper.sock -v "$dir_name":/src $IMAGENAME /bin/sh -c "cd /src;nvim $file_name"
+docker run --userns="host" -i -t -P -v ~/.clipper.sock:/root/.clipper.sock -v "$dir_name":/src $IMAGENAME /bin/sh -c "cd /src;nvim $file_name"
