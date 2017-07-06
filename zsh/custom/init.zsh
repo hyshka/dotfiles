@@ -31,7 +31,7 @@ alias xClass="xprop | grep WM_CLASS"
 alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.config/chromium-dev &"
 alias timer="/opt/active-collab-timer/Active\ Collab\ Timer"
 alias gp6="bash /opt/GuitarPro6/launcher.sh"
-alias remo="TERM=screen-256color ssh linode"
+alias remo="ssh linode"
 alias makepkgfast="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
 
