@@ -1,0 +1,10 @@
+if [ -z "$1" ]
+then
+    print "This command requires an argument. Ex. stl [port] [host, default:linode]"
+else
+    PORT=${1}
+    HOST=${2:-linode}
+    print "Tunnelling port ${PORT} locally to ${HOST}"
+
+    ssh -NT -L 0.0.0.0:${PORT}:localhost:${PORT} ${HOST}
+fi
