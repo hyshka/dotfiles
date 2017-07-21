@@ -1,0 +1,13 @@
+if [ -z "$1" ]
+then
+    print "This command requires an argument. Ex. stlo [port] [host, default:linode]"
+else
+    PORT=${1}
+    HOST=${2:-linode}
+    URL="http://localhost:${PORT}"
+
+    print "Tunnelling port ${PORT} locally to ${HOST} and opening ${URL} in chromium"
+
+    chromium ${URL}
+    ssh -NT -L 0.0.0.0:${PORT}:localhost:${PORT} ${HOST}
+fi
