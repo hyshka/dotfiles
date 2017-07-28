@@ -36,7 +36,7 @@ alias makepkgfast="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
 
 # clipboard
-alias clip="nc -NU ~/.clipper.sock"
+alias clip="nc -N localhost 8377"
 
 # services
 alias srvup="sudo systemctl start httpd mysqld"
