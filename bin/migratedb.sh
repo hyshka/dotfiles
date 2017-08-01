@@ -21,7 +21,7 @@ main() {
   TIMESTAMP=$(date +%F)
 
   # dump database from origin
-  ssh -t $ORIGIN_HOST "bash -c \"sudo -u postgres bash -c \"pg_dump --no-owner -d $DATABASE > /tmp/$DATABASE-$TIMESTAMP.sql\"\""
+  ssh -t $ORIGIN_HOST "bash -c 'sudo -u postgres bash -c \"pg_dump --no-owner -d $DATABASE > /tmp/$DATABASE-$TIMESTAMP.sql\"'"
 
   # scp database to destination
   scp -3 $ORIGIN_HOST:/tmp/$DATABASE-$TIMESTAMP.sql $DESTINATION_HOST:/tmp/$DATABASE-$TIMESTAMP.sql
