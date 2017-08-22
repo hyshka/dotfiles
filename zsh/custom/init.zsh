@@ -22,7 +22,6 @@ bindkey -v
 alias sx=startx
 alias vi=vim
 alias t=tmux
-alias calc="="
 
 # custom commands
 alias uh="urxvt &"
@@ -97,6 +96,3 @@ alias n6="nvm use 6"
 
 # rvm
 alias r1="rvm use 1.9.3"
-
-# assh
-#alias ssh="~/.gocode/bin/assh wrapper ssh"
