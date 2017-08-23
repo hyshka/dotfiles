@@ -1,10 +1,10 @@
 # general config
 font pango:Noto Sans 10
 #hide_edge_borders none
-smart_borders on
-gaps inner 0
-gaps outer 0
-smart_gaps on
+#smart_borders on
+#gaps inner 0
+#gaps outer 0
+#smart_gaps on
 new_window pixel 1
 new_float pixel 1
 
