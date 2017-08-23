@@ -48,7 +48,7 @@ function doIt() {
   if [ "$HOSTNAME" = brix ]; then
     cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_brix > ~/.config/i3/config
     ln -s ~/dotfiles/i3/i3status_brix ~/.config/i3/i3status.conf
-  elif["$HOSTNAME" = veyron]
+  elif [ "$HOSTNAME" = veyron ]; then
     cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_veyron > ~/.config/i3/config
     ln -s ~/dotfiles/i3/i3status_veyron ~/.config/i3/i3status.conf
   else
