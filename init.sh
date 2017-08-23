@@ -80,13 +80,13 @@ function doIt() {
   ln -s ~/dotfiles/clipper ~/.config/clipper
 
   # subl3
-  mkdir -p ~/.config/sublime-text-3/Packages/User
-  rm -f ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
-  rm -f ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-  rm -f ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
-  ln -s ~/dotfiles/subl3/'Default (Linux).sublime-keymap' ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
-  ln -s ~/dotfiles/subl3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-  ln -s ~/dotfiles/subl3/ColorHighlighter.sublime-settings ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
+  # mkdir -p ~/.config/sublime-text-3/Packages/User
+  # rm -f ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
+  # rm -f ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+  # rm -f ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
+  # ln -s ~/dotfiles/subl3/'Default (Linux).sublime-keymap' ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
+  # ln -s ~/dotfiles/subl3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+  # ln -s ~/dotfiles/subl3/ColorHighlighter.sublime-settings ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
