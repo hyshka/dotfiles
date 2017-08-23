@@ -1,0 +1,11 @@
+#####
+# AUTOSTARTS
+#####
+
+
+####
+# CONFIG
+####
+
+# reload the configuration file
+bindsym $mod+Shift+c exec "cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_veyron > ~/.config/i3/config && i3-msg reload"
