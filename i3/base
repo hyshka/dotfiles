@@ -194,7 +194,7 @@ bar {
   position	top
   #tray_output	LVDS1
   tray_padding  4
-  height 25
+  #height 25
   font pango:Noto Sans, FontAwesome 10
   separator_symbol "     "
   bindsym button4 nop

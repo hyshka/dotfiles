@@ -15,7 +15,7 @@ general {
 }
 
 order += "volume master"
-order += "wireless wlp3s0"
+order += "wireless wlan0"
 order += "battery 0"
 order += "tztime date"
 order += "tztime time"
@@ -26,10 +26,9 @@ volume master {
   device = "pulse"
 }
 
-wireless wlp3s0 {
-  # format_up = "  %essid (%quality) %ip"
-  format_up = "w  %ip"
-  format_down = "w"
+wireless wlan0 {
+  format_up = "  %essid (%quality) %ip"
+  format_down = ""
 }
 
 battery 0 {
@@ -40,6 +39,7 @@ battery 0 {
   status_chr= ""
   status_bat= ""
   status_full = ""
+  path = "/sys/class/power_supply/sbs-20-000b/uevent"
 }
 
 tztime date {
