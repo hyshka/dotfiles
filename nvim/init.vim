@@ -7,15 +7,15 @@ call plug#begin('~/.config/nvim/plugged')
 "-----
 " Do I need these 2?
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ryanoasis/vim-devicons' " Dev icons, needs to be after ctrlp, nerdtree
 "-----
 Plug 'tpope/vim-sensible' " Provides base config
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
-Plug 'scrooloose/syntastic' " Syntax checking
+Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' } " Syntax checking
 Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
-Plug 'tpope/vim-commentary' " Better commenting commands
+Plug 'tpope/vim-commentary': { 'on': '<Plug>Commentary' } " Better commenting commands
 Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
 Plug 'tpope/vim-repeat' " make vim-commentary and vim-surround work with .
@@ -27,7 +27,7 @@ Plug 'wincent/vim-clipper' " shorcuts for clipper integration
 
 " Syntax highlighting / Themes / Indentation
 Plug 'chriskempson/base16-vim' " colorschemes
-Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
+Plug 'yggdroot/indentline', { 'on': 'IndentLinesEnable' } " Creates indent lines, makes code a bit easier to read
 Plug 'plasticboy/vim-markdown' " It's got some cool stuff but dammit.
 Plug 'othree/html5.vim' " Has a bit more than the default html highlighting
 Plug 'stephpy/vim-yaml'
