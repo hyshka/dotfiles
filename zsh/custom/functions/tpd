@@ -2,6 +2,9 @@ if [ -z "$1" ]
 then
     print This command requires an argument. Ex. tpd [projectname]
 else
-    print $1
-    PROJECT=$1 tmuxp load ~/.config/tmuxp/docker-project.yaml
+    PROJECT=$1
+    PROJECT_PATH=find ~/work/lift ~/work/mine -maxdepth 1 -type d -name $PROJECT
+
+    print $PROJECT $PROJECT_PATH
+    PROJECT=$PROJECT PROJECT_PATH=$PROJECT_PATH tmuxp load ~/.config/tmuxp/docker-project.yaml
 fi

@@ -1,7 +1,5 @@
 session_name: "${PROJECT}"
-start_directory: "~/work/lift/${PROJECT}"
-#shell_command_before: 
-#  - make up_fe
+start_directory: "${PATH}"
 windows:
   - window_name: code
     layout: even-vertical
@@ -13,9 +11,8 @@ windows:
   - window_name: docker
     layout: even-vertical
     panes:
+      - shell_command:
+        - blank
+        focus: true
       - blank
       - blank
-      - blank
-      #- docker exec -it $(tmux display-message -p '#S')"_backend" /bin/bash -c "django-admin.py runserver 0.0.0.0:8000"
-      #- docker exec -it $(tmux display-message -p '#S')"_frontend" /bin/bash -c "gulp --dev --docker"
-      #- make enter
