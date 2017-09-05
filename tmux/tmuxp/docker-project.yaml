@@ -1,5 +1,5 @@
 session_name: "${PROJECT}"
-start_directory: "${PATH}"
+start_directory: "${PROJECT_PATH}"
 windows:
   - window_name: code
     layout: even-vertical
