@@ -15,7 +15,8 @@
 zmodules=( \
     # behaviour modules
   directory environment history input \
-  history-substring-search prompt spectrum syntax-highlighting \
+    # syntax-highlighting must come before history-substring-search
+  prompt spectrum syntax-highlighting history-substring-search \
     # productivity modules
   archive git ssh utility meta fasd custom \
     # distro-specific modules
