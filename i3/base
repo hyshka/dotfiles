@@ -1,5 +1,5 @@
 # general config
-font pango:Noto Sans 10
+font pango:DejaVuSansMono Nerd Font 10
 #hide_edge_borders none
 #smart_borders on
 #gaps inner 0
@@ -143,7 +143,8 @@ for_window [title="Active Collab Timer"] floating enable
 for_window [class="Uzbl-core"] focus child, layout tabbed, focus
 for_window [class="Firefox"] layout tabbed
 for_window [class="Chromium"] layout tabbed
-for_window [class="Subl3"] layout tabbed
+# this doesn't work but I want it to
+#for_window [class="Chromium" window_role="pop-up"] layout tabbed
 for_window [class="URxvt" instance="tty-clock"] fullscreen enable
 #for_window [instance="scratchpad"] move window to scratchpad, scratchpad show
 
@@ -151,8 +152,7 @@ for_window [class="URxvt" instance="tty-clock"] fullscreen enable
 # assign [class="URxvt"] $WS1
 assign [class="Firefox"] $WS3
 assign [class="Chromium"] $WS4
-assign [class="Subl3"] $WS2
-assign [class="Spacefm"] $WS5
+assign [class="Nemo"] $WS5
 assign [class="URxvt" instance="cmus"] $ws9
 
 #####
@@ -174,7 +174,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-# auto player
+# audio player
 bindsym XF86AudioPlay exec cmus-remote --pause
 bindsym XF86AudioStop exec cmus-remote --stop
 bindsym XF86AudioNext exec cmus-remote --next
@@ -194,7 +194,7 @@ bar {
   #tray_output	LVDS1
   tray_padding  4
   #height 25
-  font pango:Noto Sans, FontAwesome 10
+  font pango:DejaVuSansMono Nerd Font, FontAwesome 10
   separator_symbol "     "
   bindsym button4 nop
   bindsym button5 nop
