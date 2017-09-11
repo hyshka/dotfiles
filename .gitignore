@@ -7,6 +7,12 @@ nvim/nvim-files/backups/*
 !nvim/nvim-files/backups/.gitkeep
 nvim/nvim-files/swaps/*
 !nvim/nvim-files/swaps/.gitkeep
+vim/plugged/*
+!vim/plugged/.gitkeep
+vim/vim-files/backups/*
+!vim/vim-files/backups/.gitkeep
+vim/vim-files/swaps/*
+!vim/vim-files/swaps/.gitkeep
 .ctrlp_cache/
 .vimcache
 

@@ -20,7 +20,9 @@ function doIt() {
   # source ${ZDOTDIR:-${HOME}}/.zlogin
 
   # vim
+  rm -Rf ~/.vim
   rm -f ~/.vimrc
+  ln -s ~/dotfiles/vim ~/.vim
   ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 
   # neovim
