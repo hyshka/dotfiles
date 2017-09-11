@@ -1,4 +1,4 @@
 {
   "address": "0.0.0.0",
-  "logfile": "/dev/null"
+  "logfile": "/tmp/clipper.log"
 }
