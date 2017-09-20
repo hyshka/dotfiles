@@ -21,18 +21,18 @@ order += "tztime date"
 order += "tztime time"
 
 volume master {
-  format = "  %volume"
-  format_muted = "  (%volume)"
+  format = " %volume"
+  format_muted = " (%volume)"
   device = "pulse"
 }
 
 wireless wlan0 {
-  format_up = "  %essid (%quality) %ip"
+  format_up = " %essid (%quality) %ip"
   format_down = ""
 }
 
 battery 0 {
-  format = "%status  %percentage %remaining"
+  format = "%status %percentage %remaining"
   format_down = ""
   integer_battery_capacity = true
   hide_seconds = true
@@ -43,9 +43,9 @@ battery 0 {
 }
 
 tztime date {
-  format = "  %a %Y-%m-%d"
+  format = " %a %Y-%m-%d"
 }
 
 tztime time {
-  format = "  %H:%M     "
+  format = " %H:%M  "
 }

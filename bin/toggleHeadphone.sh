@@ -15,15 +15,15 @@ set -eu
 # Main loop of program#
 main() {
 # enable headphone
-#amixer -c 0 sset "Left Speaker Mixer Left DAC" off
-#amixer -c 0 sset "Right Speaker Mixer Right DAC" off
-#amixer -c 0 sset "Headphone Left" on 
-#amixer -c 0 sset "Headphone Right" on
+amixer -c 0 sset "Left Speaker Mixer Left DAC" off
+amixer -c 0 sset "Right Speaker Mixer Right DAC" off
+amixer -c 0 sset "Headphone Left" on 
+amixer -c 0 sset "Headphone Right" on
 
 # disable headphone
-amixer -c 0 sset "Left Speaker Mixer Left DAC" on
-amixer -c 0 sset "Right Speaker Mixer Right DAC" on
-amixer -c 0 sset "Headphone Left" off 
-amixer -c 0 sset "Headphone Right" off
+#amixer -c 0 sset "Left Speaker Mixer Left DAC" on
+#amixer -c 0 sset "Right Speaker Mixer Right DAC" on
+#amixer -c 0 sset "Headphone Left" off 
+#amixer -c 0 sset "Headphone Right" off
 }
 main

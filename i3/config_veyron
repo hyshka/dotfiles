@@ -1,6 +1,7 @@
 #####
 # AUTOSTARTS
 #####
+exec --no-startup-id xbindkeys
 
 
 ####

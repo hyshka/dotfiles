@@ -195,7 +195,7 @@ bar {
   tray_padding  4
   #height 25
   font pango:DejaVuSansMono Nerd Font, FontAwesome 10
-  separator_symbol "     "
+  separator_symbol " | "
   bindsym button4 nop
   bindsym button5 nop
 
