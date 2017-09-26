@@ -9,6 +9,9 @@ windows:
   - window_name: vim-options
     panes:
     - cd ~/work/mine/vim-options
+  - window_name: vim-uikit
+    panes:
+    - cd ~/work/mine/vim-uikit
   - window_name: docker-now
     panes:
     - cd ~/work/mine/docker-now
