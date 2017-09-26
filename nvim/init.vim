@@ -44,6 +44,7 @@ Plug 'chrisbra/colorizer' " highlight colors
 Plug 'tweekmonster/django-plus.vim', { 'for': ['html', 'htmldjango', 'python'] } " django python+html indent, completions, syntax
 Plug 'tmux-plugins/vim-tmux' " syntax, commentstring fix, and some extras
 Plug 'posva/vim-vue'
+Plug 'hyshka/vim-uikit'
 
 " My custom options
 Plug 'hyshka/vim-options'

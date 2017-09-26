@@ -17,7 +17,7 @@ main() {
 # enable headphone
 amixer -c 0 sset "Left Speaker Mixer Left DAC" off
 amixer -c 0 sset "Right Speaker Mixer Right DAC" off
-amixer -c 0 sset "Headphone Left" on 
+amixer -c 0 sset "Headphone Left" on
 amixer -c 0 sset "Headphone Right" on
 
 # disable headphone

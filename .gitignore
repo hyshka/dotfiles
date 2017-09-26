@@ -13,6 +13,7 @@ vim/vim-files/backups/*
 !vim/vim-files/backups/.gitkeep
 vim/vim-files/swaps/*
 !vim/vim-files/swaps/.gitkeep
+vim/.netrwhist
 .ctrlp_cache/
 .vimcache
 
