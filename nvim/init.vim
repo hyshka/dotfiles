@@ -11,8 +11,9 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ryanoasis/vim-devicons' " Dev icons, needs to be after ctrlp, nerdtree
 "-----
 Plug 'tpope/vim-sensible' " Provides base config
+Plug 'w0rp/ale' " Asyncronous linting
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
-Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' } " Syntax checking
+"Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' } " Syntax checking
 Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' } " Better commenting commands
