@@ -3,11 +3,11 @@ start_directory: "~/"
 windows:
   - window_name: scratch
     layout: main-horizontal
-    options:
-      main-pane-height: 40
+    # options:
+    #   main-pane-height: 40
     focus: true
     panes:
       - shell_command:
         - nvim work.md
         focus: true
-      - cala
+      # - cala
