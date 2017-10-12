@@ -13,14 +13,16 @@
 #          syntax-highlighting history-substring-search prompt completion)
 
 zmodules=( \
-    # behaviour modules
+  # behaviour modules
   directory environment history input \
-    # syntax-highlighting must come before history-substring-search
+  # syntax-highlighting must come before history-substring-search
   prompt spectrum syntax-highlighting history-substring-search \
-    # productivity modules
-  archive git ssh utility meta fasd custom \
-    # distro-specific modules
+  # productivity modules
+  archive git ssh utility meta fasd \
+  # distro-specific modules
   pacman \
+  # user-specific modules
+  personal
   # completion needs to be last but is a behaviour module
   completion )
 
