@@ -10,12 +10,14 @@ function doIt() {
   rm -f ~/.zlogin
   rm -f ~/.zimrc
   rm -Rf ~/.zim/modules/personal
+  rm -Rf ~/.zim/modules/docker
   rm -f ~/.fpath
   ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
   ln -s ~/dotfiles/zsh/zlogin ~/.zlogin
   ln -s ~/dotfiles/zsh/zimrc ~/.zimrc
   ln -s ~/dotfiles/zsh/fpath ~/.fpath
   ln -s ~/dotfiles/zsh/personal ~/.zim/modules/personal
+  ln -s ~/dotfiles/zsh/docker ~/.zim/modules/docker
   # source ~/.zshrc
   # source ${ZDOTDIR:-${HOME}}/.zlogin
 

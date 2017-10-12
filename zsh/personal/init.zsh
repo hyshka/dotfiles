@@ -1,8 +1,8 @@
-# Custom aliases/settings
+#
+# Personal aliases/settings
 #
 
-# any custom stuff should go here.
-# ensure that 'custom' exists in the zmodules array in your .zimrc
+# ensure that 'personal' exists in the zmodules array in your .zimrc
 
 ##################
 # SHELL SETTINGS #

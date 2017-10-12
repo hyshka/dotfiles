@@ -22,7 +22,7 @@ zmodules=( \
   # distro-specific modules
   pacman \
   # user-specific modules
-  personal
+  personal docker \
   # completion needs to be last but is a behaviour module
   completion )
 
