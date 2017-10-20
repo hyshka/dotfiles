@@ -4,16 +4,9 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Extending vim functionality
-"-----
-" Do I need these 2?
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'ryanoasis/vim-devicons' " Dev icons, needs to be after ctrlp, nerdtree
-"-----
 Plug 'tpope/vim-sensible' " Provides base config
 Plug 'w0rp/ale' " Asyncronous linting
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
-"Plug 'scrooloose/syntastic', { 'on': 'SyntasticCheck' } " Syntax checking
 Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' } " Better commenting commands
@@ -24,28 +17,36 @@ Plug 'milkypostman/vim-togglelist' " toggle the location and quickfix lists
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tmux-plugins/vim-tmux-focus-events' " restore focusgained and focuslost autocommands
 Plug 'wincent/vim-clipper' " shorcuts for clipper integration
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf install
+Plug 'junegunn/fzf.vim' " fzf integration
+Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
+Plug 'francoiscabrol/ranger.vim' " ranger intergration
+Plug 'tpope/vim-unimpaired' " group of mappings for various next/previous commands
 
 
 " Syntax highlighting / Themes / Indentation
 Plug 'chriskempson/base16-vim' " colorschemes
 Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
-Plug 'plasticboy/vim-markdown' " It's got some cool stuff but dammit.
-Plug 'othree/html5.vim' " Has a bit more than the default html highlighting
-Plug 'stephpy/vim-yaml'
-Plug 'hdima/python-syntax'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'elzr/vim-json'
-Plug 'digitaltoad/vim-pug'
-Plug 'othree/yajs.vim' " base javascript syntax
-Plug 'othree/javascript-libraries-syntax.vim' " syntax for js libs like jquery/vue
-Plug 'othree/es.next.syntax.vim' " es7+ syntax
-Plug 'gavocanov/vim-js-indent'
-Plug 'cakebaker/scss-syntax.vim'
+Plug 'sheerun/vim-polyglot' " One to rule them all, one to find them, one to bring them all and in the darkness bind them.
 Plug 'chrisbra/colorizer' " highlight colors
-Plug 'tweekmonster/django-plus.vim', { 'for': ['html', 'htmldjango', 'python'] } " django python+html indent, completions, syntax
-Plug 'tmux-plugins/vim-tmux' " syntax, commentstring fix, and some extras
-Plug 'posva/vim-vue'
-Plug 'hyshka/vim-uikit'
+
+" Plug 'plasticboy/vim-markdown' " It's got some cool stuff but dammit.
+" Plug 'othree/html5.vim' " Has a bit more than the default html highlighting
+" Plug 'stephpy/vim-yaml'
+" Plug 'hdima/python-syntax'
+" Plug 'Vimjas/vim-python-pep8-indent'
+" Plug 'elzr/vim-json'
+" Plug 'digitaltoad/vim-pug'
+" Plug 'othree/yajs.vim' " base javascript syntax
+" Plug 'othree/javascript-libraries-syntax.vim' " syntax for js libs like jquery/vue
+" Plug 'othree/es.next.syntax.vim' " es7+ syntax
+" Plug 'gavocanov/vim-js-indent'
+" Plug 'cakebaker/scss-syntax.vim'
+" Plug 'tweekmonster/django-plus.vim', { 'for': ['html', 'htmldjango', 'python'] } " django python+html indent, completions, syntax
+" Plug 'tmux-plugins/vim-tmux' " syntax, commentstring fix, and some extras
+" Plug 'posva/vim-vue'
+
+Plug 'hyshka/vim-uikit' " uikit class autocompletion
 
 " My custom options
 Plug 'hyshka/vim-options'
