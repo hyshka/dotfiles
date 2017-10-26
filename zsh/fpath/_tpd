@@ -1,5 +1,5 @@
 #compdef tpd
 
 local -a options
-options=$(ls -1td ~/work/lift/* ~/work/mine/* | xargs -I '{}' sh -c 'basename {}')
+options=$(ls -1td ~/work/lift/* ~/work/mine/* ~/work/ref/* | xargs -I '{}' sh -c 'basename {}')
 _alternative "args:project directories:($options)"
