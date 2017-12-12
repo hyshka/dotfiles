@@ -190,12 +190,12 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
 
 bar {
   status_command i3status --config ~/.config/i3/i3status.conf
-  position	top
-  #tray_output	LVDS1
-  tray_padding  4
-  #height 25
+  display_mode hide # auto-hide
+  position top
+  tray_padding 0
   font pango:DejaVuSansMono Nerd Font, FontAwesome 10
   separator_symbol " | "
+  # disable scroll wheel (doesn't work on veyron)
   bindsym button4 nop
   bindsym button5 nop
 

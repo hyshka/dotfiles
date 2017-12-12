@@ -8,17 +8,18 @@ GOPATH=$HOME/go
 PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/.bin:$HOME/.local/bin:$GOPATH/bin:$PATH
 
 # default apps
-export VISUAL=nvim
-export EDITOR=nvim
+if (( $+commands[nvim] )); then
+  export VISUAL=nvim
+  export EDITOR=nvim
+else
+  export VISUAL=vim
+  export EDITOR=vim
+fi
 export TERMINAL=urxvt
 if [ -n "$DISPLAY" ]; then
-    if [ "$HOSTNAME" = brix ]; then
-        export BROWSER=chromium
-    else
-        export BROWSER=firefox
-    fi
+  export BROWSER=chromium
 else
-    export BROWSER=w3m
+  export BROWSER=w3m
 fi
 
 # set default gtk2 theme
