@@ -190,7 +190,8 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
 
 bar {
   status_command i3status --config ~/.config/i3/i3status.conf
-  display_mode hide # auto-hide
+  # auto-hide
+  mode hide
   position top
   tray_padding 0
   font pango:DejaVuSansMono Nerd Font, FontAwesome 10
