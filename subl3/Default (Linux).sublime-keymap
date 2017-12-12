@@ -1,4 +1,0 @@
-[
-    {"keys": ["ctrl+alt+m"], "command": "toggle_menu"},
-	{"keys": ["ctrl+alt+p"], "command": "prompt_select_workspace"}
-]

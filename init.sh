@@ -55,9 +55,6 @@ function doIt() {
   elif [ "$HOSTNAME" = veyron ]; then
     cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_veyron > ~/.config/i3/config
     ln -s ~/dotfiles/i3/i3status_veyron ~/.config/i3/i3status.conf
-  else
-    cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_w520 > ~/.config/i3/config
-    ln -s ~/dotfiles/i3/i3status_w520 ~/.config/i3/i3status.conf
   fi
   ln -s ~/dotfiles/i3/compton.conf ~/.config/i3/compton.conf
   ln -s ~/dotfiles/i3/base16-railscasts.yaml ~/.config/i3/base16-railscasts.yaml
@@ -82,15 +79,6 @@ function doIt() {
   # clipper
   rm -rf ~/.config/clipper
   ln -s ~/dotfiles/clipper ~/.config/clipper
-
-  # subl3
-  # mkdir -p ~/.config/sublime-text-3/Packages/User
-  # rm -f ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
-  # rm -f ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-  # rm -f ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
-  # ln -s ~/dotfiles/subl3/'Default (Linux).sublime-keymap' ~/.config/sublime-text-3/Packages/User/'Default (Linux).sublime-keymap'
-  # ln -s ~/dotfiles/subl3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-  # ln -s ~/dotfiles/subl3/ColorHighlighter.sublime-settings ~/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
