@@ -1,6 +1,7 @@
 #####
 # AUTOSTARTS
 #####
+exec_always --no-startup-id setroot --restore
 exec --no-startup-id xbindkeys
 
 
