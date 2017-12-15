@@ -12,7 +12,7 @@
 
 # Size
 # widthxheight ex. 1600x900
-size_w520=1600x900
+size_veyron=1366x768
 size_brix=2560x1440
 
 # Location
@@ -25,11 +25,11 @@ bg_location_png='/home/hyshka/.wallpaper/background.png'
 if [ "$HOSTNAME" = brix ]; then
     wget https://source.unsplash.com/category/nature/$size_brix/ -O $bg_location
 else
-    wget https://source.unsplash.com/category/nature/$size_w520/ -O $bg_location
+    wget https://source.unsplash.com/category/nature/$size_veyron/ -O $bg_location
 fi
 
 # Conver to PNG
-convert	$bg_location $bg_location_png
+convert $bg_location $bg_location_png
 #convert	$bg_ext_location $bg_ext_location_png
 
 # Set new background
