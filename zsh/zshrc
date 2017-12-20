@@ -8,7 +8,7 @@ GOPATH=$HOME/go
 PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/.bin:$HOME/.local/bin:$GOPATH/bin:$PATH
 
 # default apps
-if (( $+commands[nvim] )); then
+if (( $+commands[docker] )); then
   export VISUAL=nvim
   export EDITOR=nvim
 else
