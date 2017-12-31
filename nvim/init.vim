@@ -13,7 +13,8 @@ Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' } " Better commenting co
 Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
 Plug 'tpope/vim-repeat' " make vim-commentary and vim-surround work with .
-Plug 'milkypostman/vim-togglelist' " toggle the location and quickfix lists
+Plug 'tpope/vim-sleuth' " auto detect and set shiftwidth and expandtab (https://github.com/tpope/vim-sleuth)
+Plug 'tpope/vim-unimpaired' " group of mappings for various next/previous commands
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tmux-plugins/vim-tmux-focus-events' " restore focusgained and focuslost autocommands
 Plug 'wincent/vim-clipper' " shorcuts for clipper integration
@@ -21,30 +22,25 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf install
 Plug 'junegunn/fzf.vim' " fzf integration
 Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
 Plug 'francoiscabrol/ranger.vim' " ranger intergration
-Plug 'tpope/vim-unimpaired' " group of mappings for various next/previous commands
+Plug 'airblade/vim-gitgutter' " show git diff in gutter (https://github.com/airblade/vim-gitgutter)
+Plug 'alvan/vim-closetag' " autoclose html tags
+Plug 'wellle/targets.vim' " more text objects to operate on (https://github.com/wellle/targets.vim)
+Plug 'ervandew/supertab' " use tab for all insert more completions (https://github.com/ervandew/supertab)
 
 
 " Syntax highlighting / Themes / Indentation
 Plug 'chriskempson/base16-vim' " colorschemes
-Plug 'yggdroot/indentline' " Creates indent lines, makes code a bit easier to read
-Plug 'sheerun/vim-polyglot' " One to rule them all, one to find them, one to bring them all and in the darkness bind them.
-Plug 'chrisbra/colorizer' " highlight colors
+" Plug 'yggdroot/indentline'
+Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
+Plug 'sheerun/vim-polyglot' " One to rule them all, one to find them, one to bring them all and in the darkness bind them. (https://github.com/sheerun/vim-polyglot)
+Plug 'ap/vim-css-color' " highlight colors
 
-" Plug 'plasticboy/vim-markdown' " It's got some cool stuff but dammit.
-" Plug 'othree/html5.vim' " Has a bit more than the default html highlighting
-" Plug 'stephpy/vim-yaml'
-" Plug 'hdima/python-syntax'
 " Plug 'Vimjas/vim-python-pep8-indent'
-" Plug 'elzr/vim-json'
-" Plug 'digitaltoad/vim-pug'
 " Plug 'othree/yajs.vim' " base javascript syntax
 " Plug 'othree/javascript-libraries-syntax.vim' " syntax for js libs like jquery/vue
 " Plug 'othree/es.next.syntax.vim' " es7+ syntax
-" Plug 'gavocanov/vim-js-indent'
-" Plug 'cakebaker/scss-syntax.vim'
 " Plug 'tweekmonster/django-plus.vim', { 'for': ['html', 'htmldjango', 'python'] } " django python+html indent, completions, syntax
 " Plug 'tmux-plugins/vim-tmux' " syntax, commentstring fix, and some extras
-" Plug 'posva/vim-vue'
 
 Plug 'hyshka/vim-uikit' " uikit class autocompletion
 
