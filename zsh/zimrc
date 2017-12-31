@@ -18,7 +18,7 @@ zmodules=( \
   # syntax-highlighting must come before history-substring-search
   prompt spectrum syntax-highlighting history-substring-search \
   # productivity modules
-  archive git ssh utility meta fasd \
+  archive git ssh utility meta \
   # distro-specific modules
   pacman \
   # user-specific modules
