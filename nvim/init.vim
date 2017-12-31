@@ -27,10 +27,8 @@ Plug 'alvan/vim-closetag' " autoclose html tags
 Plug 'wellle/targets.vim' " more text objects to operate on (https://github.com/wellle/targets.vim)
 Plug 'ervandew/supertab' " use tab for all insert more completions (https://github.com/ervandew/supertab)
 
-
 " Syntax highlighting / Themes / Indentation
 Plug 'chriskempson/base16-vim' " colorschemes
-" Plug 'yggdroot/indentline'
 Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
 Plug 'sheerun/vim-polyglot' " One to rule them all, one to find them, one to bring them all and in the darkness bind them. (https://github.com/sheerun/vim-polyglot)
 Plug 'ap/vim-css-color' " highlight colors
