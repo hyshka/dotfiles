@@ -103,7 +103,7 @@ URxvt*cursorUnderline: false
 !------------------------------------------------
 ! URXVT VISUALS
 !------------------------------------------------
-!URxvt*internalBorder: 10
+URxvt*internalBorder: 0
 URxvt*depth: 32
 URxvt*background: base00
 
