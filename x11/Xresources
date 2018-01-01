@@ -93,8 +93,8 @@ URxvt.keysym.C-S-V: eval:paste_clipboard
 !------------------------------------------------
 URxvt*saveLines: 0
 URxvt*scrollBar: false
-URxvt*cursorBlink: true
-URxvt*cursorUnderline: true
+URxvt*cursorBlink: false
+URxvt*cursorUnderline: false
 ! do not scroll with output
 !URxvt*scrollTtyOutput: false
 !URxvt*scrollWithBuffer: true
@@ -103,7 +103,7 @@ URxvt*cursorUnderline: true
 !------------------------------------------------
 ! URXVT VISUALS
 !------------------------------------------------
-URxvt*internalBorder: 10
+!URxvt*internalBorder: 10
 URxvt*depth: 32
 URxvt*background: base00
 
