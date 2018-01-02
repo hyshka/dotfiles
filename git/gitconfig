@@ -15,6 +15,10 @@
   # We wanna grab those pesky un-added files!
   # https://git-scm.com/docs/git-stash
 
+  mydiff = !git diff $1 -- . ':(exclude)**/static/css/main.css' ':(exclude)**/static/js/app.js'
+  # I hate scrolling through minified css and js, exclude them when diffing
+
+
 [merge]
   ff = only
   # I pretty much never mean to do a real merge, since I use a rebase workflow.
