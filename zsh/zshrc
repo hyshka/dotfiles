@@ -55,9 +55,10 @@ export GPG_TTY=$(tty)
 # Refresh gpg-agent tty in case user switches into an X session
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
+# Init FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Zim!
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
 fi
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
