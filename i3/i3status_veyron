@@ -21,31 +21,31 @@ order += "tztime date"
 order += "tztime time"
 
 volume master {
-  format = " %volume"
-  format_muted = " (%volume)"
+  format = "V %volume"
+  format_muted = "VM (%volume)"
   device = "pulse"
 }
 
 wireless wlan0 {
-  format_up = " %essid (%quality) %ip"
-  format_down = ""
+  format_up = "W %essid (%quality) %ip"
+  format_down = "WD"
 }
 
 battery 0 {
   format = "%status %percentage %remaining"
-  format_down = ""
+  format_down = "BD"
   integer_battery_capacity = true
   hide_seconds = true
-  status_chr= ""
-  status_bat= ""
-  status_full = ""
+  status_chr= "BC"
+  status_bat= "B"
+  status_full = "BF"
   path = "/sys/class/power_supply/sbs-20-000b/uevent"
 }
 
 tztime date {
-  format = " %a %Y-%m-%d"
+  format = "%a %Y-%m-%d"
 }
 
 tztime time {
-  format = " %H:%M  "
+  format = "%H:%M  "
 }
