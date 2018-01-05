@@ -60,13 +60,8 @@ URxvt.insecure: false
 !------------------------------------------------
 ! URXVT FONTS
 !------------------------------------------------
-!URxvt.font:xft:DejaVuSansMono Nerd Font:style=Book:pixelsize=12
-URxvt*font: xft:xos4 Terminus:pixelsize=16
-URxvt*boldFont: xft:xos4 Terminus:style=Bold:pixelsize=16
-!URxvt.boldFont:xft:DejaVuSansMono Nerd Font:style=Bold:pixelsize=12
-!URxvt.italicfont:xft:DejaVuSansMono Nerd Font:style=Oblique:pixelsize=12
-!URxvt.bolditalicFont:xft:DejaVuSansMono Nerd Font:style=Bold Oblique:pixelsize=12
-!URxvt*letterSpace: 1
+URxvt*font: -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
+URxvt*boldFont: -*-terminus-bold-*-*-*-16-*-*-*-*-*-*-*
 URxvt*allow_bold: true
 
 !------------------------------------------------
