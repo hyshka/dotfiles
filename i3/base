@@ -1,5 +1,5 @@
 # general config
-font pango:DejaVuSansMono Nerd Font 10
+font -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
 #hide_edge_borders none
 #smart_borders on
 #gaps inner 0
@@ -194,7 +194,7 @@ bar {
   mode hide
   position top
   tray_padding 0
-  font pango:DejaVuSansMono Nerd Font, FontAwesome 10
+  font -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
   separator_symbol " | "
   # disable scroll wheel (doesn't work on veyron)
   bindsym button4 nop
