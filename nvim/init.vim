@@ -17,7 +17,7 @@ Plug 'tpope/vim-sleuth' " auto detect and set shiftwidth and expandtab (https://
 Plug 'tpope/vim-unimpaired' " group of mappings for various next/previous commands
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tmux-plugins/vim-tmux-focus-events' " restore focusgained and focuslost autocommands
-Plug 'wincent/vim-clipper' " shorcuts for clipper integration
+" Plug 'wincent/vim-clipper' " shorcuts for clipper integration
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf install
 Plug 'junegunn/fzf.vim' " fzf integration
 Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
