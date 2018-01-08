@@ -35,6 +35,7 @@ alias makepkgfast="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
 
 # clipboard
+alias cb="xsel --clipboard"
 alias clip="nc -N localhost 8377"
 
 # services
