@@ -145,15 +145,14 @@ for_window [class="Firefox"] layout tabbed
 for_window [class="Chromium"] layout tabbed
 # this doesn't work but I want it to
 #for_window [class="Chromium" window_role="pop-up"] layout tabbed
-for_window [class="URxvt" instance="tty-clock"] fullscreen enable
 #for_window [instance="scratchpad"] move window to scratchpad, scratchpad show
 
 # application workspaces
-# assign [class="URxvt"] $WS1
+# assign [class="st-256color"] $WS1
 assign [class="Firefox"] $WS3
 assign [class="Chromium"] $WS4
 assign [class="Nemo"] $WS5
-assign [class="URxvt" instance="cmus"] $ws9
+assign [class="st-256color" instance="cmus"] $ws9
 
 #####
 # BINDS

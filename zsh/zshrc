@@ -7,6 +7,11 @@ GOPATH=$HOME/go
 PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/.bin:$HOME/.local/bin:$GOPATH/bin:$PATH
 
 # default apps
+if (( $+commands[st] )); then
+  export TERMINAL=st
+else
+  export TERMINAL=urxvt
+fi
 if (( $+commands[docker] )); then
   export VISUAL=nvim
   export EDITOR=nvim
@@ -14,7 +19,6 @@ else
   export VISUAL=vim
   export EDITOR=vim
 fi
-export TERMINAL=urxvt
 if [ -n "$DISPLAY" ]; then
   export BROWSER=chromium
 else
@@ -28,21 +32,40 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export XDG_DESKTOP_DIR="$HOME/Downloads"
 
 # virtualenv
+# lazy loading saves on shell startup time
 if [[ -s /usr/bin/virtualenvwrapper.sh ]]; then
-  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
-  export WORKON_HOME=$HOME/.virtualenvs
-  export PROJECT_HOME=$HOME/Lift
-  source /usr/bin/virtualenvwrapper.sh
+  workon() {
+    [ -z "$PROJECT_HOME" ] && {
+      unset -f workon;
+      export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
+      export WORKON_HOME=$HOME/.virtualenvs
+      export PROJECT_HOME=$HOME/Lift
+      source /usr/bin/virtualenvwrapper.sh
+    }
+    workon "$@"
+  }
 fi
 
 # node version manager
+# lazy loading saves on shell startup time
 if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
-  export NVM_DIR="$HOME/.nvm"
-  source "$NVM_DIR/nvm.sh"
+  nvm() {
+    unset -f nvm;
+    export NVM_DIR="$HOME/.nvm"
+    source "$NVM_DIR/nvm.sh"
+    nvim "$@"
+  }
 fi
 
 # ruby version manager
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# lazy loading saves on shell startup time
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+  rvm() {
+    unset -f rvm;
+    source "$HOME/.rvm/scripts/rvm"
+    rvm "$@"
+  }
+fi
 
 # Base16 Shell
 BASE16_SHELL_SET_BACKGROUND=false
