@@ -97,3 +97,7 @@ alias n6="nvm use 6"
 
 # rvm
 alias r1="rvm use 1.9.3"
+
+# wine
+alias win32="WINEARCH=win32 WINEPREFIX=~/win32"
+alias win64="WINEPREFIX=~/win64"
