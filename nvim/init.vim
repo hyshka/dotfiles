@@ -34,6 +34,7 @@ Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit 
 Plug 'sheerun/vim-polyglot' " One to rule them all, one to find them, one to bring them all and in the darkness bind them. (https://github.com/sheerun/vim-polyglot)
 Plug 'ap/vim-css-color' " highlight colors
 Plug 'itchyny/lightline.vim'
+Plug 'valloric/matchtagalways'
 
 " Plug 'Vimjas/vim-python-pep8-indent'
 " Plug 'othree/yajs.vim' " base javascript syntax
