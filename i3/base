@@ -166,6 +166,7 @@ bindsym $mod+Shift+p exec xfce4-appfinder
 bindsym $mod+Shift+f exec nemo
 bindsym $mod+Shift+g exec i3-sensible-terminal -e ranger
 bindsym $mod+Shift+m exec i3-sensible-terminal -e cmus
+bindsym $mod+Shift+s exec flameshot gui
 
 # audio
 bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ -5%"
