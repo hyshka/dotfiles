@@ -185,7 +185,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
 
 # rofi in greenclip mode for clipboard
-bindsym $mod+q rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $mod+q exec --no-startup-id rofi-gpaste.sh
 
 #####
 # BAR
