@@ -34,6 +34,11 @@ alias remo="ssh linode"
 alias makepkgfast="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
 
+# xrandr
+alias xeo="xrandr --output HDMI-1 --off"
+alias xea="xrandr --output HDMI-1 --auto --output eDP-1 --auto --right-of HDMI-1"
+alias xet="xrandr --output HDMI-1 --off; xrandr --output HDMI-1 --auto --output eDP-1 --auto --right-of HDMI-1"
+
 # clipboard
 alias cb="xsel --clipboard"
 alias clip="nc -N localhost 8377"
