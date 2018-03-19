@@ -5,5 +5,5 @@ windows:
     layout: even-vertical
     panes:
       - htop
-      - blank
-      - tmux split-window -h; clear
+      -
+      -

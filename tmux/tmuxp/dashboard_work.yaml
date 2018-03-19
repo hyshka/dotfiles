@@ -5,7 +5,16 @@ windows:
     layout: even-vertical
     panes:
       - htop
+      - focus: true
+      -
+  - window_name: weechat
+    panes:
       - shell_command:
         - weechat
         focus: true
-      - tmux split-window -h; gcalcli agenda
+  - window_name: ports
+    layout: even-vertical
+    panes:
+      - focus: true
+      -
+      -
