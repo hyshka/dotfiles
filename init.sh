@@ -40,8 +40,10 @@ function doIt() {
   mkdir -p ~/.config/ranger/colorschemes
   rm -f ~/.config/ranger/rc.conf
   rm -f ~/.config/ranger/bookmarks
+  rm -f ~/.config/ranger/commands.py
   ln -s ~/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
   ln -s ~/dotfiles/ranger/bookmarks ~/.config/ranger/bookmarks
+  ln -s ~/dotfiles/ranger/commands.py ~/.config/ranger/commands.py
 
   # i3
   mkdir -p ~/.config/i3
