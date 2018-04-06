@@ -14,11 +14,12 @@ set -eu
 
 ORIGIN_HOST="$1"
 DATABASE="$2"
+PORT="${3:-22}"
 
 # Main loop of program
 main() {
   TIMESTAMP=$(date +%F)
 
-  ssh -t "$ORIGIN_HOST" "sudo -u postgres bash -c \"pg_dump --no-owner -d "$DATABASE" > /tmp/"$DATABASE"-"$TIMESTAMP".sql\"" && scp "$ORIGIN_HOST":/tmp/"$DATABASE"-"$TIMESTAMP".sql .
+  ssh -t -p "$PORT" "$ORIGIN_HOST" "sudo -u postgres bash -c \"pg_dump --no-owner -d "$DATABASE" > /tmp/"$DATABASE"-"$TIMESTAMP".sql\"" && scp -P "$PORT" "$ORIGIN_HOST":/tmp/"$DATABASE"-"$TIMESTAMP".sql .
 }
 main
