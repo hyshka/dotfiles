@@ -14,6 +14,7 @@ set -eu
 
 ORIGIN_HOST="$1"
 DATABASE="$2"
+# if 3rd param does not exist, give it a value of 22
 PORT="${3:-22}"
 
 # Main loop of program
