@@ -1,0 +1,15 @@
+session_name: "mysql"
+start_directory: "~/work/mine/docker-mysql"
+windows:
+  - window_name: code
+    layout: even-vertical
+    panes:
+      - blank
+  - window_name: docker
+    layout: even-vertical
+    focus: true
+    panes:
+      - shell_command:
+        - make up
+        focus: true
+      - blank

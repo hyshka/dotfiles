@@ -1,7 +1,0 @@
-if [ -z "$1" ]
-then
-    print This command requires an argument. Ex. msi [projectname]
-else
-    print Setting up virtualenv and installing packages for $1...
-    make setup venv=$1 && workon $1 && make install
-fi

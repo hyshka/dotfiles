@@ -5,7 +5,7 @@
 # ensure that 'docker' exists in the zmodules array in your .zimrc
 
 ## Management Commands
-alias dc='docker container' # ghosts dc binary # ghosts dc binary
+alias dc='docker container' # ghosts dc binary
 alias dcl='docker container ls'
 alias dcrm='docker container rm'
 alias dck='docker container kill'
@@ -18,4 +18,5 @@ alias dvp='docker volume prune'
 alias ds='docker system'
 alias dsp='docker system prune'
 alias dsd='docker system df'
-
+alias dp='docker port'
+alias dni='docker network inspect'
