@@ -2,14 +2,11 @@
 font -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
 #hide_edge_borders none
 #smart_borders on
-#gaps inner 0
-#gaps outer 0
-#smart_gaps on
 new_window pixel 1
 new_float pixel 1
 
 # Rofi
-bindsym $mod+d exec rofi -show run
+bindsym --release $mod+d exec rofi -show run
 
 # i3 basics
 set $mod Mod1
@@ -88,7 +85,7 @@ bindsym $mod+Shift+0 move container to workspace $WS10
 #####
 
 # resize window (you can also use the mouse for that)
-mode "  " {
+mode " R " {
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
@@ -101,7 +98,7 @@ mode "  " {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym $mod+r mode "  "
+bindsym $mod+r mode " R "
 
 # locker
 #set $Locker i3lock -c '#000000' -l '#ffffff' -o '#0088CC' -w '#FF3500' && sleep 1
@@ -132,12 +129,9 @@ for_window [class="Floating"] floating enable
 for_window [window_role="Msgcompose"] floating enable
 for_window [title="Preferences$"] floating enable
 for_window [class="Pavucontrol"] floating enable
-for_window [class="TeamViewer.exe"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
-for_window [class="Gimp"] floating enable
+# for_window [class="Gimp"] floating enable
 for_window [class="Calendar"] floating enable
-for_window [class="Galculator"] floating enable
-for_window [title="Active Collab Timer"] floating enable
 
 # window defaults
 for_window [class="Uzbl-core"] focus child, layout tabbed, focus
@@ -184,7 +178,7 @@ bindsym XF86AudioPrev exec cmus-remote --prev
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -10
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
 
-# rofi in greenclip mode for clipboard
+# rofi in clipboard mode
 bindsym $mod+q exec --no-startup-id ~/.bin/rofi-gpaste.sh
 
 #####

@@ -1,0 +1,15 @@
+! ---------------------------------------------------------------
+! ROFI Settings
+! ---------------------------------------------------------------
+rofi.fullscreen:        false
+rofi.padding:           5
+rofi.hide-scrollbar:    true
+rofi.line-margin:       5
+!rofi.font: Droid Sans Mono 12
+rofi.terminal:                       urxvt
+rofi.levenshtein-sort:               true
+rofi.fuzzy:                          true
+rofi.kb-cancel:                      Escape,Control+c
+!rofi.opacity: 90
+rofi.separator-style:
+!rofi.theme: base16-tomorrow

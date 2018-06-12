@@ -7,7 +7,7 @@
 #
 
 line=`gpaste-client --oneline | \
-      rofi -dmenu -i -p gpaste -kb-custom-1 Ctrl+x $@`
+      rofi -dmenu -i -p "gpaste" -kb-custom-1 "Ctrl+x" $@`
 exit_code=$?
 
 index=`echo $line | cut -d ':' -f1`
