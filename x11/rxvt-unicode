@@ -10,8 +10,8 @@ URxvt.insecure: false
 ! URXVT FONTS
 !------------------------------------------------
 URxvt*font: -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
-URxvt*boldFont: -*-terminus-bold-*-*-*-16-*-*-*-*-*-*-*
-URxvt*allow_bold: true
+URxvt*boldFont: -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
+URxvt*allow_bold: false
 
 !------------------------------------------------
 ! URXVT PERL EXTENSIONS

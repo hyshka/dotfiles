@@ -71,6 +71,10 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   }
 fi
 
+# Solarized Dircolors
+# see: https://github.com/seebi/dircolors-solarized
+eval `dircolors $HOME/.dir_colors`
+
 # Base16 Shell
 # BASE16_SHELL_SET_BACKGROUND=false
 BASE16_SHELL=$HOME/.config/base16-shell/
