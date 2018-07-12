@@ -1,0 +1,10 @@
+if [ -z "$1" ]
+then
+    print "This command requires two arguments. Ex. aspect [width] [height]"
+else
+    WIDTH=${1}
+    HEIGHT=${2}
+    RESULT=$(python -c "print(${WIDTH} / ${HEIGHT})")
+
+    print ${RESULT}
+fi
