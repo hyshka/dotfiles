@@ -35,6 +35,16 @@ export QT_QPA_PLATFORMTHEME=gtk2
 # prevent Firefox from creating Desktop directory
 export XDG_DESKTOP_DIR="$HOME/Downloads"
 
+# Set GPG TTY
+export GPG_TTY=$(tty)
+
+# Refresh gpg-agent tty in case user switches into an X session
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+# Solarized Dircolors
+# see: https://github.com/seebi/dircolors-solarized
+eval `dircolors $HOME/.dir_colors`
+
 # virtualenv
 # lazy loading saves on shell startup time
 if [[ -s /usr/bin/virtualenvwrapper.sh ]]; then
@@ -71,20 +81,11 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   }
 fi
 
-# Solarized Dircolors
-# see: https://github.com/seebi/dircolors-solarized
-eval `dircolors $HOME/.dir_colors`
 
 # Base16 Shell
 # BASE16_SHELL_SET_BACKGROUND=false
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
-# Set GPG TTY
-export GPG_TTY=$(tty)
-
-# Refresh gpg-agent tty in case user switches into an X session
-gpg-connect-agent updatestartuptty /bye >/dev/null
+# BASE16_SHELL=$HOME/.config/base16-shell/
+# [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # Init FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
