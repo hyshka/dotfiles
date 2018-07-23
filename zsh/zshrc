@@ -2,16 +2,19 @@
 # SETUP ENVIRONMENT #
 #####################
 
-# setup paths
-GOPATH=$HOME/go
-PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/.bin:$HOME/.local/bin:$GOPATH/bin:$PATH
+# Path
+# Add binaries from dotfiles
+PATH=$HOME/.bin:$PATH
+# Use local node modules binaries before global binaries
+PATH=./node_modules/.bin:$PATH
 
-# default apps
+# Defaults
 if (( $+commands[st] )); then
   export TERMINAL=st
 else
   export TERMINAL=urxvt
 fi
+
 if (( $+commands[docker] )); then
   export VISUAL=nvim
   export EDITOR=nvim
@@ -19,6 +22,7 @@ else
   export VISUAL=vim
   export EDITOR=vim
 fi
+
 if [ -n "$DISPLAY" ]; then
   export BROWSER=chromium
 else
@@ -26,6 +30,7 @@ else
 fi
 
 # set default gtk2 theme
+# not sure why I need this
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # set qt5 to use gtk2 engine
@@ -35,30 +40,15 @@ export QT_QPA_PLATFORMTHEME=gtk2
 # prevent Firefox from creating Desktop directory
 export XDG_DESKTOP_DIR="$HOME/Downloads"
 
-# Set GPG TTY
+# GnuPG
+# Set to current
 export GPG_TTY=$(tty)
-
 # Refresh gpg-agent tty in case user switches into an X session
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # Solarized Dircolors
 # see: https://github.com/seebi/dircolors-solarized
 eval `dircolors $HOME/dotfiles/zsh/dir_colors`
-
-# virtualenv
-# lazy loading saves on shell startup time
-if [[ -s /usr/bin/virtualenvwrapper.sh ]]; then
-  workon() {
-    [ -z "$PROJECT_HOME" ] && {
-      unset -f workon;
-      export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
-      export WORKON_HOME=$HOME/.virtualenvs
-      export PROJECT_HOME=$HOME/Lift
-      source /usr/bin/virtualenvwrapper.sh
-    }
-    workon "$@"
-  }
-fi
 
 # node version manager
 # lazy loading saves on shell startup time
@@ -70,22 +60,6 @@ if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
     nvim "$@"
   }
 fi
-
-# ruby version manager
-# lazy loading saves on shell startup time
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-  rvm() {
-    unset -f rvm;
-    source "$HOME/.rvm/scripts/rvm"
-    rvm "$@"
-  }
-fi
-
-
-# Base16 Shell
-# BASE16_SHELL_SET_BACKGROUND=false
-# BASE16_SHELL=$HOME/.config/base16-shell/
-# [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # Init FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

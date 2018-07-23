@@ -41,25 +41,20 @@ function doIt() {
   rm -f ~/.config/ranger/rc.conf
   rm -f ~/.config/ranger/bookmarks
   rm -f ~/.config/ranger/commands.py
+  rm -f ~/.config/ranger/scope.sh
   ln -s ~/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
   ln -s ~/dotfiles/ranger/bookmarks ~/.config/ranger/bookmarks
   ln -s ~/dotfiles/ranger/commands.py ~/.config/ranger/commands.py
+  ln -s ~/dotfiles/ranger/scope.sh ~/.config/ranger/scope.sh
 
   # i3
   mkdir -p ~/.config/i3
   rm -f ~/.config/i3/i3status.conf
   rm -f ~/.config/i3/config
-  rm -f ~/.config/i3/compton.conf
-  rm -f ~/.config/i3/base16-railscasts.yaml
-  if [ "$HOSTNAME" = brix ]; then
-    cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_brix > ~/.config/i3/config
-    ln -s ~/dotfiles/i3/i3status_brix ~/.config/i3/i3status.conf
-  elif [ "$HOSTNAME" = veyron ]; then
+  if [ "$HOSTNAME" = veyron ]; then
     cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_veyron > ~/.config/i3/config
     ln -s ~/dotfiles/i3/i3status_veyron ~/.config/i3/i3status.conf
   fi
-  ln -s ~/dotfiles/i3/compton.conf ~/.config/i3/compton.conf
-  ln -s ~/dotfiles/i3/base16-railscasts.yaml ~/.config/i3/base16-railscasts.yaml
 
   # git
   rm -f ~/.gitconfig
