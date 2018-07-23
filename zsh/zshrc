@@ -43,7 +43,7 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # Solarized Dircolors
 # see: https://github.com/seebi/dircolors-solarized
-eval `dircolors $HOME/.dir_colors`
+eval `dircolors $HOME/dotfiles/zsh/dir_colors`
 
 # virtualenv
 # lazy loading saves on shell startup time
