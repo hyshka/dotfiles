@@ -1,0 +1,15 @@
+#!/bin/bash
+# Author: Cody Hiar
+# Date: 2017-31-03
+#
+# Purpose: Pipe text to a netcat port which is assumed to be listened to
+
+INPUT=$(</dev/stdin)
+
+NUM_LINES=$(echo "$INPUT" | wc -l)
+
+if [ "$NUM_LINES" -eq 1 ]; then
+    echo "$INPUT" | tr -d '\n' | nc -w 0 localhost 41401
+else
+    echo "$INPUT" | nc -w 0 localhost 41401
+fi
