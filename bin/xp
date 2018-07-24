@@ -3,6 +3,7 @@
 # Date: 2017-31-03
 #
 # Purpose: Pipe text to a netcat port which is assumed to be listened to
+# Requires: openbsd-netcat
 
 INPUT=$(</dev/stdin)
 
