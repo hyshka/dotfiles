@@ -3,9 +3,10 @@
 "----------------------------------------------------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
-" Extending vim functionality
+"
+" Functional
 Plug 'tpope/vim-sensible' " Provides base config
-Plug 'w0rp/ale' " Asyncronous linting
+" Plug 'w0rp/ale' " Asyncronous linting
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
 Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
@@ -29,26 +30,18 @@ Plug 'ervandew/supertab' " use tab for all insert more completions (https://gith
 Plug 'foosoft/vim-argwrap' " extra tools for (un)wrapping lists and objects
 
 " Syntax highlighting / Themes / Indentation
-Plug 'chriskempson/base16-vim' " colorschemes
-" Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
 Plug 'nathanaelkane/vim-indent-guides' " Creates indent lines, makes code a bit easier to read
 Plug 'sheerun/vim-polyglot' " One to rule them all, one to find them, one to bring them all and in the darkness bind them. (https://github.com/sheerun/vim-polyglot)
 Plug 'ap/vim-css-color' " highlight colors
 Plug 'itchyny/lightline.vim'
-Plug 'valloric/matchtagalways'
 
 " Plug 'Vimjas/vim-python-pep8-indent'
-" Plug 'othree/yajs.vim' " base javascript syntax
-" Plug 'othree/javascript-libraries-syntax.vim' " syntax for js libs like jquery/vue
-" Plug 'othree/es.next.syntax.vim' " es7+ syntax
 " Plug 'tweekmonster/django-plus.vim', { 'for': ['html', 'htmldjango', 'python'] } " django python+html indent, completions, syntax
-" Plug 'tmux-plugins/vim-tmux' " syntax, commentstring fix, and some extras
 
-Plug 'hyshka/vim-uikit' " uikit class autocompletion
-
-" My custom options
+" My plugins
 Plug 'hyshka/vim-options'
+Plug 'hyshka/vim-uikit' " uikit class autocompletion
 
 call plug#end()
 "----------------------------------------------------------------------------------------------------------------------
