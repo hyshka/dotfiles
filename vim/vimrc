@@ -27,6 +27,7 @@ Plug 'alvan/vim-closetag' " autoclose html tags
 Plug 'wellle/targets.vim' " more text objects to operate on (https://github.com/wellle/targets.vim)
 Plug 'ervandew/supertab' " use tab for all insert more completions (https://github.com/ervandew/supertab)
 Plug 'foosoft/vim-argwrap' " extra tools for (un)wrapping lists and objects
+Plug 'ahw/vim-pbcopy' " netcat style copy-paste
 
 " Syntax highlighting / Themes / Indentation
 Plug 'chriskempson/base16-vim' " colorschemes
