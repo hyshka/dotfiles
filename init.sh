@@ -37,15 +37,8 @@ function doIt() {
   # xrdb ~/.Xresources
 
   # ranger
-  mkdir -p ~/.config/ranger/colorschemes
-  rm -f ~/.config/ranger/rc.conf
-  rm -f ~/.config/ranger/bookmarks
-  rm -f ~/.config/ranger/commands.py
-  rm -f ~/.config/ranger/scope.sh
-  ln -s ~/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
-  ln -s ~/dotfiles/ranger/bookmarks ~/.config/ranger/bookmarks
-  ln -s ~/dotfiles/ranger/commands.py ~/.config/ranger/commands.py
-  ln -s ~/dotfiles/ranger/scope.sh ~/.config/ranger/scope.sh
+  rm -Rf ~/.config/ranger
+  ln -s ~/dotfiles/ranger ~/.config/ranger
 
   # i3
   mkdir -p ~/.config/i3
