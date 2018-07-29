@@ -12,9 +12,8 @@ windows:
       - shell_command:
         - weechat
         focus: true
-  - window_name: ports
-    layout: even-vertical
+  - window_name: cmus
     panes:
-      - focus: true
-      -
-      -
+      - shell_command:
+        - cmus
+        focus: true
