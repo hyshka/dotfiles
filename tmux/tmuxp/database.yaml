@@ -1,0 +1,19 @@
+session_name: "database"
+windows:
+  - window_name: postgres
+    layout: even-vertical
+    shell_command_before:
+      - cd ~/work/mine/docker-postgres
+    focus: true
+    panes:
+      - shell_command:
+        - make up
+        focus: true
+      - blank
+  - window_name: mysql
+    layout: even-vertical
+    shell_command_before:
+      - cd ~/work/mine/docker-mysql
+    panes:
+      - focus: true
+      - blank
