@@ -6,6 +6,8 @@ URxvt.insecure: false
 ! Disable all extensions
 URxvt.perl-ext:
 URxvt.perl-ext-common:
+! Don't save history (we got tmux)
+URxvt.saveLines: 0
 
 !------------------------------------------------
 ! URXVT FONTS
