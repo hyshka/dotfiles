@@ -13,17 +13,12 @@
 #          syntax-highlighting history-substring-search prompt completion)
 
 zmodules=( \
-  # behaviour modules
-  directory environment history input \
-  # syntax-highlighting must come before history-substring-search
+  directory environment git git-info history input utility \
   prompt syntax-highlighting history-substring-search \
-  # productivity modules
-  archive git git-info ssh utility \
-  # distro-specific modules
-  pacman \
-  # user-specific modules
+  archive ssh pacman \
+  # private modules
   personal docker \
-  # completion needs to be last but is a behaviour module
+  # completion needs to be last
   completion )
 
 
@@ -109,7 +104,7 @@ zssh_ids=(id_rsa)
 #
 
 # Set (optional) pacman front-end.
-#zpacman_frontend='pacaur'
+zpacman_frontend='aurman'
 
 # Load any helper scripts as defined here
-#zpacman_helper=(aur)
+zpacman_helper=(aur)
