@@ -17,6 +17,9 @@ vim/.netrwhist
 .ctrlp_cache/
 .vimcache
 
+# generated
+i3/i3status.conf
+i3/config
 
 # secret
 bin/sql-backup

@@ -41,12 +41,11 @@ function doIt() {
   ln -s ~/dotfiles/ranger ~/.config/ranger
 
   # i3
-  mkdir -p ~/.config/i3
-  rm -f ~/.config/i3/i3status.conf
-  rm -f ~/.config/i3/config
+  rm -Rf ~/.config/i3
+  ln -s ~/dotfiles/i3 ~/.config/i3
   if [ "$HOSTNAME" = veyron ]; then
-    cat ~/dotfiles/i3/colors ~/dotfiles/i3/base ~/dotfiles/i3/config_veyron > ~/.config/i3/config
-    ln -s ~/dotfiles/i3/i3status_veyron ~/.config/i3/i3status.conf
+    j4-make-config -a config_veyron solarized_light
+    ln -s ~/dotfiles/i3/i3status_veyron ~/.dotfiles/i3/i3status.conf
   fi
 
   # git
