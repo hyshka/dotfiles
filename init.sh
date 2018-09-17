@@ -45,7 +45,7 @@ function doIt() {
   ln -s ~/dotfiles/i3 ~/.config/i3
   if [ "$HOSTNAME" = veyron ]; then
     j4-make-config -a config_veyron solarized_light
-    ln -s ~/dotfiles/i3/i3status_veyron ~/.dotfiles/i3/i3status.conf
+    ln -s ~/dotfiles/i3/i3status_veyron ~/dotfiles/i3/i3status.conf
   fi
 
   # git
