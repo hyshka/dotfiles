@@ -41,6 +41,7 @@ alias xe="xrandr --output HDMI-1 --auto --output eDP-1 --off"
 alias xi="xrandr --output eDP-1 --auto --output HDMI-1 --off"
 
 # clipboard
+alias pyclip="python ~/.bin/pyclip.py"
 alias cb="xsel --clipboard"
 alias clip="nc -N localhost 8377"
 
