@@ -32,7 +32,7 @@ def parse_data(data: bytes):
             if 1000 < int_input < 40000:
                 print('Opening Docker port: {}'.format(int_input))
                 proc = subprocess.Popen(
-                    ['ssh', '-nNT', '-L', '{}:localhost:{}'.format(int_input, int_input), 'linode'],
+                    ['ssh', '-nNT', '-L', '0.0.0.0:{}:localhost:{}'.format(int_input, int_input), 'linode'],
                     stdout=subprocess.PIPE
                 )
                 time.sleep(0.5)  # Wait for SSH to connect
