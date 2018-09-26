@@ -104,11 +104,7 @@ zssh_ids=(id_rsa)
 #
 
 # Set (optional) pacman front-end.
-if (( $+commands[aurman] )); then
-  zpacman_frontend='aurman'
-else
-  zpacman_frontend='pacman'
-fi
+# zpacman_frontend='pacman'
 
 # Load any helper scripts as defined here
 zpacman_helper=(aur)
