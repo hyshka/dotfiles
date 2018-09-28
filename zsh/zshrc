@@ -4,7 +4,7 @@
 
 # Path
 # Add binaries from dotfiles
-PATH=$HOME/.bin:$PATH
+PATH=$HOME/.bin:$HOME/.local/bin:$PATH
 # Use local node modules binaries before global binaries
 PATH=./node_modules/.bin:$PATH
 
