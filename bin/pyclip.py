@@ -37,7 +37,7 @@ def parse_data(data: bytes):
                 )
                 time.sleep(0.5)  # Wait for SSH to connect
                 proc = subprocess.Popen(
-                    ['chromium', 'http://localhost:{}'.format(int_input)],
+                    ['firefox', 'http://localhost:{}'.format(int_input)],
                     stdout=subprocess.PIPE
                 )
                 return
