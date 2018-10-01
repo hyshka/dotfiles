@@ -5,5 +5,10 @@ windows:
     layout: even-vertical
     panes:
       - htop
+      - focus: true
       -
-      -
+  - window_name: cmus
+    panes:
+      - shell_command:
+        - cmus
+        focus: true
