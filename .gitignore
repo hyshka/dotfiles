@@ -23,3 +23,6 @@ i3/config
 
 # secret
 bin/sql-backup
+
+# machine-specific
+ranger/bookmarks
