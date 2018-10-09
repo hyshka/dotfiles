@@ -10,7 +10,7 @@ Plug 'tpope/vim-sensible' " Provides base config
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
 Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
-Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' } " Better commenting commands
+" Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' } " Better commenting commands
 Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
 Plug 'tpope/vim-repeat' " make vim-commentary and vim-surround work with .
@@ -18,7 +18,6 @@ Plug 'tpope/vim-sleuth' " auto detect and set shiftwidth and expandtab (https://
 Plug 'tpope/vim-unimpaired' " group of mappings for various next/previous commands
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tmux-plugins/vim-tmux-focus-events' " restore focusgained and focuslost autocommands
-" Plug 'wincent/vim-clipper' " shorcuts for clipper integration
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf install
 Plug 'junegunn/fzf.vim' " fzf integration
 Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
@@ -29,6 +28,8 @@ Plug 'wellle/targets.vim' " more text objects to operate on (https://github.com/
 Plug 'ervandew/supertab' " use tab for all insert more completions (https://github.com/ervandew/supertab)
 Plug 'foosoft/vim-argwrap' " extra tools for (un)wrapping lists and objects
 Plug 'ahw/vim-pbcopy' " netcat style copy-paste
+Plug 'Shougo/context_filetype.vim' " required for caw.vim commenting
+Plug 'tyru/caw.vim' " more advanced commenting, required for vue template files
 
 " Syntax highlighting / Themes / Indentation
 Plug 'altercation/vim-colors-solarized'

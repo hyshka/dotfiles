@@ -68,3 +68,13 @@ fi
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
 fi
+
+_gen_fzf_default_opts() {
+  export FZF_DEFAULT_OPTS="
+    --color=bg+:7,bg:15,spinner:6,hl:4
+    --color=fg:11,header:4,info:3,pointer:6
+    --color=marker:6,fg+:0,prompt:3,hl+:4
+  "
+}
+
+_gen_fzf_default_opts
