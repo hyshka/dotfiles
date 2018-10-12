@@ -1,0 +1,51 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+  colors = true
+  interval = 5
+  color_good = "#a5c261"
+  color_degraded = "#ffc66d"
+  color_bad = "#da4939"
+}
+
+order += "volume master"
+order += "wireless wlp1s0"
+order += "battery 0"
+order += "tztime date"
+order += "tztime time"
+
+volume master {
+  format = "V %volume"
+  format_muted = "VM (%volume)"
+  device = "pulse"
+}
+
+wireless wlan0 {
+  format_up = "W %essid (%quality) %ip"
+  format_down = "WD"
+}
+
+battery 0 {
+  format = "%status %percentage %remaining"
+  format_down = "BD"
+  integer_battery_capacity = true
+  hide_seconds = true
+  status_chr= "BC"
+  status_bat= "B"
+  status_full = "BF"
+  path = "/sys/class/power_supply/BAT%d/uevent"
+}
+
+tztime date {
+  format = "%a %Y-%m-%d"
+}
+
+tztime time {
+  format = "%H:%M  "
+}

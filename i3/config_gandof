@@ -1,0 +1,13 @@
+#####
+# AUTOSTARTS
+#####
+#exec_always --no-startup-id setroot --restore
+#exec --no-startup-id xbindkeys
+
+
+####
+# CONFIG
+####
+
+# regenerate the configuration file
+bindsym $mod+Shift+c exec "j4-make-config -r -a config_gandof solarized_light"
