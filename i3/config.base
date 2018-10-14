@@ -1,9 +1,8 @@
 # general config
 font -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
-#hide_edge_borders none
-#smart_borders on
-new_window pixel 1
-new_float pixel 1
+default_border pixel 1
+default_floating_border pixel 2
+hide_edge_borders smart
 
 # Rofi
 bindsym --release $mod+d exec rofi -show run
@@ -101,12 +100,11 @@ mode " R " {
 bindsym $mod+r mode " R "
 
 # locker
-#set $Locker i3lock -c '#000000' -l '#ffffff' -o '#0088CC' -w '#FF3500' && sleep 1
-set $Locker urxvt -name tty-clock -e tty-clock -C 2 -c -d 20000000000 -b && sleep 5
+# requires: physlock (https://github.com/muennich/physlock)
+set $Locker physlock && sleep 1
 
-set $system_ctl System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
+set $system_ctl System (l) lock, (e) exit i3, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$system_ctl" {
-
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id systemctl suspend, mode "default"
@@ -116,7 +114,7 @@ mode "$system_ctl" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Pause mode "$system_ctl"
+bindsym XF86ScreenSaver mode "$system_ctl"
 
 #####
 # WINDOWS
@@ -131,10 +129,8 @@ for_window [title="Preferences$"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
 # for_window [class="Gimp"] floating enable
-for_window [class="Calendar"] floating enable
 
 # window defaults
-for_window [class="Uzbl-core"] focus child, layout tabbed, focus
 for_window [class="Firefox"] layout tabbed
 for_window [class="Chromium"] layout tabbed
 # this doesn't work but I want it to
@@ -145,22 +141,17 @@ for_window [class="Chromium"] layout tabbed
 # assign [class="st-256color"] $WS1
 assign [class="Firefox"] $WS4
 assign [class="Chromium"] $WS4
-assign [class="Nemo"] $WS5
-assign [class="st-256color" instance="cmus"] $ws9
 
 #####
 # BINDS
 #####
 
+# apps
 bindsym $mod+Return exec st
 #bindsym $mod+Return exec urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"
 bindsym $mod+Shift+w exec firefox
-#bindsym $mod+Shift+e exec chromium --use-gl=egl
 bindsym $mod+Shift+e exec chromium
 bindsym $mod+Shift+p exec xfce4-appfinder
-bindsym $mod+Shift+f exec nemo
-bindsym $mod+Shift+g exec st -e ranger
-bindsym $mod+Shift+m exec st -e cmus
 bindsym $mod+Shift+s exec flameshot gui
 
 # audio
