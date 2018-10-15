@@ -64,7 +64,13 @@ fi
 # Init FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Zim!
+# Disable LiquidPrompt temperature sensor calls on linode machine
+# Do this before initializing Zimfw
+if [ "$HOSTNAME" = linode ]; then
+  LP_ENABLE_TEMP=0
+fi
+
+# Zimfw
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
 fi
