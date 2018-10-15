@@ -69,6 +69,10 @@ function doIt() {
   rm -f ~/.gnupg/gpg-agent.conf
   mkdir -p ~/.gnupg
   ln -s ~/dotfiles/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
+
+  # mutt
+  rm -Rf ~/.mutt
+  ln -s ~/dotfiles/mutt ~/.mutt
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
