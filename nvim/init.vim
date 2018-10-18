@@ -10,7 +10,6 @@ Plug 'tpope/vim-sensible' " Provides base config
 Plug 'mileszs/ack.vim' " Use ack to grep project directory
 Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
 Plug 'bkad/CamelCaseMotion' " Camel Case based motions
-" Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' } " Better commenting commands
 Plug 'tpope/vim-fugitive' " Git integration with vim
 Plug 'tpope/vim-surround' " Helps with surrounding text
 Plug 'tpope/vim-repeat' " make vim-commentary and vim-surround work with .
@@ -28,8 +27,8 @@ Plug 'wellle/targets.vim' " more text objects to operate on (https://github.com/
 Plug 'ervandew/supertab' " use tab for all insert more completions (https://github.com/ervandew/supertab)
 Plug 'foosoft/vim-argwrap' " extra tools for (un)wrapping lists and objects
 Plug 'ahw/vim-pbcopy' " netcat style copy-paste
-Plug 'Shougo/context_filetype.vim' " required for caw.vim commenting
-Plug 'tyru/caw.vim' " more advanced commenting, required for vue template files
+Plug 'tomtom/tcomment_vim'
+Plug 'zhou13/vim-easyescape' " help map esc to jk/kj with super-low latency
 
 " Syntax highlighting / Themes / Indentation
 Plug 'altercation/vim-colors-solarized'
