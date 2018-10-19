@@ -7,8 +7,6 @@ windows:
       - htop
       - focus: true
       -
-  - window_name: cmus
+  - window_name: blank
     panes:
-      - shell_command:
-        - cmus
-        focus: true
+      - blank
