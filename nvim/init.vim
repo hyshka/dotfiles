@@ -3,39 +3,81 @@
 "----------------------------------------------------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
-"
-" Functional
-Plug 'tpope/vim-sensible' " Provides base config
-Plug 'mileszs/ack.vim' " Use ack to grep project directory
-Plug 'mattn/emmet-vim' " HTML expansion plugin, very useful
-Plug 'bkad/CamelCaseMotion' " Camel Case based motions
-Plug 'tpope/vim-fugitive' " Git integration with vim
-Plug 'tpope/vim-surround' " Helps with surrounding text
-Plug 'tpope/vim-repeat' " make vim-commentary and vim-surround work with .
-Plug 'tpope/vim-sleuth' " auto detect and set shiftwidth and expandtab (https://github.com/tpope/vim-sleuth)
-Plug 'tpope/vim-unimpaired' " group of mappings for various next/previous commands
-Plug 'editorconfig/editorconfig-vim'
-Plug 'tmux-plugins/vim-tmux-focus-events' " restore focusgained and focuslost autocommands
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf install
-Plug 'junegunn/fzf.vim' " fzf integration
-Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
-Plug 'francoiscabrol/ranger.vim' " ranger intergration
-Plug 'alvan/vim-closetag' " autoclose html tags
-Plug 'wellle/targets.vim' " more text objects to operate on (https://github.com/wellle/targets.vim)
-Plug 'ervandew/supertab' " use tab for all insert more completions (https://github.com/ervandew/supertab)
-Plug 'foosoft/vim-argwrap' " extra tools for (un)wrapping lists and objects
-Plug 'ahw/vim-pbcopy' " netcat style copy-paste
-Plug 'tomtom/tcomment_vim'
-Plug 'zhou13/vim-easyescape' " help map esc to jk/kj with super-low latency
+" Provides base config
+Plug 'tpope/vim-sensible' 
 
-" Syntax highlighting / Themes / Indentation
-Plug 'altercation/vim-colors-solarized'
-Plug 'sheerun/vim-polyglot' " One to rule them all, one to find them, one to bring them all and in the darkness bind them. (https://github.com/sheerun/vim-polyglot)
+" Use ack to grep project directory
+Plug 'mileszs/ack.vim' 
+
+" HTML expansion plugin, very useful
+Plug 'mattn/emmet-vim' 
+
+" Camel Case based motions
+Plug 'bkad/CamelCaseMotion' 
+
+" Git integration with vim
+Plug 'tpope/vim-fugitive' 
+
+" Helps manipulate characters surrounding text
+Plug 'tpope/vim-surround' 
+
+" make vim-commentary and vim-surround work with .
+Plug 'tpope/vim-repeat' 
+
+" auto detect and set shiftwidth and expandtab (https://github.com/tpope/vim-sleuth)
+Plug 'tpope/vim-sleuth' 
+
+" group of mappings for various next/previous commands
+Plug 'tpope/vim-unimpaired' 
+
+" Plug 'editorconfig/editorconfig-vim'
+
+" restore focusgained and focuslost autocommands
+Plug 'tmux-plugins/vim-tmux-focus-events' 
+
+" fzf install + integration
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
+Plug 'junegunn/fzf.vim'
+
+" ranger.vim dependency + integration
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
+
+ " autoclose html tags
+Plug 'alvan/vim-closetag'
+
+" more text objects to operate on (https://github.com/wellle/targets.vim)
+Plug 'wellle/targets.vim' 
+
+" use tab for all insert more completions (https://github.com/ervandew/supertab)
+Plug 'ervandew/supertab' 
+
+" extra tools for (un)wrapping lists and objects
+Plug 'foosoft/vim-argwrap' 
+
+" netcat style copy-paste
+Plug 'ahw/vim-pbcopy' 
+
+" context and language-aware commentstrings (only one that works with vue templates)
+Plug 'tomtom/tcomment_vim'
+
+" help map esc to jk/kj with super-low latency
+Plug 'zhou13/vim-easyescape' 
+
+" One to rule them all, one to find them, one to bring them all and in the darkness bind them. (https://github.com/sheerun/vim-polyglot)
+Plug 'sheerun/vim-polyglot' 
+
+" status bars
 Plug 'itchyny/lightline.vim'
 
-" My plugins
+" colorscheme
+Plug 'altercation/vim-colors-solarized'
+
+" uikit class autocompletion
+Plug 'hyshka/vim-uikit'
+
+" all my settings
 Plug 'hyshka/vim-options'
-Plug 'hyshka/vim-uikit' " uikit class autocompletion
 
 call plug#end()
 "----------------------------------------------------------------------------------------------------------------------
