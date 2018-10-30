@@ -104,7 +104,7 @@ zssh_ids=(id_rsa)
 #
 
 # Set (optional) pacman front-end.
-# zpacman_frontend='pacman'
+zpacman_frontend='pikaur'
 
 # Load any helper scripts as defined here
 zpacman_helper=(aur)
