@@ -29,13 +29,9 @@ else
   export BROWSER=w3m
 fi
 
-# set default gtk2 theme
-# not sure why I need this
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-
-# set qt5 to use gtk2 engine
-# ref: https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle
-export QT_QPA_PLATFORMTHEME=gtk2
+# set qt5 to use adwaita
+# ref: https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#Styles_for_both_Qt_and_GTK+
+QT_STYLE_OVERRIDE=adwaita
 
 # prevent Firefox from creating Desktop directory
 export XDG_DESKTOP_DIR="$HOME/Downloads"
