@@ -26,3 +26,6 @@ bin/sql-backup
 
 # machine-specific
 ranger/bookmarks
+
+# submodules
+rofi-wrapper
