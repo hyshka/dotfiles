@@ -99,23 +99,6 @@ mode " R " {
 }
 bindsym $mod+r mode " R "
 
-# locker
-# requires: physlock (https://github.com/muennich/physlock)
-# set $Locker physlock && sleep 1
-# 
-# set $system_ctl System (l) lock, (e) exit i3, (s) suspend, (r) reboot, (Shift+s) shutdown
-# mode "$system_ctl" {
-#     bindsym l exec --no-startup-id $Locker, mode "default"
-#     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-#     bindsym s exec --no-startup-id systemctl suspend, mode "default"
-#     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-#     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-#     # back to normal: Enter or Escape
-#     bindsym Return mode "default"
-#     bindsym Escape mode "default"
-# }
-# bindsym XF86ScreenSaver mode "$system_ctl"
-
 #####
 # WINDOWS
 #####
@@ -173,6 +156,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 
 # custom rofi modes
 bindsym $mod+q exec --no-startup-id ~/dotfiles/rofi-wrapper/rofi-gpaste
+bindsym XF86ScreenSaver exec --no-startup-id ~/dotfiles/rofi-wrapper/rofi-power
 
 # BAR
 #####
