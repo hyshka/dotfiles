@@ -104,7 +104,11 @@ zssh_ids=(id_rsa)
 #
 
 # Set (optional) pacman front-end.
-zpacman_frontend='pikaur'
+if (( $+commands[pikaur] )); then
+  zpacman_frontend='pikaur'
+else
+  zpacman_frontend=''
+fi
 
 # Load any helper scripts as defined here
 zpacman_helper=(aur)
