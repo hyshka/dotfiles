@@ -24,30 +24,24 @@ alias vi=vim
 alias t=tmux
 
 # custom commands
-alias uh="urxvt &"
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 alias xClass="xprop | grep WM_CLASS"
 alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.config/chromium-dev &"
-alias gp6="bash /opt/GuitarPro6/launcher.sh"
-alias remo="ssh linode"
-alias makepkgfast="BUILDDIR=/tmp/makepkg makepkg"
+alias gp6="bash /opt/GuitarPro6/GuitarPro"
+alias makepkgram="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
 
 # xrandr
-alias xeo="xrandr --output HDMI-1 --off"
-alias xea="xrandr --output HDMI-1 --auto --output eDP-1 --auto --right-of HDMI-1"
-alias xet="xrandr --output HDMI-1 --off; xrandr --output HDMI-1 --auto --output eDP-1 --auto --right-of HDMI-1"
-alias xe="xrandr --output HDMI-1 --auto --output eDP-1 --off"
-alias xi="xrandr --output eDP-1 --auto --output HDMI-1 --off"
+alias xeo="xrandr --output HDMI1 --off"
+alias xea="xrandr --output HDMI1 --auto --output eDP1 --auto --right-of HDMI1"
+alias xet="xrandr --output HDMI1 --off; xrandr --output HDMI1 --auto --output eDP1 --auto --right-of HDMI1"
+alias xe="xrandr --output HDMI1 --auto --output eDP1 --off"
+alias xi="xrandr --output eDP1 --auto --output HDMI1 --off"
 
 # clipboard
 alias pyclip="python ~/.bin/pyclip.py"
 alias cb="xsel --clipboard"
-alias clip="nc -N localhost 8377"
-
-# i3-style
-alias i3t="i3-style ~/.dotfiles/i3/base16-tomorrow.yaml -o ~/.config/i3/config --reload"
-alias i3tn="i3-style ~/.dotfiles/i3/base16-tomorrow-night.yaml -o ~/.config/i3/config --reload"
+alias clip="nc -w 1 localhost 41401"
 
 # tmuxp sessions
 alias tph="tmuxp load ~/.config/tmuxp/dashboard_home.yaml"
@@ -55,23 +49,6 @@ alias tpw="tmuxp load ~/.config/tmuxp/dashboard_work.yaml"
 alias tpdot="tmuxp load ~/.config/tmuxp/dotfiles.yaml"
 alias tpdb="tmuxp load ~/.config/tmuxp/database.yaml"
 alias tpsp="tmuxp load ~/.config/tmuxp/scratchpad.yaml"
-
-# django-admin.py
-alias dj=django-admin.py
-alias djr='django-admin.py runserver'
-alias djrp='django-admin.py runserver_plus'
-alias djr2='django-admin.py runserver 127.0.0.1:8080'
-alias djm='django-admin.py migrate'
-alias djmm='django-admin.py makemigrations'
-alias djs='django-admin.py syncdb'
-alias djsh='django-admin.py shell'
-alias djshp='django-admin.py shell_plus'
-
-# pip
-alias pi="pip install"
-alias pu="pip uninstall"
-alias pf="pip freeze"
-alias pfg="pip freeze | grep"
 
 # git shortcuts (mostly in zim module)
 alias gch="git cherry-pick"

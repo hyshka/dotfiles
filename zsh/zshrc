@@ -2,18 +2,10 @@
 # SETUP ENVIRONMENT #
 #####################
 
-# Path
 # Add binaries from dotfiles
 PATH=$HOME/.bin:$HOME/.local/bin:$PATH
-# Use local node modules binaries before global binaries
-PATH=./node_modules/.bin:$PATH
 
-# Defaults
-if (( $+commands[st] )); then
-  export TERMINAL=st
-else
-  export TERMINAL=urxvt
-fi
+export TERMINAL=st
 
 if (( $+commands[docker] )); then
   export VISUAL=nvim
@@ -23,11 +15,16 @@ else
   export EDITOR=vim
 fi
 
+# use gui browser if running x11/wayland
 if [ -n "$DISPLAY" ]; then
   export BROWSER=firefox
 else
   export BROWSER=w3m
 fi
+
+# Solarized Dircolors
+# see: https://github.com/seebi/dircolors-solarized
+eval `dircolors $HOME/dotfiles/zsh/dir_colors`
 
 # set qt5 to use adwaita
 # ref: https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#Styles_for_both_Qt_and_GTK+
@@ -42,23 +39,25 @@ export GPG_TTY=$(tty)
 # Refresh gpg-agent tty in case user switches into an X session
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
-# Solarized Dircolors
-# see: https://github.com/seebi/dircolors-solarized
-eval `dircolors $HOME/dotfiles/zsh/dir_colors`
+# Use local node modules binaries before global binaries
+PATH=./node_modules/.bin:$PATH
 
 # node version manager
-# lazy loading saves on shell startup time
-if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
-  nvm() {
-    unset -f nvm;
-    export NVM_DIR="$HOME/.nvm"
-    source "$NVM_DIR/nvm.sh"
-    nvim "$@"
-  }
-fi
+export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Init FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# FZF style
+_gen_fzf_default_opts() {
+  export FZF_DEFAULT_OPTS="
+    --color=bg+:7,bg:15,spinner:6,hl:4
+    --color=fg:11,header:4,info:3,pointer:6
+    --color=marker:6,fg+:0,prompt:3,hl+:4
+  "
+}
+_gen_fzf_default_opts
 
 # Disable LiquidPrompt temperature sensor calls on linode machine
 # Do this before initializing Zimfw
@@ -70,13 +69,3 @@ fi
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
 fi
-
-_gen_fzf_default_opts() {
-  export FZF_DEFAULT_OPTS="
-    --color=bg+:7,bg:15,spinner:6,hl:4
-    --color=fg:11,header:4,info:3,pointer:6
-    --color=marker:6,fg+:0,prompt:3,hl+:4
-  "
-}
-
-_gen_fzf_default_opts
