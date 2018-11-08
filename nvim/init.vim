@@ -73,6 +73,10 @@ Plug 'itchyny/lightline.vim'
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
 
+" indent lines trial
+Plug 'Yggdroot/indentLine'
+Plug 'nathanaelkane/vim-indent-guides'
+
 " uikit class autocompletion
 Plug 'hyshka/vim-uikit'
 
