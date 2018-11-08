@@ -27,7 +27,7 @@ alias t=tmux
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 alias xClass="xprop | grep WM_CLASS"
 alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.config/chromium-dev &"
-alias gp6="bash /opt/GuitarPro6/GuitarPro"
+alias gp6="bash /opt/GuitarPro6/launcher.sh"
 alias makepkgram="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
 
