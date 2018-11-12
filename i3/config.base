@@ -132,7 +132,7 @@ assign [class="Chromium"] $WS4
 # apps
 bindsym $mod+Return exec st
 #bindsym $mod+Return exec urxvt -e bash -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOSTNAME"
-bindsym $mod+Shift+w exec firefox
+bindsym $mod+Shift+w exec firefox-developer-edition
 bindsym $mod+Shift+e exec chromium
 bindsym $mod+Shift+p exec xfce4-appfinder
 bindsym $mod+Shift+s exec flameshot gui

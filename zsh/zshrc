@@ -17,7 +17,7 @@ fi
 
 # use gui browser if running x11/wayland
 if [ -n "$DISPLAY" ]; then
-  export BROWSER=firefox
+  export BROWSER=firefox-developer-edition
 else
   export BROWSER=w3m
 fi
