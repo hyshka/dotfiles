@@ -3,16 +3,6 @@ windows:
   - window_name: dotfiles
     panes:
     - cd ~/dotfiles
-  - window_name: docker-neovim
-    panes:
-    - cd ~/work/mine/docker-neovim
   - window_name: vim-options
     panes:
     - cd ~/work/mine/vim-options
-  - window_name: vim-uikit
-    panes:
-    - cd ~/work/mine/vim-uikit
-  - window_name: docker-now
-    panes:
-    - cd ~/work/mine/docker-now
-

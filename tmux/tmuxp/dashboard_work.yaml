@@ -6,14 +6,4 @@ windows:
     panes:
       - htop
       - focus: true
-      -
-  - window_name: weechat
-    panes:
-      - shell_command:
-        - weechat
-        focus: true
-  - window_name: cmus
-    panes:
-      - shell_command:
-        - cmus
-        focus: true
+      - blank

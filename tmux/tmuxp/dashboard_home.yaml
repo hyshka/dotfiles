@@ -3,10 +3,19 @@ start_directory: "${HOME}"
 windows:
   - window_name: live
     layout: even-vertical
+    focus: true
     panes:
       - htop
       - focus: true
-      -
-  - window_name: blank
+      - blank
+#  - window_name: weechat
+#    panes:
+#      - shell_command:
+#        - weechat
+#        focus: true
+  - window_name: clipboard
+    panes:
+      - pyclip
+  - window_name: mail
     panes:
       - blank
