@@ -107,7 +107,7 @@ zssh_ids=(id_rsa)
 if (( $+commands[pikaur] )); then
   zpacman_frontend='pikaur'
 else
-  zpacman_frontend=''
+  zpacman_frontend='pacman'
 fi
 
 # Load any helper scripts as defined here
