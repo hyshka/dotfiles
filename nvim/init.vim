@@ -82,7 +82,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'majutsushi/tagbar'
 
 " presentation software (slides)
-Plug "sotte/presenting.vim"
+Plug 'sotte/presenting.vim'
 
 " uikit class autocompletion
 Plug 'hyshka/vim-uikit'
