@@ -77,6 +77,13 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'Yggdroot/indentLine'
 Plug 'nathanaelkane/vim-indent-guides'
 
+" class outline viewer
+" TODO: WIP
+" Plug 'majutsushi/tagbar'
+
+" presentation software (slides)
+Plug "sotte/presenting.vim"
+
 " uikit class autocompletion
 Plug 'hyshka/vim-uikit'
 
