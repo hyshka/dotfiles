@@ -1,6 +1,0 @@
-# Function for allowing remote to netcat to local clipboard
-# Requires: openbsd-netcat, xsel
-
-ssh "$1" '~/clipd_kill.sh' &> /dev/null
-ssh -nNT -R 0.0.0.0:41401:localhost:41401 "$1" &
-while true; do nc -l 41401 | "$HOME/dotfiles/bin/port_parse.py" | tee >(xsel -i --clipboard); done &
