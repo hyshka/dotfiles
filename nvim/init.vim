@@ -33,7 +33,7 @@ Plug 'tpope/vim-unimpaired'
 " Plug 'editorconfig/editorconfig-vim'
 
 " restore focusgained and focuslost autocommands
-Plug 'tmux-plugins/vim-tmux-focus-events' 
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " fzf install + integration
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } 
@@ -47,25 +47,22 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'alvan/vim-closetag'
 
 " more text objects to operate on (https://github.com/wellle/targets.vim)
-Plug 'wellle/targets.vim' 
-
-" use tab for all insert more completions (https://github.com/ervandew/supertab)
-Plug 'ervandew/supertab' 
+Plug 'wellle/targets.vim'
 
 " extra tools for (un)wrapping lists and objects
-Plug 'foosoft/vim-argwrap' 
+Plug 'foosoft/vim-argwrap'
 
 " netcat style copy-paste
-Plug 'ahw/vim-pbcopy' 
+Plug 'ahw/vim-pbcopy'
 
 " context and language-aware commentstrings (only one that works with vue templates)
 Plug 'tomtom/tcomment_vim'
 
 " help map esc to jk/kj with super-low latency
-Plug 'zhou13/vim-easyescape' 
+Plug 'zhou13/vim-easyescape'
 
 " One to rule them all, one to find them, one to bring them all and in the darkness bind them. (https://github.com/sheerun/vim-polyglot)
-Plug 'sheerun/vim-polyglot' 
+Plug 'sheerun/vim-polyglot'
 
 " status bars
 Plug 'itchyny/lightline.vim'
@@ -83,6 +80,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 " presentation software (slides)
 Plug 'sotte/presenting.vim'
+
+" Code completion
+Plug 'Valloric/YouCompleteMe'
 
 " uikit class autocompletion
 Plug 'hyshka/vim-uikit'
