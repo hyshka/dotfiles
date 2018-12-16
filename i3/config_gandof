@@ -2,8 +2,8 @@
 # AUTOSTARTS
 #####
 #exec_always --no-startup-id setroot --restore
-#exec --no-startup-id xbindkeys
-exec --no-startup-id gpaste-client # init clipboard manager
+exec_always --no-startup-id ~/dotfiles/bin/polybar.sh
+exec --no-startup-id gpaste-client
 
 
 ####

@@ -73,6 +73,10 @@ function doIt() {
   # mutt
   rm -Rf ~/.mutt
   ln -s ~/dotfiles/mutt ~/.mutt
+
+  # polybar
+  rm -Rf ~/.config/polybar
+  ln -s ~/dotfiles/polybar ~/.config/polybar
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

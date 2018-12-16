@@ -154,25 +154,14 @@ bindsym XF86AudioPrev exec cmus-remote --prev
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 
+# polybar control
+# show
+bindcode 133 exec xdotool search --class Polybar windowmap %@ windowraise %@
+# hide
+bindcode --release 133 exec xdotool search --class Polybar windowunmap %@
+
 # custom rofi modes
 bindsym $mod+q exec --no-startup-id ~/dotfiles/rofi-wrapper/rofi-gpaste
 bindsym XF86ScreenSaver exec --no-startup-id ~/dotfiles/rofi-wrapper/rofi-power
-
-# BAR
-#####
-
-bar {
-  status_command i3status --config ~/.config/i3/i3status.conf
-  mode invisible
-  position top
-  tray_padding 0
-  font -*-terminus-medium-*-*-*-16-*-*-*-*-*-*-*
-  separator_symbol " | "
-  # disable scroll wheel (doesn't work on veyron)
-  bindsym button4 nop
-  bindsym button5 nop
-
-  # $i3-theme-bar
-}
 
 # $i3-theme-window
