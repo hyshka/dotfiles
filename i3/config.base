@@ -138,10 +138,11 @@ bindsym $mod+Shift+p exec xfce4-appfinder
 bindsym $mod+Shift+s exec flameshot gui
 
 # audio
-bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ -5%"
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+# 
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ -5%; notify-send 'Volume' $(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,') --icon=dialog-information"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ +5%; notify-send 'Volume' $(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,') --icon=dialog-information"
+bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle; notify-send 'Volume Muted' $(pactl list sinks | grep '^[[:space:]]Mute:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed 's/Mute://' | xargs) --icon=dialog-information"
+bindsym XF86AudioMicMute exec --no-startup-id "pactl set-source-mute @DEFAULT_SOURCE@ toggle; notify-send 'Microphone Mute Toggled'"
 
 # audio player
 bindsym XF86AudioPlay exec cmus-remote --pause
@@ -151,8 +152,8 @@ bindsym XF86AudioPrev exec cmus-remote --prev
 
 # backlight
 # requires: light (https://aur.archlinux.org/packages/light-git/)
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 10; notify-send 'Backlight' $(light -G)"
+bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 10; notify-send 'Backlight' $(light -G)"
 
 # polybar control
 # show
