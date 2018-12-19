@@ -57,7 +57,7 @@ font-2 = "Wuncon Siji:pixelsize=10;1"
 
 modules-left = i3
 modules-center = date
-modules-right = pulseaudio wlan eth battery
+modules-right = battery
 
 tray-position = right
 tray-padding = 2
