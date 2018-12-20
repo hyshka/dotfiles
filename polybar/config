@@ -56,11 +56,11 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = "Wuncon Siji:pixelsize=10;1"
 
 modules-left = i3
-modules-center = date
-modules-right = battery
+modules-center =
+modules-right = date
 
-tray-position = right
-tray-padding = 2
+tray-position = none
+;tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
 
