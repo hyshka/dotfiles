@@ -30,6 +30,7 @@ alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.confi
 alias gp6="bash /opt/GuitarPro6/launcher.sh"
 alias makepkgram="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
+alias bhp="echo -e "power on\nconnect 74:5C:4B:B4:3C:86" | bluetoothctl"
 
 # xrandr
 alias xeo="xrandr --output HDMI1 --off"
