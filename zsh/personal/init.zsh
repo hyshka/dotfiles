@@ -30,7 +30,7 @@ alias chromiumcors="chromium --disable-web-security --user-data-dir=$HOME/.confi
 alias gp6="bash /opt/GuitarPro6/launcher.sh"
 alias makepkgram="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
-alias bhp='echo -e "power on\nconnect 74:5C:4B:B4:3C:86" | bluetoothctl'
+alias bhp='echo -e "connect 74:5C:4B:B4:3C:86\n" | bluetoothctl'
 
 # xrandr
 alias xeo="xrandr --output HDMI1 --off"
@@ -50,9 +50,6 @@ alias tpw="tmuxp load ~/.config/tmuxp/dashboard_work.yaml"
 alias tpdot="tmuxp load ~/.config/tmuxp/dotfiles.yaml"
 alias tpdb="tmuxp load ~/.config/tmuxp/database.yaml"
 alias tpsp="tmuxp load ~/.config/tmuxp/scratchpad.yaml"
-
-# git shortcuts (mostly in zim module)
-alias gch="git cherry-pick"
 
 # npm shortcuts that only list top-level modules
 # ! overrides the line-number utility
