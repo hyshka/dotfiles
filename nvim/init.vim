@@ -58,9 +58,6 @@ Plug 'ahw/vim-pbcopy'
 " context and language-aware commentstrings (only one that works with vue templates)
 Plug 'tomtom/tcomment_vim'
 
-" help map esc to jk/kj with super-low latency
-Plug 'zhou13/vim-easyescape'
-
 " One to rule them all, one to find them, one to bring them all and in the darkness bind them. (https://github.com/sheerun/vim-polyglot)
 Plug 'sheerun/vim-polyglot'
 
@@ -72,11 +69,10 @@ Plug 'altercation/vim-colors-solarized'
 
 " indent lines trial
 Plug 'Yggdroot/indentLine'
-Plug 'nathanaelkane/vim-indent-guides'
 
 " class outline viewer
-" TODO: WIP
-" Plug 'majutsushi/tagbar'
+Plug 'ternjs/tern_for_vim' " required for jsctags support
+Plug 'majutsushi/tagbar'
 
 " presentation software (slides)
 Plug 'sotte/presenting.vim'
@@ -91,4 +87,8 @@ Plug 'hyshka/vim-uikit'
 Plug 'hyshka/vim-options'
 
 call plug#end()
+
+" These options don't work inside vim-options
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
 "----------------------------------------------------------------------------------------------------------------------
