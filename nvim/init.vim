@@ -30,8 +30,6 @@ Plug 'tpope/vim-sleuth'
 " group of mappings for various next/previous commands
 Plug 'tpope/vim-unimpaired' 
 
-" Plug 'editorconfig/editorconfig-vim'
-
 " restore focusgained and focuslost autocommands
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
@@ -67,11 +65,10 @@ Plug 'itchyny/lightline.vim'
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
 
-" indent lines trial
+" indent lines
 Plug 'Yggdroot/indentLine'
 
 " class outline viewer
-Plug 'ternjs/tern_for_vim' " required for jsctags support
 Plug 'majutsushi/tagbar'
 
 " presentation software (slides)
@@ -79,6 +76,9 @@ Plug 'sotte/presenting.vim'
 
 " Code completion
 Plug 'Valloric/YouCompleteMe'
+
+" Linting, Fixing, and Code completion
+Plug 'w0rp/ale'
 
 " uikit class autocompletion
 Plug 'hyshka/vim-uikit'

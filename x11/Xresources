@@ -1,3 +1,2 @@
 #include "dotfiles/x11/solarized_light"
-#include "dotfiles/x11/rxvt-unicode"
 #include "dotfiles/x11/rofi"

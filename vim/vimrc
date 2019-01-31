@@ -18,11 +18,11 @@ Plug 'junegunn/fzf.vim' " fzf integration
 Plug 'rbgrouleff/bclose.vim' " ranger.vim dep
 Plug 'francoiscabrol/ranger.vim' " ranger intergration
 Plug 'wellle/targets.vim' " more text objects to operate on (https://github.com/wellle/targets.vim)
-Plug 'ervandew/supertab' " use tab for all insert more completions (https://github.com/ervandew/supertab)
 Plug 'foosoft/vim-argwrap' " extra tools for (un)wrapping lists and objects
 Plug 'ahw/vim-pbcopy' " netcat style copy-paste
 Plug 'tomtom/tcomment_vim'
 Plug 'zhou13/vim-easyescape' " help map esc to jk/kj with super-low latency
+Plug 'Yggdroot/indentLine' " indent lines
 
 " Syntax highlighting / Themes / Indentation
 Plug 'altercation/vim-colors-solarized'
