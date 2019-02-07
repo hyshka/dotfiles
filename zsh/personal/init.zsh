@@ -22,6 +22,7 @@ bindkey -v
 alias sx=startx
 alias vi=vim
 alias t=tmux
+alias b='buku --suggest'
 
 # custom commands
 alias xev="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
