@@ -77,6 +77,10 @@ function doIt() {
   # polybar
   rm -Rf ~/.config/polybar
   ln -s ~/dotfiles/polybar ~/.config/polybar
+
+  # alacritty
+  rm -Rf ~/.config/alacritty
+  ln -s ~/dotfiles/alacritty ~/.config/alacritty
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
