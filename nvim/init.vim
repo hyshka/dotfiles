@@ -75,7 +75,7 @@ Plug 'majutsushi/tagbar'
 Plug 'sotte/presenting.vim'
 
 " Code completion
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 
 " Linting, Fixing, and Code completion
 Plug 'w0rp/ale'
