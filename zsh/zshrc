@@ -5,7 +5,10 @@
 # Add binaries from dotfiles
 PATH=$HOME/.bin:$HOME/.local/bin:$PATH
 
-export TERMINAL=st
+export TERMINAL=alacritty
+
+# DPI Fix for alacritty
+export WINIT_HIDPI_FACTOR=1.0
 
 if (( $+commands[docker] )); then
   export VISUAL=nvim
