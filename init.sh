@@ -21,12 +21,6 @@ function doIt() {
   # source ~/.zshrc
   # source ${ZDOTDIR:-${HOME}}/.zlogin
 
-  # vim
-  rm -Rf ~/.vim
-  rm -f ~/.vimrc
-  ln -s ~/dotfiles/vim ~/.vim
-  ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-
   # neovim
   rm -Rf ~/.config/nvim
   ln -s ~/dotfiles/nvim ~/.config/nvim

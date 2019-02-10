@@ -111,7 +111,6 @@ for_window [window_role="Msgcompose"] floating enable
 for_window [title="Preferences$"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
-# for_window [class="Gimp"] floating enable
 
 # window defaults
 for_window [class="Firefox"] layout tabbed
@@ -121,7 +120,6 @@ for_window [class="Chromium"] layout tabbed
 #for_window [instance="scratchpad"] move window to scratchpad, scratchpad show
 
 # application workspaces
-# assign [class="st-256color"] $WS1
 assign [class="Firefox"] $WS4
 assign [class="Chromium"] $WS4
 
