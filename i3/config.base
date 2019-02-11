@@ -26,7 +26,7 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 # split in horizontal orientation
-bindsym $mod+c split h
+bindsym $mod+g split h
 # split in vertical orientation
 bindsym $mod+v split v
 # enter fullscreen mode for the focused container
@@ -159,7 +159,7 @@ bindcode 133 exec xdotool search --class Polybar windowmap %@ windowraise %@
 bindcode --release 133 exec xdotool search --class Polybar windowunmap %@
 
 # custom rofi modes
-bindsym $mod+q exec --no-startup-id ~/dotfiles/rofi-wrapper/rofi-gpaste
+bindsym $mod+c exec --no-startup-id ~/dotfiles/rofi-wrapper/rofi-gpaste
 bindsym XF86ScreenSaver exec --no-startup-id ~/dotfiles/rofi-wrapper/rofi-power
 # requires: https://aur.archlinux.org/packages/buku_run-git/
 bindsym $mod+b exec --no-startup-id buku_run
