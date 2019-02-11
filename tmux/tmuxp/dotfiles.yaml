@@ -6,3 +6,6 @@ windows:
   - window_name: vim-options
     panes:
     - cd ~/work/mine/vim-options
+  - window_name: docker-neovim
+    panes:
+    - cd ~/work/mine/docker-neovim
