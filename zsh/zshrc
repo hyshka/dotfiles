@@ -10,8 +10,14 @@ export TERMINAL=alacritty
 # DPI Fix for alacritty
 export WINIT_HIDPI_FACTOR=1.0
 
-export VISUAL=nvim
-export EDITOR=nvim
+# @todo: find a better way to do this
+if (( $+commands[docker] )); then
+  export VISUAL=nvim
+  export EDITOR=nvim
+else
+  export VISUAL=vim
+  export EDITOR=vim
+fi
 
 # use gui browser if running x11/wayland
 if [ -n "$DISPLAY" ]; then
