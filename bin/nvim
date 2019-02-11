@@ -1,13 +1,5 @@
 #!/bin/bash
-# vim: set filetype=sh :
-
-# Purpose: Command for running neovim
-#
-# Set options:
-#   e: Stop script if command fails
-#   u: Stop script if unset variable is referenced
-#   x: Debug, print commands as they are executed
-#set -eu
+# Command for running neovim
 
 IMAGENAME=hyshka/neovim
 
@@ -19,5 +11,12 @@ else
   dir_name="$(pwd)"
 fi
 
+# Name container by tmux session
+name=$(tmux display-message -p '#S')
+timestamp=$(date +%s)
+
 # Run the docker command
-docker run --userns="host" -i -t -P -v "$dir_name":/src $IMAGENAME /bin/sh -c "cd /src;nvim $file_name"
+docker run --userns="host" -i -t -P -v "$dir_name":/root/app --name "nvim_${name}_${timestamp}" $IMAGENAME /bin/bash -c "cd /root/app; nvim $file_name"
+
+# Remove container after it's done
+docker rm $(docker ps -l -q)
