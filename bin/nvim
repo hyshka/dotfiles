@@ -18,7 +18,7 @@ timestamp=$(date +%s)
 # Run the docker command
 docker run -i -t -P \
   --memory 64m \
-  --memory-swappiness="10"
+  --memory-swappiness="10" \
   --userns="host" \
   -v "$dir_name":/root/app \
   --name "nvim_${name}_${timestamp}" \
