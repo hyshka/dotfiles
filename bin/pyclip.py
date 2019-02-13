@@ -2,7 +2,6 @@
 import socket
 import subprocess
 import time
-import os
 
 import pyperclip
 
@@ -43,7 +42,8 @@ def parse_data(data: bytes):
                 return
     pyperclip.copy(data_str)
 
-def listen_for_data(sock: socket.socket):
+
+def listen_for_data(sock: socket.socket) -> None:
     """Make the socket listen for data forever."""
     host = 'localhost'
     port = 41401
@@ -61,10 +61,10 @@ def listen_for_data(sock: socket.socket):
 
 
 if __name__ == '__main__':
-    print('Spawning SSH')
-    proc = subprocess.Popen(
-        ['ssh', '-nNT', '-R', '172.17.0.1:41401:localhost:41401', '-R', '41401:localhost:41401', 'linode'],
-        stdout=subprocess.PIPE
+    print('Attempting to forward SSH port')
+    subprocess.Popen(
+        ['ssh', '-nNT', '-R', '41401:localhost:41401', 'linode'],
+        stdout=subprocess.PIPE,
     )
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # Previous executions can leave socket in TIME_WAIT, prevent this.
