@@ -63,7 +63,7 @@ def listen_for_data(sock: socket.socket):
 if __name__ == '__main__':
     print('Spawning SSH')
     proc = subprocess.Popen(
-        ['ssh', '-nNT', '-R', '41401:localhost:41401', 'linode'],
+        ['ssh', '-nNT', '-R', '172.17.0.1:41401:localhost:41401', '-R', '41401:localhost:41401', 'linode'],
         stdout=subprocess.PIPE
     )
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
