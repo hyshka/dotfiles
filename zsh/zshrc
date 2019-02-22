@@ -11,7 +11,7 @@ export TERMINAL=alacritty
 export WINIT_HIDPI_FACTOR=1.0
 
 export VISUAL=nvim
-export EDITOR=nvim
+export EDITOR=vim
 
 # use gui browser if running x11/wayland
 if [ -n "$DISPLAY" ]; then

@@ -6,7 +6,7 @@ rofi.padding:           5
 rofi.hide-scrollbar:    true
 rofi.line-margin:       5
 !rofi.font: Droid Sans Mono 12
-rofi.terminal:                       urxvt
+rofi.terminal:                       alacritty
 rofi.levenshtein-sort:               true
 rofi.fuzzy:                          true
 rofi.kb-cancel:                      Escape,Control+c

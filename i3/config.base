@@ -159,9 +159,9 @@ bindcode 133 exec xdotool search --class Polybar windowmap %@ windowraise %@
 bindcode --release 133 exec xdotool search --class Polybar windowunmap %@
 
 # custom rofi modes
-bindsym $mod+c exec --no-startup-id ~/dotfiles/rofi-wrapper/rofi-gpaste
-bindsym XF86ScreenSaver exec --no-startup-id ~/dotfiles/rofi-wrapper/rofi-power
+bindsym $mod+c exec ~/dotfiles/rofi-wrapper/rofi-gpaste
+bindsym XF86ScreenSaver exec ~/dotfiles/rofi-wrapper/rofi-power
 # requires: https://aur.archlinux.org/packages/buku_run-git/
-bindsym $mod+b exec --no-startup-id buku_run
+bindsym $mod+b exec ~/dotfiles/bin/buku_run.sh
 
 # $i3-theme-window
