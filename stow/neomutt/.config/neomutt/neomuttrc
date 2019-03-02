@@ -38,4 +38,4 @@ set from = bryan@hyshka.com
 set use_from = yes
 
 # Display
-source $HOME/dotfiles/mutt/mutt-colors-solarized-light-16.muttrc
+source $HOME/.config/neomutt/mutt-colors-solarized-light-16.muttrc
