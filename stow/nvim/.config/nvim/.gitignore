@@ -1,10 +1,6 @@
-*.swp
-*~
 plugged/*
 !plugged/.gitkeep
 nvim-files/backups/*
 !nvim-files/backups/.gitkeep
 nvim-files/swaps/*
 !nvim-files/swaps/.gitkeep
-.ctrlp_cache/
-.vimcache

@@ -1,32 +1,13 @@
-*.zwc
-*.old
 *.swp
 *~
-nvim/plugged/*
-!nvim/plugged/.gitkeep
-nvim/nvim-files/backups/*
-!nvim/nvim-files/backups/.gitkeep
-nvim/nvim-files/swaps/*
-!nvim/nvim-files/swaps/.gitkeep
-vim/plugged/*
-!vim/plugged/.gitkeep
-vim/vim-files/backups/*
-!vim/vim-files/backups/.gitkeep
-vim/vim-files/swaps/*
-!vim/vim-files/swaps/.gitkeep
-vim/.netrwhist
-.ctrlp_cache/
-.vimcache
-
-# generated
-i3/i3status.conf
-i3/config
+repos
+!repos/.gitkeep
+stow/systemd/.config/systemd/user/default.target.wants/
 
 # secret
 bin/sql-backup
 
 # machine-specific
 ranger/bookmarks
-
-# submodules
-rofi-wrapper
+i3/i3status.conf
+i3/config

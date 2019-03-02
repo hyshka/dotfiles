@@ -3,26 +3,19 @@
 #####################
 
 # Add binaries from dotfiles
-PATH=$HOME/.bin:$HOME/.local/bin:$PATH
-
-export TERMINAL=alacritty
+PATH=$HOME/dotfiles/bin:$HOME/.local/bin:$PATH
 
 # DPI Fix for alacritty
 export WINIT_HIDPI_FACTOR=1.0
 
+export TERMINAL=alacritty
 export VISUAL=nvim
 export EDITOR=vim
-
-# use gui browser if running x11/wayland
-if [ -n "$DISPLAY" ]; then
-  export BROWSER=firefox-developer-edition
-else
-  export BROWSER=w3m
-fi
+export BROWSER=firefox-developer-edition
 
 # Solarized Dircolors
 # see: https://github.com/seebi/dircolors-solarized
-eval `dircolors $HOME/dotfiles/zsh/dir_colors`
+eval `dircolors $HOME/.config/zsh/dir_colors`
 
 # set qt5 to use adwaita
 # ref: https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#Styles_for_both_Qt_and_GTK+
