@@ -2,12 +2,6 @@
 *~
 repos
 !repos/.gitkeep
-stow/systemd/.config/systemd/user/default.target.wants/
 
 # secret
 bin/sql-backup
-
-# machine-specific
-ranger/bookmarks
-i3/i3status.conf
-i3/config
