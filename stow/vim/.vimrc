@@ -1,7 +1,7 @@
 "----------------------------------------------------------------------------------------------------------------------
 " Plugins
 "----------------------------------------------------------------------------------------------------------------------
-call plug#begin('~/dotfiles/vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " Extending vim functionality
 Plug 'tpope/vim-sensible' " Provides base config
