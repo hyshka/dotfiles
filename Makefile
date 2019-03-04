@@ -3,7 +3,16 @@ help:
 
 install: ## Install the symlink
 	# TODO: install packages
-	# sudo pacman -S stow
+	# stow 
+	# ranger highlight libcaca mediainfo perl-image-exiftool poppler w3m
+	# gnupg pinentry git
+	# zsh 
+	# neomutt
+	# tmux tmuxp
+	# i3-wm
+	# alacritty alacritty-term-info
+	# gvim
+	# TODO Install packages from AUR: j4-make-config polybar rofi buku_run-git osync
 	git clone git@github.com:tadly/rofi-wrapper.git ~/dotfiles/repos/rofi-wrapper
 	# TODO: install zimfw
 

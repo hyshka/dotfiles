@@ -1,1 +1,2 @@
-#include "~/.config/xorg/solarized_light"
+! must be full path relative to home directory
+#include ".config/xorg/solarized_light"
