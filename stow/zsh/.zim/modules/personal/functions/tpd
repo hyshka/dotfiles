@@ -3,7 +3,7 @@ then
     print This command requires an argument. Ex. tpd [projectname]
 else
     PROJECT=$1
-    PROJECT_PATH=$(find ~/work/lift ~/work/mine ~/work/ref -maxdepth 1 -type d -name $PROJECT)
+    PROJECT_PATH=$(find ~/work/* -maxdepth 1 -type d -name $PROJECT)
 
     print $PROJECT $PROJECT_PATH
     PROJECT=$PROJECT PROJECT_PATH=$PROJECT_PATH tmuxp load ~/.config/tmuxp/docker-project.yaml
