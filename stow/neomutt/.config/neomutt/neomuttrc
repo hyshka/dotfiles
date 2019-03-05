@@ -1,11 +1,9 @@
 # IMAP
 # imap.dreamhost.com:993
 set imap_user = bryan@hyshka.com
-# set imap_pass=SECRET
 set folder = imaps://imap.dreamhost.com:993/
-# set folder = +Archives
-mailboxes = +INBOX
-# mailboxes = +Archives
+set spoolfile = +INBOX
+mailboxes =INBOX
 
 # Store message headers locally to speed things up.
 # If hcache is a folder, Mutt will create sub cache folders for each account which may speeds things up even more.
@@ -37,5 +35,24 @@ set realname = 'Bryan Hyshka'
 set from = bryan@hyshka.com
 set use_from = yes
 
-# Display
+# Color theme
 source $HOME/.config/neomutt/mutt-colors-solarized-light-16.muttrc
+
+# Misc settings
+# Default to archives folder of current year
+save-hook . =INBOX.Archives.`date +"%Y"`
+
+# If you move a mail from a mailbox to another, Mutt will ask for confirmation
+set confirmappend = no
+
+# Enforce the charset of sent mail
+set send_charset="utf-8"
+
+# Thread views
+set sort=threads
+
+# Sort latest at top
+set sort = reverse-date-received
+
+# Use vim instead of neovim ide
+set editor="vim"
