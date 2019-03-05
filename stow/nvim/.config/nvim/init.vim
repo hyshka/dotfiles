@@ -91,4 +91,6 @@ call plug#end()
 " These options don't work inside vim-options
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
+" This setting must be set before ALE is loaded.
+let g:ale_completion_enabled = 1
 "----------------------------------------------------------------------------------------------------------------------
