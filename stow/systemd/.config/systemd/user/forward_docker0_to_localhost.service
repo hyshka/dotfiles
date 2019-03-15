@@ -1,9 +1,0 @@
-[Unit]
-Description=Forward docker0 traffic to localhost interface
-
-[Service]
-Type=oneshot
-ExecStart=/home/hyshka/dotfiles/bin/forward_docker0_to_localhost.sh
-
-[Install]
-WantedBy=default.target
