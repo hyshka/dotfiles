@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # https://unix.stackexchange.com/a/112232
 sysctl -w net.ipv4.conf.docker0.route_localnet=1
 
