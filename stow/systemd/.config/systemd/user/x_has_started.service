@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor X server start
+
+[Service]
+Type=oneshot
+ExecStart=/home/hyshka/.config/systemd/user/x_has_started.sh
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=default.target

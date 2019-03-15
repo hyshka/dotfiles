@@ -1,0 +1,14 @@
+[Unit]
+Description=GPaste Daemon
+Requires=x_has_started.service
+After=x_has_started.service
+
+[Service]
+ExecStart=/usr/lib/gpaste/gpaste-daemon
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/hyshka/.Xauthority
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=default.target

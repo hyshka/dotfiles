@@ -1,0 +1,15 @@
+[Unit]
+Description=Service file for Keynav
+Requires=x_has_started.service
+After=x_has_started.service
+
+[Service]
+ExecStart=/usr/bin/keynav
+Restart=always
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/hyshka/.Xauthority
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=default.target
