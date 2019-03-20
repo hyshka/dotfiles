@@ -3,8 +3,6 @@
 #####
 #exec_always --no-startup-id setroot --restore
 exec_always --no-startup-id ~/dotfiles/bin/polybar.sh
-exec --no-startup-id gpaste-client
-exec --no-startup-id keynav
 
 
 ####
