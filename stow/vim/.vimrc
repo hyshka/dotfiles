@@ -18,7 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0rp/ale'
     Plug 'itchyny/lightline.vim'
     Plug 'maximbaz/lightline-ale'
-    Plug 'altercation/vim-colors-solarized'
+    Plug 'iCyMind/NeoSolarized'
     Plug 'sheerun/vim-polyglot'
     Plug 'scrooloose/nerdcommenter'
     Plug 'mattn/emmet-vim'
@@ -65,7 +65,7 @@ set noshowmode " Don't need this anymore due to lightline plugin
 set clipboard+=unnamed
 
 " TODO: True color
-" set termguicolors
+"set termguicolors
 
 set textwidth=80
 set autoread " Detect file changes on disk
@@ -235,7 +235,7 @@ let g:lightline.active = {
 
 " Make sure colored syntax mode is on, and make it Just Work with 256-color terminals.
 set background=dark
-colorscheme solarized
+colorscheme NeoSolarized
 
 " indent guides
 let g:indent_guides_enable_on_vim_startup = 1
