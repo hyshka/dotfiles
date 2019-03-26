@@ -1,6 +1,8 @@
+undodir/*
+!undodir/.gitkeep
+backupdir/*
+!backupdir/.gitkeep
+swapdir/*
+!swapdir/.gitkeep
 plugged/*
 !plugged/.gitkeep
-vim-files/backups/*
-!vim-files/backups/.gitkeep
-vim-files/swaps/*
-!vim-files/swaps/.gitkeep
