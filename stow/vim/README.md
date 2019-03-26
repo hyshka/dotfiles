@@ -18,4 +18,8 @@
 # packages
 - fzf
 - the_silver_searcher
-- ranger
+- ranger, highlight
+- netcat
+- bash
+- nodejs: prettier, TODO: eslint
+- python: python-neovim, python-black
