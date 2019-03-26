@@ -3,45 +3,6 @@ if !has('nvim')
     set nocompatible
 endif
 
-augroup vimrc
-    autocmd!
-
-    " Reload vimrc automatically when editing
-    autocmd! BufWritePost ~/.vimrc source $MYVIMRC
-    autocmd! BufWritePost .vimrc source $MYVIMRC " Editing in dotfiles repo
-
-    " vue syntax always messes up
-    autocmd FileType vue syntax sync fromstart
-
-    " Debugging helpers
-    autocmd BufEnter *.py iabbr xxx print("XXX",
-    autocmd BufEnter *.py iabbr yyy print("YYY",
-    autocmd BufEnter *.py iabbr zzz print("ZZZ",
-    autocmd BufEnter *.js iabbr xxx console.log("XXX",
-    autocmd BufEnter *.js iabbr yyy console.log("YYY",
-    autocmd BufEnter *.js iabbr zzz console.log("ZZZ",
-    autocmd BufEnter *.jsx iabbr xxx console.log("XXX",
-    autocmd BufEnter *.jsx iabbr yyy console.log("YYY",
-    autocmd BufEnter *.jsx iabbr zzz console.log("ZZZ",
-    autocmd BufEnter *.vue iabbr xxx console.log("XXX",
-    autocmd BufEnter *.vue iabbr yyy console.log("YYY",
-    autocmd BufEnter *.vue iabbr zzz console.log("ZZZ",
-
-    " Neomutt composition
-    autocmd BufRead /tmp/neomutt-* set textwidth=72
-
-    " Django templates
-    autocmd BufNewFile,BufEnter,BufRead *templates/*.html setf htmldjango
-    autocmd FileType htmldjango setlocal commentstring={#\ %s\ #}
-
-    " Column highlighting
-    autocmd BufNewFile,BufRead * call matchadd('ColorColumn', '\%81v', 80)
-    autocmd BufNewFile,BufRead * call matchadd('Error', '\%121v', 100)
-
-    " Folding
-    au FileType javascript setlocal foldmethod=syntax
-augroup END
-
 " before ale is loaded
 let g:ale_completion_enabled = 1
 
@@ -171,6 +132,47 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 " Select the stuff I just pasted
 nnoremap gV `[V`]
+
+" Autocommands
+
+augroup vimrc
+    autocmd!
+
+    " Reload vimrc automatically when editing
+    autocmd! BufWritePost ~/.vimrc source $MYVIMRC
+    autocmd! BufWritePost .vimrc source $MYVIMRC " Editing in dotfiles repo
+
+    " vue syntax always messes up
+    autocmd FileType vue syntax sync fromstart
+
+    " Debugging helpers
+    autocmd BufEnter *.py iabbr xxx print("XXX",
+    autocmd BufEnter *.py iabbr yyy print("YYY",
+    autocmd BufEnter *.py iabbr zzz print("ZZZ",
+    autocmd BufEnter *.js iabbr xxx console.log("XXX",
+    autocmd BufEnter *.js iabbr yyy console.log("YYY",
+    autocmd BufEnter *.js iabbr zzz console.log("ZZZ",
+    autocmd BufEnter *.jsx iabbr xxx console.log("XXX",
+    autocmd BufEnter *.jsx iabbr yyy console.log("YYY",
+    autocmd BufEnter *.jsx iabbr zzz console.log("ZZZ",
+    autocmd BufEnter *.vue iabbr xxx console.log("XXX",
+    autocmd BufEnter *.vue iabbr yyy console.log("YYY",
+    autocmd BufEnter *.vue iabbr zzz console.log("ZZZ",
+
+    " Neomutt composition
+    autocmd BufRead /tmp/neomutt-* set textwidth=72
+
+    " Django templates
+    autocmd BufNewFile,BufEnter,BufRead *templates/*.html setf htmldjango
+    autocmd FileType htmldjango setlocal commentstring={#\ %s\ #}
+
+    " Column highlighting
+    autocmd BufNewFile,BufRead * call matchadd('ColorColumn', '\%81v', 80)
+    autocmd BufNewFile,BufRead * call matchadd('Error', '\%121v', 100)
+
+    " Folding
+    au FileType javascript setlocal foldmethod=syntax
+augroup END
 
 " Plugins
 
