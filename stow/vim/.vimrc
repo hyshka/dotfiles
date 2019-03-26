@@ -65,7 +65,7 @@ set noshowmode " Don't need this anymore due to lightline plugin
 set clipboard+=unnamed
 
 " TODO: True color
-"set termguicolors
+set termguicolors
 
 set textwidth=80
 set autoread " Detect file changes on disk
@@ -234,7 +234,7 @@ let g:lightline.active = {
     \}
 
 " Make sure colored syntax mode is on, and make it Just Work with 256-color terminals.
-set background=dark
+set background=light
 colorscheme NeoSolarized
 
 " indent guides
