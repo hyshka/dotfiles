@@ -19,6 +19,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim'
     Plug 'maximbaz/lightline-ale'
     Plug 'iCyMind/NeoSolarized'
+    Plug 'lifepillar/vim-solarized8'
+    Plug 'altercation/vim-colors-solarized'
     Plug 'sheerun/vim-polyglot'
     Plug 'scrooloose/nerdcommenter'
     Plug 'mattn/emmet-vim'
@@ -63,9 +65,6 @@ set noshowmode " Don't need this anymore due to lightline plugin
 
 " Always use the clipboard for all operations
 set clipboard+=unnamed
-
-" TODO: True color
-set termguicolors
 
 set textwidth=80
 set autoread " Detect file changes on disk
@@ -212,6 +211,15 @@ let g:ale_linters = {
     \}
 nmap <Leader>g <Plug>(ale_go_to_definition)
 
+" Make sure colored syntax mode is on, and make it Just Work with 256-color terminals.
+set t_8f=[38;2;%lu;%lu;%lum
+set t_8b=[48;2;%lu;%lu;%lum
+if (has("termguicolors"))
+    "set termguicolors
+endif
+set background=dark
+colorscheme NeoSolarized
+
 " Lightline
 " If this comes after we set our colorscheme than lightline won't properly set it's own colors.
 let g:lightline = {
@@ -232,10 +240,6 @@ let g:lightline.component_type = {
 let g:lightline.active = {
     \'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok', 'lineinfo', 'percent', 'fileformat', 'fileencoding', 'filetype' ]]
     \}
-
-" Make sure colored syntax mode is on, and make it Just Work with 256-color terminals.
-set background=light
-colorscheme NeoSolarized
 
 " indent guides
 let g:indent_guides_enable_on_vim_startup = 1
