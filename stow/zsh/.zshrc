@@ -10,7 +10,7 @@ export WINIT_HIDPI_FACTOR=1.0
 
 export TERMINAL=alacritty
 export VISUAL=nvim
-export EDITOR=vim
+export EDITOR=nvim
 export BROWSER=firefox-developer-edition
 
 # Solarized Dircolors
