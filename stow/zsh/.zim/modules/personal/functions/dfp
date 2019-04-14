@@ -1,0 +1,6 @@
+# Function to send forwarded port to clipboard
+if [ -z "$2" ]; then
+	dcp $1 | xp
+else
+	dcp $1 $2 | xp
+fi

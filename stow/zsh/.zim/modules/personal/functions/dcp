@@ -1,0 +1,6 @@
+# Function to get forwarded port of docker container
+if [ -z "$2" ]; then
+	docker inspect --format='{{(index (index .NetworkSettings.Ports "8000/tcp") 0).HostPort}}' $1
+else
+	docker inspect --format='{{(index (index .NetworkSettings.Ports "'$2'/tcp") 0).HostPort}}' $1
+fi
