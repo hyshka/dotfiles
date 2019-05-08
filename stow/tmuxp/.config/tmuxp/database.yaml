@@ -7,13 +7,20 @@ windows:
     focus: true
     panes:
       - shell_command:
-        - make up
+        - 
         focus: true
       - blank
   - window_name: mysql
     layout: even-vertical
     shell_command_before:
       - cd ~/work/mine/docker-mysql
+    panes:
+      - focus: true
+      - blank
+  - window_name: mongo
+    layout: even-vertical
+    shell_command_before:
+      - cd ~/work/mine/docker-mongo
     panes:
       - focus: true
       - blank
