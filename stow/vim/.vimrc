@@ -29,7 +29,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-sleuth'
     Plug 'ahw/vim-pbcopy'
     Plug 'foosoft/vim-argwrap'
+    Plug 'wellle/targets.vim'
+    Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-unimpaired'
 
+    " TODO: learn more about native vim completion before trying deoplete
     " if has('nvim')
     "     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     " else
@@ -38,16 +42,11 @@ call plug#begin('~/.vim/plugged')
     "     Plug 'roxma/vim-hug-neovim-rpc'
     " endif
     " Plug 'Shougo/neco-syntax'
-
     " Plug 'ervandew/supertab'
-    " Plug 'tpope/vim-repeat'
-    " Plug 'tpope/vim-unimpaired'
-    " Plug 'bkad/CamelCaseMotion'
-    " Plug 'alvan/vim-closetag'
-    " Plug 'wellle/targets.vim'
-    " Plug 'majutsushi/tagbar'
     " Plug 'hyshka/vim-uikit'
-    " Plug 'hyshka/vim-options'
+
+    " TODO: figure out a system for JS tags
+    " Plug 'majutsushi/tagbar'
 call plug#end()
 
 " Options
@@ -192,7 +191,7 @@ nnoremap <leader>m :RangerWorkingDirectory<CR>
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_sign_column_always = 1
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ale_fixers = {
     \'*': ['remove_trailing_lines', 'trim_whitespace'],
     \'javascript': ['prettier'],
@@ -242,7 +241,7 @@ let g:lightline.active = {
     \}
 
 " indent guides
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 let g:indent_guides_start_level = 2
