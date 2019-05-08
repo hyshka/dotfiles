@@ -81,3 +81,8 @@
   # Helper to temporarily store passwords in memory
   # Cache credentials for 1 hr
   # https://git-scm.com/docs/git-credential-cache
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
