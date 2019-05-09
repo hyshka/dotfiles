@@ -32,6 +32,7 @@ alias gp6="bash /opt/GuitarPro6/launcher.sh"
 alias makepkgram="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
 alias bhp='echo -e "connect 74:5C:4B:B4:3C:86\n" | bluetoothctl'
+alias pyhttp="python -m http.server"
 
 # xrandr
 alias xeo="xrandr --output HDMI1 --off"
