@@ -12,6 +12,7 @@ install: ## Install the symlink
 	# i3-wm
 	# alacritty alacritty-term-info
 	# gvim
+	# fzf fd
 	# TODO Install packages from AUR: j4-make-config polybar rofi buku_run-git osync
 	git clone git@github.com:tadly/rofi-wrapper.git ~/dotfiles/repos/rofi-wrapper
 	# TODO: install zimfw
