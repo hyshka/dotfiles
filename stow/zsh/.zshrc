@@ -19,7 +19,7 @@ eval `dircolors $HOME/.config/zsh/dir_colors`
 
 # set qt5 to use adwaita
 # ref: https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#Styles_for_both_Qt_and_GTK+
-QT_STYLE_OVERRIDE=adwaita
+QT_QPA_PLATFORMTHEME=gtk2
 
 # prevent Firefox from creating Desktop directory
 export XDG_DESKTOP_DIR="$HOME/Downloads"
