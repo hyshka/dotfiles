@@ -33,6 +33,7 @@ alias makepkgram="BUILDDIR=/tmp/makepkg makepkg"
 alias cala="gcalcli agenda"
 alias bhp='echo -e "connect 74:5C:4B:B4:3C:86\n" | bluetoothctl'
 alias pyhttp="python -m http.server"
+alias pacclean="paccache -k 2 -r && paccache -k 0 -ur"
 
 # xrandr
 alias xeo="xrandr --output HDMI1 --off"
