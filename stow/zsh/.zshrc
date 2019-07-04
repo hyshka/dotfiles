@@ -3,7 +3,7 @@
 #####################
 
 # Add binaries from dotfiles
-PATH=$HOME/dotfiles/bin:$HOME/.local/bin:$PATH
+PATH=$HOME/dotfiles/bin:$HOME/.local/bin:$HOME/.ebcli-virtual-env/executables:$PATH
 
 # DPI Fix for alacritty
 export WINIT_HIDPI_FACTOR=1.0

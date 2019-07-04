@@ -34,8 +34,7 @@ install: ## Install the symlink
 	# Sound:
 	# alsa-utils pulseaudio pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils pavucontrol
 	#
-	# Install packages from AUR: j4-make-config-git polybar buku_run-git osync spotify airvpn-bin
-	# opt: studio-3t intellij-idea-ultimate-edition
+	# Install packages from AUR: j4-make-config-git polybar buku_run-git osync spotify airvpn-bin postman-bin
 	#
 	# Post-install:
 	# systemctl --user enable gpaste.service
