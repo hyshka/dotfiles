@@ -36,11 +36,11 @@ alias pyhttp="python -m http.server"
 alias pacclean="paccache -k 2 -r && paccache -k 0 -ur"
 
 # xrandr
-alias xeo="xrandr --output HDMI1 --off"
-alias xea="xrandr --output HDMI1 --auto --output eDP1 --auto --right-of HDMI1"
-alias xet="xrandr --output HDMI1 --off; xrandr --output HDMI1 --auto --output eDP1 --auto --right-of HDMI1"
-alias xe="xrandr --output HDMI1 --auto --output eDP1 --off"
 alias xi="xrandr --output eDP1 --auto --output HDMI1 --off"
+alias xe="xrandr --output HDMI1 --auto --output eDP1 --off"
+alias xel="xrandr --output HDMI1 --auto --output eDP1 --auto --left-of HDMI1"
+alias xer="xrandr --output HDMI1 --auto --output eDP1 --auto --right-of HDMI1"
+alias xeo="xrandr --output HDMI1 --off"
 
 # clipboard
 alias pyclip="python ~/.bin/pyclip.py"
