@@ -57,7 +57,7 @@ modules-left = i3
 modules-center =
 modules-right = battery date
 
-tray-position = none
+tray-position = center
 ;tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff

@@ -81,9 +81,6 @@ if [ "$HOSTNAME" = linode ]; then
   LP_ENABLE_TEMP=0
 fi
 
-# Prevent slowdown in typeracer git repo
-LP_DISABLED_VCS_PATH=$HOME/work/teachme/typeracer
-
 # Zimfw
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
