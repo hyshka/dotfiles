@@ -149,8 +149,8 @@ bindsym XF86AudioPrev exec cmus-remote --prev
 
 # backlight
 # requires: light (https://aur.archlinux.org/packages/light-git/)
-bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 10; notify-send 'Backlight' $(light -G)"
-bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 10; notify-send 'Backlight' $(light -G)"
+bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 10; notify-send 'Backlight' $(light -G) -h string:x-canonical-private-synchronous:brightness-change"
+bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 10; notify-send 'Backlight' $(light -G) -h string:x-canonical-private-synchronous:brightness-change"
 
 # polybar control
 # show
