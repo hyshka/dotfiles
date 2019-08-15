@@ -34,6 +34,7 @@ alias cala="gcalcli agenda"
 alias bhp='echo -e "connect 74:5C:4B:B4:3C:86\n" | bluetoothctl'
 alias pyhttp="python -m http.server"
 alias pacclean="paccache -k 2 -r && paccache -k 0 -ur"
+alias garmin="WINEPREFIX=/home/hyshka/GarminExpress wine explorer /desktop=garmin,1366x768 '/home/hyshka/GarminExpress/drive_c/Program Files/Garmin/Express/express.exe'"
 
 # xrandr
 alias xi="xrandr --output eDP1 --primary --auto --output HDMI1 --off"
