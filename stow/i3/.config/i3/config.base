@@ -4,9 +4,6 @@ default_border pixel 1
 default_floating_border pixel 2
 hide_edge_borders smart
 
-# Rofi
-bindsym --release $mod+d exec rofi -show run
-
 # i3 basics
 set $mod Mod1
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -157,6 +154,9 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 10; notify-send 'Back
 bindcode 133 exec xdotool search --class Polybar windowmap %@ windowraise %@
 # hide
 bindcode --release 133 exec xdotool search --class Polybar windowunmap %@
+
+# Rofi
+bindsym --release $mod+d exec rofi -show run
 
 # custom rofi modes
 bindsym $mod+c exec ~/dotfiles/repos/rofi-wrapper/rofi-gpaste
