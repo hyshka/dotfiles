@@ -3,5 +3,10 @@
 repos
 !repos/.gitkeep
 
+# symlinks
+stow/systemd/.config/systemd/user/default.target.wants
+
 # secret
 bin/sql-backup
+stow/gnupg/.gnupg
+!stow/gnupg/.gnupg/gpg-agent.conf
