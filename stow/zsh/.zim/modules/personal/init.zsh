@@ -37,11 +37,11 @@ alias pacclean="paccache -k 2 -r && paccache -k 0 -ur"
 alias garmin="WINEPREFIX=/home/hyshka/GarminExpress wine explorer /desktop=garmin,1366x768 '/home/hyshka/GarminExpress/drive_c/Program Files/Garmin/Express/express.exe'"
 
 # xrandr
-alias xi="xrandr --output eDP1 --primary --auto --output HDMI1 --off"
-alias xe="xrandr --output HDMI1 --primary --auto --output eDP1 --off"
-alias xel="xrandr --output HDMI1 --primary --auto --output eDP1 --auto --left-of HDMI1"
-alias xer="xrandr --output HDMI1 --primary --auto --output eDP1 --auto --right-of HDMI1"
-alias xeo="xrandr --output HDMI1 --noprimary --off"
+alias xi="xrandr --output eDP-1 --primary --auto --output HDMI-1 --off"
+alias xe="xrandr --output HDMI-1 --primary --auto --output eDP-1 --off"
+alias xel="xrandr --output HDMI-1 --primary --auto --output eDP-1 --auto --left-of HDMI-1"
+alias xer="xrandr --output HDMI-1 --primary --auto --output eDP-1 --auto --right-of HDMI-1"
+alias xeo="xrandr --output HDMI-1 --noprimary --off"
 
 # clipboard
 alias pyclip="python ~/.bin/pyclip.py"
