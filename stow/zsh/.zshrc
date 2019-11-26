@@ -5,6 +5,11 @@
 # Add binaries from dotfiles
 PATH=$HOME/dotfiles/bin:$HOME/.local/bin:$HOME/.ebcli-virtual-env/executables:$PATH
 
+# docker.sock host path fix
+# daemon path got out of sync with client, client still defaults to
+# /var/run/docker/sock
+export DOCKER_HOST=unix:///run/docker.sock
+
 # DPI Fix for alacritty
 export WINIT_HIDPI_FACTOR=1.0
 
