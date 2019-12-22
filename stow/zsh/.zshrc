@@ -10,6 +10,9 @@ PATH=$HOME/dotfiles/bin:$HOME/.local/bin:$HOME/.ebcli-virtual-env/executables:$P
 # /var/run/docker/sock
 export DOCKER_HOST=unix:///run/docker.sock
 
+# use intel-media-driver for va-api
+export LIBVA_DRIVER_NAME=iHD
+
 # DPI Fix for alacritty
 export WINIT_HIDPI_FACTOR=1.0
 
