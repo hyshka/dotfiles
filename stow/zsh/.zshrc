@@ -41,6 +41,9 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 # Use local node modules binaries before global binaries
 PATH=./node_modules/.bin:$PATH
 
+# Add Garmin ConnectIQ Binaries
+PATH=$PATH:$HOME/work/connectiq_sdk/bin
+
 # node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
