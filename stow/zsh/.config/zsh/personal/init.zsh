@@ -4,15 +4,8 @@
 
 # ensure that 'personal' exists in the zmodules array in your .zimrc
 
-##################
-# SHELL SETTINGS #
-##################
-
-# autocompletion of command line switches for aliases
-# setopt COMPLETE_ALIASES
-
-# vim-style term keybinds
-bindkey -v
+fpath+=~/.config/zsh/personal/functions/
+autoload tpd
 
 ###########
 # ALIASES #
