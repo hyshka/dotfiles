@@ -13,3 +13,7 @@ if [ "$HOSTNAME" = gandof ]; then
   j4-make-config -a config_gandof solarized_light
   # ln -s ~/.config/i3/i3status_gandof ~/.config/i3/i3status.conf
 fi
+
+if [ "$HOSTNAME" = nuc8 ]; then
+  j4-make-config -a config_nuc8 solarized_light
+fi

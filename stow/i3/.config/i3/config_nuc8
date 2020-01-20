@@ -1,0 +1,14 @@
+#####
+# AUTOSTARTS
+#####
+#exec_always --no-startup-id setroot --restore
+exec_always --no-startup-id ~/dotfiles/bin/polybar.sh
+exec --no-startup-id udiskie --tray
+
+
+####
+# CONFIG
+####
+
+# regenerate the configuration file
+bindsym $mod+Shift+c exec "j4-make-config -r -a config_nuc8 solarized_light"
