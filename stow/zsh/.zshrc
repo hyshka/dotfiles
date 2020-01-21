@@ -222,10 +222,13 @@ _gen_fzf_default_opts() {
 _gen_fzf_default_opts
 
 # Disable LiquidPrompt temperature sensor calls on linode machine
-# Do this before initializing Zimfw
+# Do this before initializing Zimfw or liquidprompt
 if [ "$HOSTNAME" = linode ]; then
   LP_ENABLE_TEMP=0
 fi
+
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
 [ -f ${HOME}/.config/zsh/personal/init.zsh ] && source ${HOME}/.config/zsh/personal/init.zsh
 [ -f ${HOME}/.config/zsh/docker/init.zsh ] && source ${HOME}/.config/zsh/docker/init.zsh

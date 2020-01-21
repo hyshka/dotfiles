@@ -42,6 +42,9 @@ install: ## Install the symlink
 	# Get zimfw
 	curl https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh --create-dirs -o ~/.zim/zimfw.zsh
 
+	# Get liquidprompt
+	cd ~/ && git clone https://github.com/nojhan/liquidprompt.git && cd ~/dotfiles
+
 	# Get and install incantation
 	cd ~/build && git clone git@git.sr.ht:~thornycrackers/incantation && make incantation && cd ~/dotfiles
 
