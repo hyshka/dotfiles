@@ -26,7 +26,7 @@ install: ## Install the symlink
 		firefox-developer-edition chromium\
 		vimiv flameshot gimp inkscape\
 		zeal go\
-		pacman-contrib etckeeper reflector
+		pacman-contrib etckeeper reflector acpi
 
 	# not sure about these: weechat acpi
 
