@@ -10,9 +10,9 @@ install: ## Install the symlink
 	# Sound:
 	# alsa-utils pulseaudio pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils pavucontrol
 
-	# pre-req: git openssh opendoas/sudo base-devel pikaur(AUR)
+	# pre-req: git openssh opendoas/sudo base-devel pikaur(AUR) zsh (when creating user)
 	doas pacman -S \
-		git stow zsh\
+		git stow zsh-completions zsh-syntax-highlighting zsh-lovers\
 		openssh gnupg pinentry\
 		alacritty alacritty-terminfo\
 		ranger highlight libcaca mediainfo perl-image-exiftool poppler w3m\
@@ -26,12 +26,13 @@ install: ## Install the symlink
 		firefox-developer-edition chromium\
 		vimiv flameshot gimp inkscape\
 		zeal go\
-		pacman-contrib etckeeper reflector acpi
+		pacman-contrib etckeeper reflector acpi\
+		lxappearance gnome-themes-extra
 
 	# not sure about these: weechat acpi
 
 	# Install packages from AUR
-	pikaur -S j7-make-config-git polybar buku buku_run-git spotify airvpn-bin mosh-git slack-desktop ngrok
+	pikaur -S j7-make-config-git polybar buku buku_run-git spotify airvpn-bin mosh-git slack-desktop ngrok adwaita-qt qgnomeplatform
 	# Spotify optional deps
 	pikaur -S --asdeps ffmpeg-compat-57 zenity
 	# note sure about these: postman-bin osync

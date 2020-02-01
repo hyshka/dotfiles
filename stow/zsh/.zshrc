@@ -159,8 +159,9 @@ export BROWSER=firefox-developer-edition
 eval `dircolors $HOME/.config/zsh/dir_colors`
 
 # ref: https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#Styles_for_both_Qt_and_GTK+
-#QT_QPA_PLATFORMTHEME=gtk2
-export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME='gnome'
+export XDG_CURRENT_DESKTOP=GNOME
+export QT_STYLE_OVERRIDE=adwaita
 
 # prevent Firefox from creating Desktop directory
 export XDG_DESKTOP_DIR="$HOME/Downloads"
