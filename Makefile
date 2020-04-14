@@ -32,7 +32,7 @@ install: ## Install the symlink
 	# not sure about these: weechat acpi
 
 	# Install packages from AUR
-	pikaur -S j7-make-config-git polybar buku buku_run-git spotify airvpn-bin mosh-git slack-desktop ngrok adwaita-qt qgnomeplatform
+	pikaur -S j7-make-config-git polybar buku buku_run-git spotify airvpn-bin mosh-git slack-desktop ngrok adwaita-qt qgnomeplatform bitwarden-cli bitwarden-rofi
 	# Spotify optional deps
 	pikaur -S --asdeps ffmpeg-compat-57 zenity
 	# note sure about these: postman-bin osync

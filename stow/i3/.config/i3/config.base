@@ -130,9 +130,10 @@ bindsym $mod+Shift+w exec firefox-developer-edition
 bindsym $mod+Shift+e exec chromium
 bindsym $mod+Shift+p exec xfce4-appfinder
 bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+a exec pavucontrol
 
 # audio
-# 
+#
 bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ -5%; notify-send 'Volume' $(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,') --icon=dialog-information -h string:x-canonical-private-synchronous:audio-volume-change"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false; pactl set-sink-volume @DEFAULT_SINK@ +5%; notify-send 'Volume' $(pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,') --icon=dialog-information -h string:x-canonical-private-synchronous:audio-volume-change"
 bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle; notify-send 'Volume Muted' $(pactl list sinks | grep '^[[:space:]]Mute:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed 's/Mute://' | xargs) --icon=dialog-information -h string:x-canonical-private-synchronous:audio-mute-change"
@@ -163,5 +164,7 @@ bindsym $mod+c exec ~/dotfiles/repos/rofi-wrapper/rofi-gpaste
 bindsym XF86ScreenSaver exec ~/dotfiles/repos/rofi-wrapper/rofi-power
 # requires: https://aur.archlinux.org/packages/buku_run-git/
 bindsym $mod+b exec ~/dotfiles/bin/buku_run.sh
+# requires: bitwarden-cli and bitwarden-rofi from AUR
+bindsym $mod+p exec bwmenu
 
 # $i3-theme-window
