@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'wellle/targets.vim'
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-unimpaired'
+    Plug 'python-rope/ropevim'
 
     " TODO: learn more about native vim completion before trying deoplete
     " if has('nvim')

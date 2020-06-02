@@ -18,7 +18,7 @@ install: ## Install the symlink
 		ranger highlight libcaca mediainfo perl-image-exiftool poppler w3m\
 		tmux tmuxp\
 		i3-wm rofi terminus-font dunst keynav python-pyperclip xsel\
-		gvim neovim python-neovim python-black fzf the_silver_searcher netcat prettier\
+		gvim neovim python-neovim python-black python-rope fzf the_silver_searcher netcat prettier\
 		fzf fd\
 		transmission-gtk mpv libreoffice-fresh zathura zathura-pdf-poppler gpaste htop\
 		rsync \
@@ -32,7 +32,7 @@ install: ## Install the symlink
 	# not sure about these: weechat acpi
 
 	# Install packages from AUR
-	pikaur -S j7-make-config-git polybar buku buku_run-git spotify airvpn-bin mosh-git slack-desktop ngrok adwaita-qt qgnomeplatform bitwarden-cli bitwarden-rofi
+	pikaur -S j7-make-config-git polybar buku buku_run-git spotify airvpn-bin mosh-git slack-desktop ngrok adwaita-qt qgnomeplatform bitwarden-cli bitwarden-rofi python-ropemode
 	# Spotify optional deps
 	pikaur -S --asdeps ffmpeg-compat-57 zenity
 	# note sure about these: postman-bin osync

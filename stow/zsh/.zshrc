@@ -217,7 +217,7 @@ _gen_fzf_default_opts() {
     --color info:$yellow,prompt:$yellow,pointer:$base03,marker:$base03,spinner:$yellow
   "
 
-  export FZF_DEFAULT_COMMAND='fd --type f'
+  export FZF_DEFAULT_COMMAND='fd --no-ignore-vcs --type f'
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 }
 _gen_fzf_default_opts
