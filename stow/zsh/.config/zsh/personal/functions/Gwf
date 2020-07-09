@@ -1,0 +1,5 @@
+local FILES=(${(f)"$(git ls-files --others --exclude-standard| fzf --multi)"})
+for FILE in ${FILES[@]}
+do
+	git rm "$FILE"
+done

@@ -17,7 +17,7 @@ install: ## Install the symlink
 		alacritty alacritty-terminfo\
 		ranger highlight libcaca mediainfo perl-image-exiftool poppler w3m\
 		tmux tmuxp\
-		i3-wm rofi terminus-font dunst keynav python-pyperclip xsel\
+		i3-wm rofi terminus-font-otb dunst keynav python-pyperclip xsel\
 		gvim neovim python-neovim python-black python-rope fzf the_silver_searcher netcat prettier\
 		fzf fd\
 		transmission-gtk mpv libreoffice-fresh zathura zathura-pdf-poppler gpaste htop\

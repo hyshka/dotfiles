@@ -13,4 +13,4 @@ exec --no-startup-id xsettingsd
 ####
 
 # regenerate the configuration file
-bindsym $mod+Shift+c exec "j4-make-config -r -a config_nuc8 solarized_light"
+bindsym $mod+Shift+c exec "j4-make-config -r -a config_starship solarized_light"

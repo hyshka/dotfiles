@@ -108,6 +108,7 @@ for_window [window_role="Msgcompose"] floating enable
 for_window [title="Preferences$"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
+for_window [class="battle.net.exe"] floating enable
 
 # window defaults
 for_window [class="Firefox"] layout tabbed

@@ -6,14 +6,16 @@ done
 # i3 host-specifics
 if [ "$HOSTNAME" = veyron ]; then
   j4-make-config -a config_veyron solarized_light
-  # ln -s ~/.config/i3/i3status_veyron ~/.config/i3/i3status.conf
 fi
 
 if [ "$HOSTNAME" = gandof ]; then
   j4-make-config -a config_gandof solarized_light
-  # ln -s ~/.config/i3/i3status_gandof ~/.config/i3/i3status.conf
 fi
 
 if [ "$HOSTNAME" = nuc8 ]; then
   j4-make-config -a config_nuc8 solarized_light
+fi
+
+if [ "$HOSTNAME" = starship ]; then
+  j4-make-config -a config_starship solarized_light
 fi
