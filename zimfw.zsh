@@ -1,1 +1,0 @@
-<html><body>You are being <a href="https://github.com/zimfw/zimfw/releases/download/v1.0.1/zimfw.zsh">redirected</a>.</body></html>
