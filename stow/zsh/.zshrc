@@ -94,7 +94,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Wrap pacman commands with pikaur
 zstyle ':zim:pacman' frontend 'pikaur'
 # Add aur shortcuts
-zstyle ':zim:pacman' helpers 'aur'
+#zstyle ':zim:pacman' helpers 'aur'
 
 # ------------------
 # Initialize modules

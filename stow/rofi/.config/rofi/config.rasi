@@ -1,0 +1,9 @@
+configuration {
+	padding: 5;
+	terminal: "alacritty";
+	line-margin: 5;
+	separator-style: "";
+	hide-scrollbar: true;
+	fullscreen: false;
+	kb-cancel: "Escape,Control+c";
+}
