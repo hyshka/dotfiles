@@ -161,7 +161,7 @@ bindcode --release 133 exec xdotool search --class Polybar windowunmap %@
 bindsym --release $mod+d exec rofi -show run
 
 # custom rofi modes
-bindsym $mod+c exec ~/dotfiles/repos/rofi-wrapper/rofi-gpaste
+bindsym $mod+c exec ~/dotfiles/bin/rofi-gpaste
 bindsym XF86ScreenSaver exec ~/dotfiles/repos/rofi-wrapper/rofi-power
 # requires: https://aur.archlinux.org/packages/buku_run-git/
 bindsym $mod+b exec ~/dotfiles/bin/buku_run.sh

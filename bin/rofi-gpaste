@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+#
+#   Use rofi to select/remove entries from gpaste.
+#
+#   Requirements:
+#     rofi, gpaste
+#
+#   Notes:
+#     * "Return" will activate the highlighted item.
+#     * "Ctrl+x" will remove the highlighted.
+#
+
+# Basic rofi launch command. Additional option can also be provided
+# when calling this script.
+LAUNCHER="rofi -dmenu -i -p gpaste -kb-custom-1 Ctrl+x $@"
+
+# Gpaste now uses UUIDs as an index. Let's validate them per
+# https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_.28random.29
+UUID_V4_REGEX="[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-4[0-9A-Za-z]{3}-[89ABab][0-9A-Za-z]{3}-[0-9A-Za-z]{12}"
+
+line=$(gpaste-client --oneline | $LAUNCHER)
+exit_code=$?
+
+index=$(echo $line | cut -d ':' -f1)
+
+if ! [[ $index =~ $UUID_V4_REGEX ]]; then
+    exit 0
+fi
+
+if [ $exit_code -eq 0 ]; then
+    gpaste-client select $index
+elif [ $exit_code -eq 10 ]; then
+    gpaste-client delete $index
+fi
