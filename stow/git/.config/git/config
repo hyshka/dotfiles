@@ -19,9 +19,15 @@
   mydiff = !git diff $1 -- . ':(exclude)**/static/css/main.css' ':(exclude)**/static/js/app.js'
   # I hate scrolling through minified css and js, exclude them when diffing
 
+  # remove branches that have been merged in, excluding master and * glob
+  cleanup = "!git branch --merged | grep -v -P '^\\^|master|develop'  | xargs -n 1 -r git branch -d"
+
+
+[pull]
+  rebase = true
 
 [merge]
-  # ff = only
+  ff = only
   # I pretty much never mean to do a real merge, since I use a rebase workflow.
   # Note: this global option applies to all merges, including those done during a git pull
   # https://git-scm.com/docs/git-config#git-config-mergeff
@@ -82,6 +88,7 @@
   # Helper to temporarily store passwords in memory
   # Cache credentials for 1 hr
   # https://git-scm.com/docs/git-credential-cache
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
