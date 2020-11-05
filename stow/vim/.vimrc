@@ -18,9 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'w0rp/ale'
     Plug 'itchyny/lightline.vim'
     Plug 'maximbaz/lightline-ale'
-    Plug 'iCyMind/NeoSolarized'
     Plug 'lifepillar/vim-solarized8'
-    Plug 'altercation/vim-colors-solarized'
     Plug 'sheerun/vim-polyglot'
     Plug 'scrooloose/nerdcommenter'
     Plug 'mattn/emmet-vim'
@@ -88,6 +86,7 @@ set formatoptions=tcqjn1 " t - autowrap normal text
 set shell=bash " use bash in terminal mode
 set signcolumn=yes " always show
 set showmatch " show matching bracket when inserted
+set syntax=off " disable syntax highlighting
 
 " Maps
 
@@ -192,6 +191,8 @@ nnoremap <leader>m :RangerWorkingDirectory<CR>
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_sign_column_always = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
     \'*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -210,15 +211,6 @@ let g:ale_linters = {
     \'scss': ['stylelint'],
     \}
 nmap <Leader>g <Plug>(ale_go_to_definition)
-
-" Make sure colored syntax mode is on, and make it Just Work with 256-color terminals.
-set t_8f=[38;2;%lu;%lu;%lum
-set t_8b=[48;2;%lu;%lu;%lum
-if (has("termguicolors"))
-    "set termguicolors
-endif
-set background=dark
-colorscheme NeoSolarized
 
 " Lightline
 " If this comes after we set our colorscheme than lightline won't properly set it's own colors.
@@ -240,6 +232,15 @@ let g:lightline.component_type = {
 let g:lightline.active = {
     \'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok', 'lineinfo', 'percent', 'fileformat', 'fileencoding', 'filetype' ]]
     \}
+
+" Make sure colored syntax mode is on, and make it Just Work with 256-color terminals.
+set t_8f=[38;2;%lu;%lu;%lum
+set t_8b=[48;2;%lu;%lu;%lum
+if (has("termguicolors"))
+    set termguicolors
+endif
+set background=light
+colorscheme solarized8
 
 " indent guides
 let g:indent_guides_enable_on_vim_startup = 0
