@@ -5,6 +5,7 @@ repos
 
 # symlinks
 stow/systemd/.config/systemd/user/default.target.wants
+stow/systemd/.config/systemd/user/multi-user.target.wants
 
 # secret
 bin/sql-backup

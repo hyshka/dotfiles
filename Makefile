@@ -26,12 +26,13 @@ install: ## Install the symlink
 		firefox-developer-edition chromium\
 		vimiv flameshot gimp inkscape\
 		pacman-contrib etckeeper reflector acpi\
-		lxappearance gnome-themes-extra
+		lxappearance gnome-themes-extra\
+		xss-lock physlock
 
 	# not sure about these: weechat acpi
 
 	# Install packages from AUR
-	pikaur -S j4-make-config-git polybar buku buku_run-git spotify airvpn-bin hummingbird-bin mosh-git slack-desktop ngrok adwaita-qt qgnomeplatform bitwarden-cli bitwarden-rofi python-ropemode ttf-iosevka ttf-iosevka-term
+	pikaur -S j4-make-config-git polybar buku buku_run-git spotify airvpn-bin hummingbird-bin mosh-git slack-desktop ngrok adwaita-qt qgnomeplatform bitwarden-cli bitwarden-rofi python-ropemode ttf-iosevka ttf-iosevka-term xidlehook
 	# Spotify optional deps
 	pikaur -S --asdeps ffmpeg-compat-57 zenity
 	# note sure about these: postman-bin osync
@@ -63,6 +64,8 @@ install: ## Install the symlink
 	systemctl --user start gpaste.service
 	systemctl --user enable keynav.service
 	systemctl --user start keynav.service
+	systemctl --user start xidlehook.service
+	systemctl --user enable xidlehook.service
 
 uninstall: ## Remove the sumlink
 	rm -rf ~/dotfiles/repos/rofi-wrapper
