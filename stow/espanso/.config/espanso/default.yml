@@ -10,7 +10,7 @@ matches:
   - trigger: ":e1"
     replace: "bryan@hyshka.com"
   - trigger: ":e2"
-    replace: "bryan@takethehelm.app"
+    replace: "bryan@muckrack.com"
   - trigger: ":dt"
     replace: "coverage run manage.py test --nomigrations --exclude-tag=slow --exclude-tag=internet"
   - trigger: ":dr"
@@ -19,6 +19,8 @@ matches:
     replace: "__import__('pdb').set_trace()  # FIXME"
   - trigger: ":pudb"
     replace: "__import__('pudb').set_trace()  # FIXME"
+  - trigger: ":bdev"
+    replace: "https://bryan.muckrack.dev/"
 
   # Dates
   - trigger: ":date"
