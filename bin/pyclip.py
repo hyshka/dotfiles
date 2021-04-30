@@ -9,8 +9,8 @@ import pyperclip
 def receive_all(socket: socket.socket):
     """We're assuming small payloads of text.
 
-    TCP is streaming, we're assuming that copying text will be no bigger than
-    'max_buff_size' in bytes.
+    TCP is streaming, we're assuming that copying text will be no bigger
+    than 'max_buff_size' in bytes.
     """
     max_buff_size = 8192
     data = socket.recv(max_buff_size)

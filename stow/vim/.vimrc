@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'rbgrouleff/bclose.vim'
     Plug 'francoiscabrol/ranger.vim'
-    Plug 'w0rp/ale'
+    Plug 'dense-analysis/ale'
     Plug 'itchyny/lightline.vim'
     Plug 'maximbaz/lightline-ale'
     Plug 'lifepillar/vim-solarized8'
@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-unimpaired'
     Plug 'python-rope/ropevim'
+    Plug 'editorconfig/editorconfig-vim'
 
     " TODO: learn more about native vim completion before trying deoplete
     " if has('nvim')
@@ -194,6 +195,12 @@ let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let g:ale_fix_on_save = 1
+function! DocFormatter(buffer) abort
+    return {
+    \   'command': 'docformatter -- -'
+    \}
+endfunction
+execute ale#fix#registry#Add('docformatter', 'DocFormatter', ['python'], 'docformatter for python')
 let g:ale_fixers = {
     \'*': ['remove_trailing_lines', 'trim_whitespace'],
     \'javascript': ['prettier'],
@@ -203,12 +210,13 @@ let g:ale_fixers = {
     \'jsx': ['prettier'],
     \'html': ['prettier'],
     \'md': ['prettier'],
-    \'python': ['black'],
+    \'python': ['black', 'isort', 'docformatter'],
     \}
 let g:ale_linters = {
     \'javascript': ['eslint'],
     \'css': ['stylelint'],
     \'scss': ['stylelint'],
+    \'python': ['flake8'],
     \}
 nmap <Leader>g <Plug>(ale_go_to_definition)
 

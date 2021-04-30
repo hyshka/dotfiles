@@ -9,5 +9,6 @@ stow/systemd/.config/systemd/user/multi-user.target.wants
 
 # secret
 bin/sql-backup
+bin/mfa_func.sh
 stow/gnupg/.gnupg
 !stow/gnupg/.gnupg/gpg-agent.conf

@@ -4,8 +4,6 @@
 
 # Sets sane Zsh built-in environment options.
 zmodule environment
-# Provides handy git aliases and functions.
-zmodule git
 # Applies correct bindkeys for input events.
 zmodule input
 # Sets a custom terminal title.
@@ -13,22 +11,30 @@ zmodule termtitle
 # Utility aliases and functions. Adds colour to ls, grep and less.
 zmodule utility
 
-# Sets directory, navigation, and redirect options
-zmodule directory
 # Provides archive and unarchive functions for easy archive manipulation
 zmodule archive
+# Adds aliases and better defaults for exa.
+zmodule exa
+# Configures fzf for faster fetching of files and directories names.
+zmodule fzf
+# Provides handy git aliases and functions.
+zmodule git
 # Provides a convenient way to load ssh-agent
 zmodule ssh
+# Adds utility aliases and functions. Adds colour to ls, grep and less.
+zmodule utility
 # Adds aliases for the pacman package manager
 zmodule pacman
 
 #
 # Prompt
 #
-# Exposes git repository status information to prompts.
-#zmodule git-info
-# A customizable version of steeef's prompt theme.
-#zmodule steeef
+# Exposes to prompts how long the last command took to execute, used by asciiship.
+zmodule duration-info
+# Exposes git repository status information to prompts, used by asciiship.
+zmodule git-info
+# A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
+zmodule asciiship
 
 # Additional completion definitions for Zsh.
 zmodule zsh-users/zsh-completions
@@ -41,5 +47,6 @@ zmodule zsh-users/zsh-autosuggestions
 # zsh-users/zsh-syntax-highlighting must be sourced after completion
 zmodule zsh-users/zsh-syntax-highlighting
 # Fish-like history search (up arrow) for Zsh.
-# zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
+# zsh-users/zsh-history-substring-search must be sourced after
+zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search

@@ -143,9 +143,6 @@ PATH=$HOME/dotfiles/bin:$HOME/.local/bin:$HOME/.ebcli-virtual-env/executables:$P
 # /var/run/docker/sock
 export DOCKER_HOST=unix:///run/docker.sock
 
-# use intel-media-driver for va-api
-export LIBVA_DRIVER_NAME=iHD
-
 # DPI Fix for alacritty
 export WINIT_HIDPI_FACTOR=1.0
 
@@ -220,16 +217,7 @@ _gen_fzf_default_opts() {
   export FZF_DEFAULT_COMMAND='fd -H -E .git --no-ignore-vcs --type f'
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 }
-_gen_fzf_default_opts
-
-# Disable LiquidPrompt temperature sensor calls on linode machine
-# Do this before initializing Zimfw or liquidprompt
-if [ "$HOSTNAME" = linode ]; then
-  LP_ENABLE_TEMP=0
-fi
-
-# Only load Liquid Prompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+#_gen_fzf_default_opts
 
 [ -f ${HOME}/.config/zsh/personal/init.zsh ] && source ${HOME}/.config/zsh/personal/init.zsh
 [ -f ${HOME}/.config/zsh/docker/init.zsh ] && source ${HOME}/.config/zsh/docker/init.zsh
