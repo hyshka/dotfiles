@@ -2,4 +2,12 @@
 #include ".config/xorg/solarized_light"
 
 # Set minotor DPI
-Xft.dpi:	95
+Xft.dpi:	94
+
+# For apps without fontconfig support
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb

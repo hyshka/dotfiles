@@ -1,0 +1,16 @@
+[[ $1 ]] || {
+	echo "Usage: mfa token-code" >&2
+	return 1
+}
+unset AWS_ACCESS_KEY_ID || return
+unset AWS_SECRET_ACCESS_KEY || return
+unset AWS_SESSION_TOKEN || return
+token_json=$(aws sts get-session-token --serial-number arn:aws:iam::625830657620:mfa/bryan --token-code "$1" --profile default --output json) || return
+IFS=$'\t' read -r accessKeyId secretAccessKey sessionToken _ < <(
+	jq -r '
+		.Credentials | [.AccessKeyId, .SecretAccessKey, .SessionToken] | @tsv
+	' <<<"$token_json"
+) && [[ $accessKeyId && $secretAccessKey && $sessionToken ]] || return
+export AWS_ACCESS_KEY_ID="$accessKeyId" || return
+export AWS_SECRET_ACCESS_KEY="$secretAccessKey" || return
+export AWS_SESSION_TOKEN="$sessionToken"

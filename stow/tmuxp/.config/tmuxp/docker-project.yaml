@@ -11,8 +11,6 @@ windows:
   - window_name: docker
     layout: even-vertical
     panes:
-      - shell_command:
-        - blank
-        focus: true
+      - blank
       - blank
       - blank

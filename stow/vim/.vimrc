@@ -32,6 +32,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-unimpaired'
     Plug 'python-rope/ropevim'
     Plug 'editorconfig/editorconfig-vim'
+    Plug 'ternjs/tern_for_vim'
+    Plug 'preservim/tagbar'
+    Plug 'dpelle/vim-languagetool'
 
     " TODO: learn more about native vim completion before trying deoplete
     " if has('nvim')
@@ -45,8 +48,6 @@ call plug#begin('~/.vim/plugged')
     " Plug 'ervandew/supertab'
     " Plug 'hyshka/vim-uikit'
 
-    " TODO: figure out a system for JS tags
-    " Plug 'majutsushi/tagbar'
 call plug#end()
 
 " Options
@@ -88,6 +89,7 @@ set shell=bash " use bash in terminal mode
 set signcolumn=yes " always show
 set showmatch " show matching bracket when inserted
 set syntax=off " disable syntax highlighting
+set tags=./tags;,tags " search for tags file recursively up
 
 " Maps
 
@@ -110,7 +112,7 @@ nmap \h :syntax sync fromstart<CR> " refresh syntax highlighting
 nmap j gj
 nmap k gk
 
-" Don't interrupt v-mode due indent. Thanks, kaero
+" Don't interrupt v-mode due indent
 vnoremap < <gv
 vnoremap > >gv
 
@@ -131,6 +133,12 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 " Select the stuff I just pasted
 nnoremap gV `[V`]
+
+" Swap CTRL=] and g CTRL-] to make :tjump the default
+nnoremap <c-]> g<c-]>
+vnoremap <c-]> g<c-]>
+nnoremap g<c-]> <c-]>
+vnoremap g<c-]> <c-]>
 
 " Autocommands
 
@@ -164,6 +172,8 @@ augroup vimrc
     " Django templates
     autocmd BufNewFile,BufEnter,BufRead *templates/*.html setf htmldjango
     autocmd FileType htmldjango setlocal commentstring={#\ %s\ #}
+    " Disable autowrapping in Django templates
+    autocmd FileType htmldjango setlocal formatoptions-=t
 
     " Column highlighting
     autocmd BufNewFile,BufRead * call matchadd('ColorColumn', '\%81v', 80)
@@ -197,7 +207,7 @@ let g:ale_sign_warning = '--'
 let g:ale_fix_on_save = 1
 function! DocFormatter(buffer) abort
     return {
-    \   'command': 'docformatter -- -'
+    \   'command': 'docformatter --pre-summary-newline --wrap-summaries=0 -- -'
     \}
 endfunction
 execute ale#fix#registry#Add('docformatter', 'DocFormatter', ['python'], 'docformatter for python')
@@ -298,3 +308,11 @@ let g:vim_pbcopy_remote_cmd = "nc -w 0 localhost 41401"
 " Argwrap
 nnoremap <leader>W :ArgWrap<CR>
 let g:argwrap_tail_comma = 1
+
+" Tagbar
+nmap <Leader>b :TagbarToggle<CR>
+let g:tagbar_width = 60
+
+" LanguageTool
+let g:languagetool_cmd='/usr/bin/languagetool'
+let g:languagetool_lang='en-CA'

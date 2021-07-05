@@ -13,9 +13,9 @@ windows:
 #      - shell_command:
 #        - weechat
 #        focus: true
-  - window_name: clipboard
-    panes:
-      - pyclip
+  #- window_name: clipboard
+    #panes:
+      #- pyclip
   - window_name: mail
     panes:
       - blank
