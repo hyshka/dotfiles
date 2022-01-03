@@ -2,6 +2,7 @@
 # AUTOSTARTS
 #####
 #exec_always --no-startup-id setroot --restore
+exec --no-startud-id xiccd
 exec_always --no-startup-id ~/dotfiles/bin/polybar.sh
 exec --no-startup-id udiskie --tray
 exec --no-startup-id dunst

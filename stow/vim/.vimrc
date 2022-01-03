@@ -10,9 +10,6 @@ let g:ale_completion_enabled = 1
 call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-sensible'
     Plug 'tmux-plugins/vim-tmux-focus-events'
-    " TODO: find a way to use native fzf from pacman
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-    Plug 'junegunn/fzf.vim'
     Plug 'rbgrouleff/bclose.vim'
     Plug 'francoiscabrol/ranger.vim'
     Plug 'dense-analysis/ale'
@@ -23,18 +20,25 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdcommenter'
     Plug 'mattn/emmet-vim'
     Plug 'tpope/vim-surround'
-    Plug 'nathanaelkane/vim-indent-guides'
     Plug 'tpope/vim-sleuth'
     Plug 'ahw/vim-pbcopy'
     Plug 'foosoft/vim-argwrap'
     Plug 'wellle/targets.vim'
     Plug 'tpope/vim-repeat'
     Plug 'tpope/vim-unimpaired'
-    Plug 'python-rope/ropevim'
+    "Plug 'python-rope/ropevim'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'ternjs/tern_for_vim'
     Plug 'preservim/tagbar'
     Plug 'dpelle/vim-languagetool'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'lukas-reineke/indent-blankline.nvim'
 
     " TODO: learn more about native vim completion before trying deoplete
     " if has('nvim')
@@ -180,17 +184,19 @@ augroup vimrc
     autocmd BufNewFile,BufRead * call matchadd('Error', '\%121v', 100)
 
     " Folding
-    au FileType javascript setlocal foldmethod=syntax
+    " au FileType javascript setlocal foldmethod=syntax
 augroup END
 
 " Plugins
 
-" fzf
-nnoremap ; :Buffers<CR>
-nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>T :Tags<CR>
-nnoremap <Leader>t :BTags<CR>
-nnoremap <Leader>s :Ag<CR>
+" telescope
+nnoremap ; <cmd>Telescope buffers<CR>
+nnoremap <Leader>f <cmd>Telescope find_files<CR>
+nnoremap <Leader>F <cmd>Telescope git_files<CR>
+nnoremap <Leader>s <cmd>Telescope live_grep<CR>
+nnoremap <Leader>T <cmd>Telescope tags<CR>
+nnoremap <Leader>t <cmd>Telescope current_buffer_tags<CR>
+nnoremap <Leader>l <cmd>Telescope lsp_references<CR>
 
 " ranger
 let g:ranger_map_keys = 0
@@ -228,7 +234,6 @@ let g:ale_linters = {
     \'scss': ['stylelint'],
     \'python': ['flake8'],
     \}
-nmap <Leader>g <Plug>(ale_go_to_definition)
 
 " Lightline
 " If this comes after we set our colorscheme than lightline won't properly set it's own colors.
@@ -259,17 +264,6 @@ if (has("termguicolors"))
 endif
 set background=light
 colorscheme solarized8
-
-" indent guides
-let g:indent_guides_enable_on_vim_startup = 0
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-au VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=0
-au VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
-au BufEnter *.py,*.html,*.js,*.jsx,*.vue,*.css,*.scss :IndentGuidesEnable
-au BufLeave *.py,*.html,*.js,*.jsx,*.vue,*.css,*.scss :IndentGuidesDisable
 
 " deoplete
 " let g:deoplete#enable_at_startup = 1
@@ -316,3 +310,33 @@ let g:tagbar_width = 60
 " LanguageTool
 let g:languagetool_cmd='/usr/bin/languagetool'
 let g:languagetool_lang='en-CA'
+
+" LSP
+" TODO
+
+" nvim-treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true,
+  },
+  incremental_selection = {
+    enable = true,
+  },
+  indent = {
+    enable = true
+  }
+}
+EOF
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
+" colorizer
+lua require'colorizer'.setup()
+
+" indent-blankline
+highlight IndentBlanklineChar guifg=#e4e4e4 gui=nocombine
+let g:indent_blankline_use_treesitter = v:true
+let g:indent_blankline_show_first_indent_level = v:false
+let g:indent_blankline_filetype = ['vim', 'python', 'html', 'htmldjango', 'javascript', 'jsx', 'vue', 'css', 'scss']

@@ -4,23 +4,12 @@
 	signingkey = DB2D93D1BFAAA6EA
 
 [alias]
-  prune = fetch --prune
-  # Because I constantly forget how to do this
-  # https://git-scm.com/docs/git-fetch#git-fetch--p
-
   undo = reset --soft HEAD^
   # Not quite as common as an amend, but still common
   # https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
 
-  stash-all = stash save --include-untracked
-  # We wanna grab those pesky un-added files!
-  # https://git-scm.com/docs/git-stash
-
-  mydiff = !git diff $1 -- . ':(exclude)**/static/css/main.css' ':(exclude)**/static/js/app.js'
-  # I hate scrolling through minified css and js, exclude them when diffing
-
-  # remove branches that have been merged in, excluding master and * glob
-  cleanup = "!git branch --merged | grep -v -P '^\\^|master|develop'  | xargs -n 1 -r git branch -d"
+  # remove branches that have been merged in, excluding master, main and * glob
+  cleanup = "!git branch --merged | grep -v -P '^\\^|main|master|develop'  | xargs -n 1 -r git branch -d"
 
 
 [pull]
@@ -38,11 +27,11 @@
 
   tool = vimdiff
 
-[mergetool "diffconflicts"]
-  cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
-  trustExitCode = true
-  keepBackup = false
-  # http://vim.wikia.com/wiki/A_better_Vimdiff_Git_mergetool
+[mergetool]
+	keepBackup = false
+
+[mergetool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [commit]
   gpgSign = true
@@ -72,16 +61,8 @@
   # https://git-scm.com/docs/git-config#git-config-transferfsckObjects
   # via https://groups.google.com/forum/#!topic/binary-transparency/f-BI4o8HZW0
 
-[diff]
-  tool = icdiff
-
 [difftool]
   prompt = false
-
-[difftool "icdiff"]
-  cmd = /usr/bin/icdiff --line-numbers $LOCAL $REMOTE
-  # A nice little github-like colorful, split diff right in the console.
-  # via http://owen.cymru/github-style-diff-in-terminal-with-icdiff/
 
 [credential]
   helper = cache --timeout=3600
@@ -94,3 +75,20 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+# delta diff comparisons
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+    syntax-theme = Solarized (light)
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none

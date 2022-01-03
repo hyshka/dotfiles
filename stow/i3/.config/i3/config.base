@@ -109,6 +109,7 @@ for_window [title="Preferences$"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="battle.net.exe"] floating enable
+for_window [class="zoom"] floating enable
 
 # window defaults
 for_window [class="Firefox"] layout tabbed
@@ -163,9 +164,10 @@ bindsym --release $mod+d exec rofi -show run
 # custom rofi modes
 bindsym $mod+c exec ~/dotfiles/bin/rofi-gpaste
 bindsym XF86ScreenSaver exec ~/dotfiles/repos/rofi-wrapper/rofi-power
+bindsym $mod+p exec ~/dotfiles/repos/rofi-wrapper/rofi-power
 # requires: https://aur.archlinux.org/packages/buku_run-git/
 bindsym $mod+b exec ~/dotfiles/bin/buku_run.sh
 # requires: bitwarden-cli and bitwarden-rofi from AUR
-bindsym $mod+p exec bwmenu
+# bindsym $mod+p exec bwmenu
 
 # $i3-theme-window
