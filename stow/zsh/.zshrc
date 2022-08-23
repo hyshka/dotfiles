@@ -222,3 +222,4 @@ _gen_fzf_default_opts() {
 [ -f ${HOME}/.config/zsh/personal/init.zsh ] && source ${HOME}/.config/zsh/personal/init.zsh
 [ -f ${HOME}/.config/zsh/docker/init.zsh ] && source ${HOME}/.config/zsh/docker/init.zsh
 eval "$(pyenv init -)"
+eval "$(direnv hook zsh)"

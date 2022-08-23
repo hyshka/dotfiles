@@ -1,0 +1,7 @@
+echo 'Calendar'
+echo 'Bullet journal'
+echo 'Email'
+echo 'Typing (optional)'
+echo 'Coffee'
+echo 'Focus time'
+curl -H "Accept: text/plain" https://icanhazdadjoke.com/

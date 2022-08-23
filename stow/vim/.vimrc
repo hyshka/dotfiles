@@ -255,6 +255,9 @@ let g:lightline.component_type = {
 let g:lightline.active = {
     \'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok', 'lineinfo', 'percent', 'fileformat', 'fileencoding', 'filetype' ]]
     \}
+let g:lightline.component = {
+    \'filename': "%{expand('%:p:h:t')}/%t"
+    \}
 
 " Make sure colored syntax mode is on, and make it Just Work with 256-color terminals.
 set t_8f=[38;2;%lu;%lu;%lum
@@ -317,9 +320,25 @@ let g:languagetool_lang='en-CA'
 " nvim-treesitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
+  -- A list of parser names, or "all"
+  ensure_installed = { "lua", "comment", "bash", "css", "help", "html", "javascript", "json", "make", "python", "regex", "scss", "typescript", "vim",
+  "vue", "yaml" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  -- List of parsers to ignore installing (for "all")
+  ignore_install = { "javascript" },
+
   highlight = {
+    -- `false` will disable the whole extension
     enable = true,
+
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
   },
   incremental_selection = {
     enable = true,

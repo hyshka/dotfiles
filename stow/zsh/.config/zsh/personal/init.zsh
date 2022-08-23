@@ -7,6 +7,7 @@
 fpath+=~/.config/zsh/personal/functions/
 autoload tpd
 autoload mfa
+autoload morning
 
 ###########
 # ALIASES #
@@ -29,7 +30,7 @@ alias bhp='echo -e "connect 74:5C:4B:B4:3C:86\n" | bluetoothctl'
 alias pyhttp="python -m http.server"
 alias pacclean="paccache -k 2 -r && paccache -k 0 -ur"
 alias garmin="WINEPREFIX=/home/hyshka/GarminExpress wine explorer /desktop=garmin,1366x768 '/home/hyshka/GarminExpress/drive_c/Program Files/Garmin/Express/express.exe'"
-alias av="aws-vault --backend=file exec default --"
+alias av="aws-vault exec mr-bryan --"
 
 # xrandr
 alias xi="xrandr --output eDP-1 --primary --auto --output HDMI-1 --off"

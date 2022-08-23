@@ -49,6 +49,10 @@
   # Because I get sick of telling git to do it manually
   # https://git-scm.com/docs/git-config#git-config-pushfollowTags
 
+  autoSetupRemote = true
+  # Assume --set-upstream when pushing, creating branch on origin and tracking
+  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushautoSetupRemote
+
 [status]
   showUntrackedFiles = all
   # Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
