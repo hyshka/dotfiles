@@ -2,7 +2,7 @@ rofi.fullscreen:        false
 rofi.padding:           5
 rofi.hide-scrollbar:    true
 rofi.line-margin:       5
-rofi.terminal:                       alacritty
+rofi.terminal:                       kitty
 rofi.levenshtein-sort:               true
 rofi.fuzzy:                          true
 rofi.kb-cancel:                      Escape,Control+c

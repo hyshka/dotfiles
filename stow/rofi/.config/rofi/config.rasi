@@ -1,6 +1,6 @@
 configuration {
 	padding: 5;
-	terminal: "alacritty";
+	terminal: "kitty";
 	line-margin: 5;
 	separator-style: "";
 	hide-scrollbar: true;

@@ -20,3 +20,6 @@ alias dsp='docker system prune'
 alias dsd='docker system df'
 alias dp='docker port'
 alias dni='docker network inspect'
+
+# docker
+alias dC="docker compose --project-name muckrack --file /home/hyshka/work/MR/muckrack/code/docker/docker-compose.yml --file /home/hyshka/work/MR/muckrack/code/docker/docker-compose.web.yml"

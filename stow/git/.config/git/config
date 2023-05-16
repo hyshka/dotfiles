@@ -1,7 +1,10 @@
+[init]
+  defaultBranch = main
+
 [user]
   name = Bryan Hyshka
   email = bryan@hyshka.com
-	signingkey = DB2D93D1BFAAA6EA
+  signingKey = DB2D93D1BFAAA6EA
 
 [alias]
   undo = reset --soft HEAD^

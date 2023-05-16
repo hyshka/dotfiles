@@ -1,5 +1,6 @@
 ! must be full path relative to home directory
-#include ".config/xorg/solarized_light"
+!#include ".config/xorg/solarized_light"
+#include ".config/xorg/everforest_light"
 
 # Set minotor DPI
 Xft.dpi:	94

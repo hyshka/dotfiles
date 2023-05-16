@@ -5,7 +5,7 @@ default_floating_border pixel 2
 hide_edge_borders smart
 
 # i3 basics
-set $mod Mod1
+set $mod Mod4
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # kill focused window
@@ -110,6 +110,7 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="battle.net.exe"] floating enable
 for_window [class="zoom"] floating enable
+for_window [class="corectrl"] floating enable
 
 # window defaults
 for_window [class="Firefox"] layout tabbed
@@ -117,6 +118,11 @@ for_window [class="Chromium"] layout tabbed
 # this doesn't work but I want it to
 #for_window [class="Chromium" window_role="pop-up"] layout tabbed
 #for_window [instance="scratchpad"] move window to scratchpad, scratchpad show
+
+# steam
+for_window [class="Steam"] fullscreen enable
+assign [class="Steam"] $WS10
+bindsym $mod+Shift+t exec nyrna --toggle
 
 # application workspaces
 assign [class="Firefox"] $WS4
@@ -127,7 +133,7 @@ assign [class="Chromium"] $WS4
 #####
 
 # apps
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 bindsym $mod+Shift+w exec firefox-developer-edition
 bindsym $mod+Shift+e exec chromium
 bindsym $mod+Shift+p exec xfce4-appfinder
@@ -154,9 +160,9 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 10; notify-send 'Back
 
 # polybar control
 # show
-bindcode 133 exec xdotool search --class Polybar windowmap %@ windowraise %@
+bindsym Alt_R exec xdotool search --class Polybar windowmap %@ windowraise %@
 # hide
-bindcode --release 133 exec xdotool search --class Polybar windowunmap %@
+bindsym --release Alt_R exec xdotool search --class Polybar windowunmap %@
 
 # Rofi
 bindsym --release $mod+d exec rofi -show run

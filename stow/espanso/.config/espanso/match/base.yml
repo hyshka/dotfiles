@@ -1,10 +1,11 @@
-# espanso configuration file
+# espanso match file
 
-# This is the default configuration file, change it as you like it
-# You can refer to the official documentation:
-# https://espanso.org/docs/
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
 
-# Matches are the substitution rules, when you type the "trigger" string
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
   - trigger: ":e1"
@@ -15,12 +16,20 @@ matches:
     replace: "coverage run manage.py test --nomigrations --exclude-tag=slow --exclude-tag=internet"
   - trigger: ":dr"
     replace: "python manage.py runserver 0.0.0.0:8000"
+  - trigger: ":dp"
+    replace: "WEBPACK_LOADER_USE_PROD=1 python manage.py runserver 0.0.0.0:8000"
   - trigger: ":pdb"
     replace: "__import__('pdb').set_trace()  # FIXME"
   - trigger: ":pudb"
     replace: "__import__('pudb').set_trace()  # FIXME"
   - trigger: ":bdev"
     replace: "https://bryan.muckrack.dev/"
+  - trigger: ":a1"
+    replace: "4866 Terwillegar Common NW"
+  - trigger: ":a2"
+    replace: "T6R 0S3"
+  - trigger: ":p1"
+    replace: "780-720-5420"
 
   # Dates
   - trigger: ":date"

@@ -3,12 +3,16 @@
 #####
 #exec_always --no-startup-id setroot --restore
 exec --no-startud-id xiccd
-exec_always --no-startup-id ~/dotfiles/bin/polybar.sh
+#exec_always --no-startup-id ~/dotfiles/bin/polybar.sh
 exec --no-startup-id udiskie --tray
-exec --no-startup-id dunst
+#exec --no-startup-id dunst
 exec --no-startup-id xsettingsd
-exec --no-startud-id xss-lock -- physlock
-
+#exec --no-startup-id xss-lock -- physlock
+exec --no-startup-id corectrl
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+exec --no-startup-id xfce4-panel --disable-wm-check
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startud-id nyrna
 
 ####
 # CONFIG
@@ -16,3 +20,5 @@ exec --no-startud-id xss-lock -- physlock
 
 # regenerate the configuration file
 bindsym $mod+Shift+c exec "j4-make-config -r -a config_starship solarized_light"
+
+for_window [ class="Xfce4-panel" instance="xfce4-panel" ] floating enable
